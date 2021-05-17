@@ -21,6 +21,7 @@ This is the project of FishDoge(FDOGE) on BSC(Binance smart chain)
 - BSC : [https://bscscan.com/token/0x361d8552d7db423ec0cb097a5911fe453d205374?a=0x00A91642Acf51E1562ad97724BAF64458BF20bc2](https://bscscan.com/token/0x361d8552d7db423ec0cb097a5911fe453d205374?a=0x00A91642Acf51E1562ad97724BAF64458BF20bc2)
 - Price 價格 : [https://poocoin.app/tokens/0x361d8552d7db423ec0cb097a5911fe453d205374](https://poocoin.app/tokens/0x361d8552d7db423ec0cb097a5911fe453d205374)
 - Webpage : not yet 
+- BSC [操作教學](https://davidcolor153.medium.com/%E9%AD%9A%E7%8B%97%E5%B9%A3%E6%93%8D%E4%BD%9C%E6%95%99%E5%AD%B8-da418cccda6a)
  
 <br/>
 
