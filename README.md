@@ -2,6 +2,7 @@
 # FishDoge FDOGE
 This is the project of FishDoge(FDOGE) on BSC(Binance smart chain)
 
+![image](https://github.com/ru19wu06/FishDoge-FDOGE-/blob/main/1_dG0vuMrsz3GOfU1FgCmeNQ.jpeg)
 
 <br/>
 
