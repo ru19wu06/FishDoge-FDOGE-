@@ -1,5 +1,5 @@
 
-# FishDoge FDOGE
+# The FishDoge Coin
 This is the project of FishDoge(FDOGE) on BSC(Binance smart chain)
 
 ![image](https://raw.githubusercontent.com/ru19wu06/FishDoge_FDOGE/main/1_dG0vuMrsz3GOfU1FgCmeNQ.jpeg)
