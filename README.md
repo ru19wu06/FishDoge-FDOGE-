@@ -2,6 +2,7 @@
 # FishDoge FDOGE
 This is the project of FishDoge(FDOGE) on BSC(Binance smart chain)
 
+![image](https://github.com/ru19wu06/FishDoge-FDOGE-/blob/main/1_dG0vuMrsz3GOfU1FgCmeNQ.jpeg)
 
 <br/>
 
@@ -14,7 +15,13 @@ This is the project of FishDoge(FDOGE) on BSC(Binance smart chain)
 - Owner Address 持有人 : 0x66666694Ff556B311111Ce95830d3A363ad52C63
 - Team 開發團隊 : Lord of Hugo
 - Manager : Aaron 顏培祐 
- 
+
+## View
+
+- BSC : https://bscscan.com/token/0x361d8552d7db423ec0cb097a5911fe453d205374?a=0x00A91642Acf51E1562ad97724BAF64458BF20bc2
+- Price 價格 : https://poocoin.app/tokens/0x361d8552d7db423ec0cb097a5911fe453d205374
+- Webpage : not yet 
+- 
 <br/>
 
 ## Purpose 目標
