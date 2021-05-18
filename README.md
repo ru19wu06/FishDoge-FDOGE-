@@ -1,8 +1,8 @@
 
-# FishDoge FDOGE
+# The FishDoge Coin
 This is the project of FishDoge(FDOGE) on BSC(Binance smart chain)
 
-![image](https://github.com/ru19wu06/FishDoge-FDOGE-/blob/main/1_dG0vuMrsz3GOfU1FgCmeNQ.jpeg)
+![image](https://raw.githubusercontent.com/ru19wu06/FishDoge_FDOGE/main/1_dG0vuMrsz3GOfU1FgCmeNQ.jpeg)
 
 <br/>
 
@@ -14,14 +14,15 @@ This is the project of FishDoge(FDOGE) on BSC(Binance smart chain)
 - Contract Address : 0x361d8552d7db423ec0cb097a5911fe453d205374
 - Owner Address 持有人 : 0x66666694Ff556B311111Ce95830d3A363ad52C63
 - Team 開發團隊 : Lord of Hugo
-- Manager : Aaron 顏培祐 
+- Manager : Aaron  
 
 ## View
 
-- BSC : https://bscscan.com/token/0x361d8552d7db423ec0cb097a5911fe453d205374?a=0x00A91642Acf51E1562ad97724BAF64458BF20bc2
-- Price 價格 : https://poocoin.app/tokens/0x361d8552d7db423ec0cb097a5911fe453d205374
+- BSC : [https://bscscan.com/token/0x361d8552d7db423ec0cb097a5911fe453d205374?a=0x00A91642Acf51E1562ad97724BAF64458BF20bc2](https://bscscan.com/token/0x361d8552d7db423ec0cb097a5911fe453d205374?a=0x00A91642Acf51E1562ad97724BAF64458BF20bc2)
+- Price 價格 : [https://poocoin.app/tokens/0x361d8552d7db423ec0cb097a5911fe453d205374](https://poocoin.app/tokens/0x361d8552d7db423ec0cb097a5911fe453d205374)
 - Webpage : not yet 
-- 
+- BSC [操作教學](https://davidcolor153.medium.com/%E9%AD%9A%E7%8B%97%E5%B9%A3%E6%93%8D%E4%BD%9C%E6%95%99%E5%AD%B8-da418cccda6a)
+ 
 <br/>
 
 ## Purpose 目標
