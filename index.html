@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
+    <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.36/dist/web3.min.js" integrity="sha256-nWBTbvxhJgjslRyuAKJHK+XcZPlCnmIAAMixz6EefVk=" crossorigin="anonymous"></script>
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="mobile-web-app-capable" content="yes">
     <title>
@@ -34,6 +35,22 @@
 </head>
 
 <body>
+    <script>
+         
+
+        let web3 = new Web3("wss://mainnet.infura.io/ws/v3/094050d79dc24c87b21f1ab21c343597");
+
+        function  getMetamask(){
+            if (window.ethereum) {
+            window.web3 = new Web3(window.ethereum);
+            window.ethereum.enable();
+            console.log("AA");
+            return true;
+            }
+            return false;
+        }
+        getMetamask();
+    </script>
     <div id="doc" class="markdown-body container-fluid comment-enabled" data-hard-breaks="true"><h1 id="The-FishDoge-Coin" data-id="The-FishDoge-Coin"><a class="anchor hidden-xs" href="#The-FishDoge-Coin" title="The-FishDoge-Coin"><span class="octicon octicon-link"></span></a><span>The FishDoge Coin</span></h1><p><span>This is the project of FishDoge(FDOGE) on BSC(Binance smart chain)</span></p><p><img src="https://raw.githubusercontent.com/ru19wu06/FishDoge_FDOGE/main/1_dG0vuMrsz3GOfU1FgCmeNQ.jpeg" alt="image"></p><br><h2 id="Introduction-介紹" data-id="Introduction-介紹"><a class="anchor hidden-xs" href="#Introduction-介紹" title="Introduction-介紹"><span class="octicon octicon-link"></span></a><span>Introduction 介紹</span></h2><ul>
 <li><span>Full name 全名 : Fish Doge coin</span></li>
 <li><span>Codename 代號 : FDOGE</span></li>
