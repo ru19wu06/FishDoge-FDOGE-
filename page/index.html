@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.36/dist/web3.min.js" integrity="sha256-nWBTbvxhJgjslRyuAKJHK+XcZPlCnmIAAMixz6EefVk=" crossorigin="anonymous"></script>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>
+        The FishDoge Coin - HackMD
+    </title>
+    <!-- <link rel="icon" type="image/png" href="https://hackmd.io/favicon.png">
+    <link rel="apple-touch-icon" href="https://hackmd.io/apple-touch-icon.png"> -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css" integrity="sha256-3iu9jgsy9TpTwXKb7bNQzqWekRX7pPK+2OLj3R922fo=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/3.5.0/octicons.min.css" integrity="sha256-QiWfLIsCT02Sdwkogf6YMiQlj4NE84MKkzEMkZnMGdg=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/themes/prism.min.css" integrity="sha256-vtR0hSWRc3Tb26iuN2oZHt3KRUomwTufNIf5/4oeCyg=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/css/basic/emojify.min.css" integrity="sha256-UOrvMOsSDSrW6szVLe8ZDZezBxh5IoIfgTwdNDgTjiU=" crossorigin="anonymous" />
+    <link href='./style.css' rel='stylesheet' type='text/css'>
+    
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha256-3Jy/GbSLrg0o9y5Z5n1uw0qxZECH7C6OQpVBgNFYa0g=" crossorigin="anonymous"></script>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js" integrity="sha256-g6iAfvZp+nDQ2TdTR/VVKJf3bGro4ub5fvWSWVRi2NE=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js" integrity="sha256-8E4Is26QH0bD52WoQpcB+R/tcWQtpzlCojrybUd7Mxo=" crossorigin="anonymous"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <script>
+         
+
+        let web3 = new Web3("wss://mainnet.infura.io/ws/v3/094050d79dc24c87b21f1ab21c343597");
+
+        function  getMetamask(){
+            if (window.ethereum) {
+            window.web3 = new Web3(window.ethereum);
+            window.ethereum.enable();
+            console.log("AA");
+            return true;
+            }
+            return false;
+        }
+        getMetamask();
+    </script>
+    <div id="doc" class="markdown-body container-fluid comment-enabled" data-hard-breaks="true"><h1 id="The-FishDoge-Coin" data-id="The-FishDoge-Coin"><a class="anchor hidden-xs" href="#The-FishDoge-Coin" title="The-FishDoge-Coin"><span class="octicon octicon-link"></span></a><span>The FishDoge Coin</span></h1><p><span>This is the project of FishDoge(FDOGE) on BSC(Binance smart chain)</span></p><p><img src="https://raw.githubusercontent.com/ru19wu06/FishDoge_FDOGE/main/1_dG0vuMrsz3GOfU1FgCmeNQ.jpeg" alt="image"></p><br><h2 id="Introduction-介紹" data-id="Introduction-介紹"><a class="anchor hidden-xs" href="#Introduction-介紹" title="Introduction-介紹"><span class="octicon octicon-link"></span></a><span>Introduction 介紹</span></h2><ul>
+<li><span>Full name 全名 : Fish Doge coin</span></li>
+<li><span>Codename 代號 : FDOGE</span></li>
+<li><span>Total Yield 總產量 : 200000000000 兩千億</span></li>
+<li><span>Block-chain : BSC (Binance smart chain)</span></li>
+<li><span>Contract Address : 0x361d8552d7db423ec0cb097a5911fe453d205374</span></li>
+<li><span>Owner Address 持有人 : 0x66666694Ff556B311111Ce95830d3A363ad52C63</span></li>
+<li><span>Team 開發團隊 : Lord of Hugo</span></li>
+<li><span>Manager : Aaron</span></li>
+<li><span>交易平台 : <a href="https://exchange.pancakeswap.finance/#/swap?outputCurrency=0x361d8552d7db423ec0cb097a5911fe453d205374">Pancake V2 BNB-FDOGE USDT-BNB</a></span></li>
+<li><span>價格觀測平台 : <a href="https://dex.guru/token/0x361d8552d7db423ec0cb097a5911fe453d205374-bsc">Guru DEX</a></span></li>
+
+<br/>
+
+</ul><h2 id="View" data-id="View"><a class="anchor hidden-xs" href="#View" title="View"><span class="octicon octicon-link"></span></a><span>View</span></h2><ul>
+<li><span>BSC : </span><a href="https://bscscan.com/token/0x361d8552d7db423ec0cb097a5911fe453d205374" target="_blank" rel="noopener"><span>0x00A91642Acf51E1562ad97724BAF64458BF20bc2</span></a></li>
+<li><span>Price 價格 : </span><a href="https://poocoin.app/tokens/0x361d8552d7db423ec0cb097a5911fe453d205374" target="_blank" rel="noopener"><span>Poocoin</span></a></li>
+<li><span>Webpage : not yet</span></li>
+<li><span>BSC : </span><a href="https://davidcolor153.medium.com/%E9%AD%9A%E7%8B%97%E5%B9%A3%E6%93%8D%E4%BD%9C%E6%95%99%E5%AD%B8-da418cccda6a" target="_blank" rel="noopener"><span>操作教學</span></a></li>
+</ul><br><h2 id="Purpose-目標" data-id="Purpose-目標"><a class="anchor hidden-xs" href="#Purpose-目標" title="Purpose-目標"><span class="octicon octicon-link"></span></a><span>Purpose 目標</span></h2><h3 id="目標一" data-id="目標一"><a class="anchor hidden-xs" href="#目標一" title="目標一"><span class="octicon octicon-link"></span></a><span>目標一</span></h3><ul>
+<li><span>讓人了解到發行數位貨幣是多麼的容易，而自己所持有的資產多沒有價值，遠離數位貨幣騙局，讓FishDoge coin 成為一種警惕。</span></li>
+</ul><p><em><span>Let the user to understand that Cryptocurrency is easy to create just like FDOGE.</span></em></p><br><h3 id="目標二" data-id="目標二"><a class="anchor hidden-xs" href="#目標二" title="目標二"><span class="octicon octicon-link"></span></a><span>目標二</span></h3><ul>
+<li><span>讓一些沒有接觸過區塊鏈的用戶可以有動機去了解區塊鏈的運作，並自己手動操作而不透過交易所</span></li>
+</ul><p><em><span>Let the user who is new with BlockChain can understand how Crypto works.</span></em></p><br><h3 id="目標三" data-id="目標三"><a class="anchor hidden-xs" href="#目標三" title="目標三"><span class="octicon octicon-link"></span></a><span>目標三</span></h3><ul>
+<li><span>讓FishDoge Coin可以變成大家開心持有，當作玩具交易的媒介。</span></li>
+</ul><p><em><span>Hold fishDoge coin and have fun with it.</span></em></p><br>
+
+
+<h2 id="開發團隊-Load-of-Hugo" data-id="開發團隊-Load-of-Hugo"><a class="anchor hidden-xs" href="#開發團隊-Load-of-Hugo" title="開發團隊-Load-of-Hugo"><span class="octicon octicon-link"></span></a><span>開發團隊 Load of Hugo</span></h2><p><span>這是一個由幾個社會新鮮人自發性組成的團隊，專門做一些有趣的事情</span><br>
+<span>通常不以賺錢為目的，但是如果很有趣又可以賺錢那當然更好ㄌ。</span></p></div>
+    <div class="ui-toc dropup unselectable hidden-print" style="display:none;">
+        <div class="pull-right dropdown">
+            <a id="tocLabel" class="ui-toc-label btn btn-default" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" title="Table of content">
+                <i class="fa fa-bars"></i>
+            </a>
+            <ul id="ui-toc" class="ui-toc-dropdown dropdown-menu" aria-labelledby="tocLabel">
+                <div class="toc"><ul class="nav">
+<li class=""><a href="#The-FishDoge-Coin" title="The FishDoge Coin">The FishDoge Coin</a><ul class="nav">
+<li><a href="#Introduction-介紹" title="Introduction 介紹">Introduction 介紹</a></li>
+<li class=""><a href="#View" title="View">View</a></li>
+<li><a href="#Purpose-目標" title="Purpose 目標">Purpose 目標</a><ul class="nav">
+<li><a href="#目標一" title="目標一">目標一</a></li>
+<li><a href="#目標二" title="目標二">目標二</a></li>
+<li><a href="#目標三" title="目標三">目標三</a></li>
+</ul>
+</li>
+<li><a href="#開發團隊-Load-of-Hugo" title="開發團隊 Load of Hugo">開發團隊 Load of Hugo</a></li>
+</ul>
+</li>
+</ul>
+</div><div class="toc-menu"><a class="expand-toggle" href="#">全部展開</a><a class="back-to-top" href="#">回到頂部</a><a class="go-to-bottom" href="#">移至底部</a></div>
+            </ul>
+        </div>
+    </div>
+    <div id="ui-toc-affix" class="ui-affix-toc ui-toc-dropdown unselectable hidden-print" data-spy="affix" style="top:17px;display:none;" null null>
+        <div class="toc"><ul class="nav">
+<li class=""><a href="#The-FishDoge-Coin" title="The FishDoge Coin">The FishDoge Coin</a><ul class="nav">
+<li><a href="#Introduction-介紹" title="Introduction 介紹">Introduction 介紹</a></li>
+<li class=""><a href="#View" title="View">View</a></li>
+<li><a href="#Purpose-目標" title="Purpose 目標">Purpose 目標</a><ul class="nav">
+<li><a href="#目標一" title="目標一">目標一</a></li>
+<li><a href="#目標二" title="目標二">目標二</a></li>
+<li><a href="#目標三" title="目標三">目標三</a></li>
+</ul>
+</li>
+<li><a href="#開發團隊-Load-of-Hugo" title="開發團隊 Load of Hugo">開發團隊 Load of Hugo</a></li>
+</ul>
+</li>
+</ul>
+</div><div class="toc-menu"><a class="expand-toggle" href="#">全部展開</a><a class="back-to-top" href="#">回到頂部</a><a class="go-to-bottom" href="#">移至底部</a></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gist-embed/2.6.0/gist-embed.min.js" integrity="sha256-KyF2D6xPIJUW5sUDSs93vWyZm+1RzIpKCexxElmxl8g=" crossorigin="anonymous" defer></script>
+    <script src="./style_script.js"></script>
+        
+    </script>
+</body>
+
+</html>
