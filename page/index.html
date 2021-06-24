@@ -8,8 +8,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.36/dist/web3.min.js" integrity="sha256-nWBTbvxhJgjslRyuAKJHK+XcZPlCnmIAAMixz6EefVk=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="mobile-web-app-capable" content="yes">
+
     <title>
         The FishDoge Coin - HackMD
     </title>
@@ -23,6 +25,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/themes/prism.min.css" integrity="sha256-vtR0hSWRc3Tb26iuN2oZHt3KRUomwTufNIf5/4oeCyg=" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/css/basic/emojify.min.css" integrity="sha256-UOrvMOsSDSrW6szVLe8ZDZezBxh5IoIfgTwdNDgTjiU=" crossorigin="anonymous" />
     <link href='./style.css' rel='stylesheet' type='text/css'>
+    <link href='./style2.css' rel='stylesheet' type='text/css'>
+    
     
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -37,18 +41,21 @@
     <script>
          
 
-        let web3 = new Web3("wss://mainnet.infura.io/ws/v3/094050d79dc24c87b21f1ab21c343597");
+        //let web3 = new Web3("wss://mainnet.infura.io/ws/v3/094050d79dc24c87b21f1ab21c343597");
+        var coinbase;//設定帳戶
+       
 
-        function  getMetamask(){
-            if (window.ethereum) {
-            window.web3 = new Web3(window.ethereum);
-            window.ethereum.enable();
-            console.log("AA");
-            return true;
-            }
-            return false;
-        }
-        getMetamask();
+        if (typeof web3 !== 'undefined') {
+		  web3 = new Web3(web3.currentProvider);
+          
+          //alert("請使用MetaMask登入");
+          
+		} else {
+		  // 確認是否使用metamask地址
+		  web3 = new Web3("wss://mainnet.infura.io/ws/v3/094050d79dc24c87b21f1ab21c343597");
+         
+		}
+
     </script>
     <div id="doc" class="markdown-body container-fluid comment-enabled" data-hard-breaks="true"><h1 id="The-FishDoge-Coin" data-id="The-FishDoge-Coin"><a class="anchor hidden-xs" href="#The-FishDoge-Coin" title="The-FishDoge-Coin"><span class="octicon octicon-link"></span></a><span>The FishDoge Coin</span></h1><p><span>This is the project of FishDoge(FDOGE) on BSC(Binance smart chain)</span></p><p><img src="https://raw.githubusercontent.com/ru19wu06/FishDoge_FDOGE/main/1_dG0vuMrsz3GOfU1FgCmeNQ.jpeg" alt="image"></p><br><h2 id="Introduction-介紹" data-id="Introduction-介紹"><a class="anchor hidden-xs" href="#Introduction-介紹" title="Introduction-介紹"><span class="octicon octicon-link"></span></a><span>Introduction 介紹</span></h2><ul>
 <li><span>Full name 全名 : Fish Doge coin</span></li>
@@ -82,7 +89,11 @@
 <h2 id="開發團隊-Load-of-Hugo" data-id="開發團隊-Load-of-Hugo"><a class="anchor hidden-xs" href="#開發團隊-Load-of-Hugo" title="開發團隊-Load-of-Hugo"><span class="octicon octicon-link"></span></a><span>開發團隊 Load of Hugo</span></h2>
 <p>
     <span>這是一個由幾個社會新鮮人自發性組成的團隊，專門做一些有趣的事情</span><br>
-    <span>通常不以賺錢為目的，但是如果很有趣又可以賺錢那當然更好ㄌ。</span>
+    <span>通常不以賺錢為目的，但是如果很有趣又可以賺錢那當然更好ㄌ。</span><br>
+    <br>
+    <button class="button_dot" onclick="Donate()">贊助團隊</button>
+    <h1>FDOGE 目前用途</h1>
+
     <h3 style="border-color:#aaaaee;border-style:solid;border-width:3px;padding:5px;"><span>FishDoge coin 可以用以做為 Load of Hugo 團隊的顧問費，每一千萬顆可以諮詢一小時</span></h3>
 
 
@@ -114,6 +125,8 @@
     </div>
     <div id="ui-toc-affix" class="ui-affix-toc ui-toc-dropdown unselectable hidden-print" data-spy="affix" style="top:17px;display:none;" null null>
         <div class="toc"><ul class="nav">
+<l1><h4 class="font_style"><span id="login_address">Not logged in</span></h4></l1>
+<br>
 <li class=""><a href="#The-FishDoge-Coin" title="The FishDoge Coin">The FishDoge Coin</a><ul class="nav">
 <li><a href="#Introduction-介紹" title="Introduction 介紹">Introduction 介紹</a></li>
 <li class=""><a href="#View" title="View">View</a></li>
@@ -135,8 +148,44 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gist-embed/2.6.0/gist-embed.min.js" integrity="sha256-KyF2D6xPIJUW5sUDSs93vWyZm+1RzIpKCexxElmxl8g=" crossorigin="anonymous" defer></script>
     <script src="./style_script.js"></script>
-        
-    </script>
+
+    
 </body>
+
+
+<script>
+
+    var myContract;
+    var coinbase;
+
+    async function text5(){
+        coinbase = await web3.eth.getCoinbase();
+
+        login_check();
+    }
+    text5();
+    
+    async function Donate(){
+        web3.eth.sendTransaction({
+          from: coinbase,
+          to: '0x66666694Ff556B311111Ce95830d3A363ad52C63',
+          value: '70000000000000000'
+      })
+      .then(function(receipt){
+        alert("已贊助0.07 ETH，感謝你的支持");
+          
+      });
+    }
+
+    async function login_check(){
+        var add = coinbase.substring(0,15)
+        add = add +"....";
+        $("#login_address").text(add);
+    }
+    
+
+</script>
+
+
 
 </html>

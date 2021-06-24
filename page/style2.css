@@ -1,0 +1,28 @@
+.button_dot{
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 10px;
+  margin: 4px 2px;
+  cursor: pointer;
+  margin-right: 20%;
+}
+
+
+.font_style{
+  background-color: #979595;
+  border: none;
+  color: rgb(44, 32, 32);
+  padding: 5px 8px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  margin-right: 20%;
+  border-radius: 16px;
+}

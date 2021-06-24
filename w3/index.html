@@ -1,0 +1,644 @@
+﻿<!DOCTYPE html>
+<html lang="zh-TW">
+
+    <head>
+        <meta charset="utf-8">
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+     
+         <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.36/dist/web3.min.js" integrity="sha256-nWBTbvxhJgjslRyuAKJHK+XcZPlCnmIAAMixz6EefVk=" crossorigin="anonymous"></script>
+         <script src="https://widgets.coingecko.com/coingecko-coin-price-chart-widget.js"></script>
+         <!-- 上面為libary -->
+         <link href="reset.css" rel="stylesheet" type="text/css">
+         <link href="indexstyle.css" rel="stylesheet" type="text/css">
+         <link href="ability.css" rel="stylesheet" type="text/css">
+        
+         
+
+         <!-- 上面為CSS -->
+         <link rel="Shortcut Icon" type="image/x-icon" href="http://www.eraserknight.net/chers/sord.ico"></link>
+    </head>
+    
+    <body>
+      <div class = "tital"></div>
+        
+      
+         <div class="all">
+            <div class = "tital">
+                <div class="wapper">
+                   <a class="btn" herf="#" onclick="menu()"><span>Introduction</span></a>
+                </div>
+            </div>
+            <!-- 這是選單按鈕 -->
+            
+            <!-- 這是選單按鈕內容 -->
+            
+          
+             <div class="end_line">
+                    <div class="menu_inside">
+                            <ul class="drop-down-menu" onclick="businessCard()">
+                                    
+                                    <li><a href="#">聯絡我們</a>
+                                    </li>
+                                </ul>
+        
+                    </div>
+
+                    <div style="left:1%;top:1%;width:300px;height:60px;background-color: cornsilk;">
+                            <img style="left:5%;top:10%"width="250" height="50" onclick="scan()" src = "http://www.eraserknight.net/scan.png" alt = "Test Image"></img>
+                    </div>
+                    
+             </div>
+             
+         </div>
+
+         <div href="https://blockchain.storesocool.com/2018/12/14/如何安裝-metamask教學/" class="metamask" style="left:5%;top:25%;">
+                <img onclick="to()" width="250" height="120" src = "http://www.eraserknight.net/59.png" alt = "Test Image" />
+                <a style="text-decoration:none;margin-top: 15px;margin-left:-30px;color:rgb(168, 23, 197);" href="https://blockchain.storesocool.com/2018/12/14/如何安裝-metamask教學/" target="_blank" title="Wibibi 網頁設計教學百科"><ul>使用說明</ul></a>
+                
+         </div>
+        
+         <div class="frameBox">
+            <div class="Character">
+
+            <div class="allbox" style="margin-left:10%;top:5%;">
+                    <br>
+                    <div style="top:-5%;"class="ch_ID"><p style="color:rgb(255, 80, 75);font-size:20px;">ID:  </p><p style="color:rgb(255, 80, 75);font-size:20px;padding-left:30px;font-weight:bold; " id="Knight_ID"><span id="ID_s"></span></p></div>
+                    <div style="top:15%;" class="health">
+                        <a style="margin-left:-40px;color:black">生命</a>
+                        <div style="left:2%" class="health1"><a style="margin-left:25%;"><span style="left:5%;" id="Health_s"></span></a></div>
+                    </div>
+                    
+                    <div style="top:30%;" class="power">
+                        <a style="margin-left:-40px;color:black">力量</a>
+                        <div style="left:2%" class="power1"><a style="margin-left:50%;"><span id="Strong_s"></span></a></div>
+                    </div>
+                    
+                    <div class="fast">
+                        <a style="margin-left:-40px;color:black">速度</a>
+                        <div style="left:2%" class="fast1"><a style="margin-left:50%;"><span id="Speed_s"></span></a></div>
+                    </div>
+                    
+                    <div class="defense">
+                        <a style="margin-left:-40px;color:black">防禦</a>
+                        <div style="left:2%" class="defense1"><a style="margin-left:50%;"><span id="Defense_s"></span></a></div>    
+                    </div>
+                    
+                    
+                    <div class="EXP">
+                        <a style="margin-left:-40px;color:black">經驗</a>
+                        <div style="left:2%" class="EXP1"><a style="margin-left:50%;"><span id="Exp_s"></span></a></div>
+                    </div>
+                    <div class="level">
+                        <a style="margin-left:-40px;color:black">等級</a>
+                        <div style="left:2%" class="level1"><a style="margin-left:50%;"><span id="Lv_s"></span></a>
+                            <br>
+                            
+                        </div>
+                        
+                    </div>
+                    <p style="left:30%;margin-left:100px;top:83%;display: inline-block;">稀有度(Star): <span id="Star_s" class="starColor"></span></p>
+
+                    
+                    
+                </div>
+               <!-- 騎士內容放下面 -->
+
+               <div id="che" class="knightPng" style="left:25%;top:50%;">
+                  <img id="image" src = "http://www.eraserknight.net/chers/Gre.png" alt = "Test Image" />
+                  <img id="image2" src = "http://www.eraserknight.net/chers/Blu.png" alt = "Test Image" />
+                  <img id="image3" src = "http://www.eraserknight.net/chers/Org.png" alt = "Test Image" />
+                  <img id="image4" src = "http://www.eraserknight.net/chers/Pur.png" alt = "Test Image" />
+                  <img id="image5" src = "http://www.eraserknight.net/chers/Red.png" alt = "Test Image" />
+                  <img id="image6" src = "http://www.eraserknight.net/chers/Yel.png" alt = "Test Image" />
+               </div>
+              
+
+               <div style="top:80%;left:88%">
+                    <button onclick="createKnights()">建立人物</button>
+                    <br>
+                    
+                </div>
+
+
+                <div style="top:90%;left:5%">
+                        <button onclick="LevelUP()">騎士LvUP</button>
+                        <br>
+                        
+                </div>
+                
+
+                <div style="top:92%;left:86.5%;height:40px;width:50px;background-color: rgb(180, 50, 78); border: 2px solid black;">
+                    <p style="left:-700%;top:-15%;;color:blanchedalmond;font-size:25px;">擁有的騎士 ID :<span style="left:110%;color:blanchedalmond" id="Your_k"></span></p>
+                    <a style="left:15%;top:4%">0.05 ETH</a>
+                </div>
+            
+            </div>
+            
+            <div class="enter">
+               
+                    <p>角色ID: <button style="left:110%;" onclick="enter()">Search</button><input style="left:230%" id="knight_ID"></p>
+          
+                    <br>
+                    <br>
+                    <p style="font-size:16px;">你的地址:<span style="display:inline;font-size:16px;" id="Account_ID" ></span></p>
+                    <br>
+                    <br>
+                    <p style="font-size:16px;">合約地址:<span style="display:inline;font-size:16px;" onclick="gotoContract()">0x1DdA3267112Ce6923ad0f88a91363AC6cF414874</span></p>
+                    <br>
+                    
+                    <!-- <p style="display:inline;">合約內金額 : <span style="display:inline;" id="contract_s"></span></p> -->
+                    
+                    <br>
+                    
+                    
+                            
+                            
+                 
+                   
+                    
+            </div>
+
+            <div class="frame3">
+                <div style="left:90%;top:90%">
+                    <button onclick="Donate()">捐款</button>
+                </div>
+                <div class="Knight_cot">
+                    <p style="font-size: 20px;left:20%">騎士總量</p>
+                    <p style="font-size: 80px;left:30%;top:-15%"><span id="knight_count"></span></p>
+                </div>
+
+                <div style="height:30%; width:80%;top:8%;left:10%;background-color:cadetblue;border:3px solid rgb(29, 29, 29);">
+                    <p style="left:30%;font-size: 30px;top:-10%">交易角色</p>
+
+                   
+                        <p style="top:25%;left:2%">獲取角色玩家: <input style="margin-left:8px;width:250px;" id="Input_address"></p>
+                   
+                        <p style="top:42%;left:2%">輸入獲取角色ID:<input style="margin-left:8px;width:80px;" id="Input_ID"></p>
+                        <button style="left:40%;top:75%;" onclick="transferKnight()">送出</button>
+                    
+                </div>
+
+                <div>
+                    <a id="ETH_cost"></a>
+                </div>
+            </div>
+        
+       </div>  
+
+         <div class="end_line"></div>
+
+         <div class="playerS">
+             <div class="playerN">
+                 <a style="left:15%;top:30%;font-size:20px;">角色ID對應遊戲玩家</a>
+            </div>
+
+            <div class="owinerlist" style="top:10%;left:5%" >
+                                    
+                <div id="ffkoe" style="color:#2A7F9C;font-size:14px"></div>
+
+            </div>
+        </div>
+         
+     </div>
+<!-- -------------------------分隔-------------------------- -->
+
+        
+
+
+        
+
+
+        <div class="Eraser">
+            <h1 style="left:40%;top:20%;">EraserKnight</h1>
+            <br>
+            <br>
+            <br>
+            <br>
+            <h2 style="left:40%;top:105%;">擦子騎士</h1>
+          </div>
+          <br>
+          <br>
+          
+          <div class="Eraser1" style="left:40%;display:inline;">
+            <!-- <h3 style="font-size:20px;display:inline;">擦子騎士</h3> -->
+            <br>
+            
+          </div>
+    
+  
+    
+    </body>
+    <script>
+       function menu(){
+           
+            location.href = "http://127.0.0.1:8887/howto.html";
+        }
+        function businessCard(){
+            location.href = "http://127.0.0.1:8887/%E5%90%8D%E7%89%87.html";
+
+        }
+        function to(){
+
+            location.href="https://blockchain.storesocool.com/2018/12/14/如何安裝-metamask教學/";
+
+        }
+        function scan(){
+            location.href="https://etherscan.io/";
+        }
+        
+
+
+// ----------------------Solidity 開始線-------------------------------
+        if (typeof web3 !== 'undefined') {
+		  web3 = new Web3(web3.currentProvider);
+          $("#Account_D").text("請使用MetaMask登入");
+          //alert("請使用MetaMask登入");
+          
+		} else {
+		  // 確認是否使用metamask地址
+		  web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
+          
+		}
+
+
+     
+    </script>
+
+    <style>
+        /* img {
+        
+        height: auto;
+        width: 80%;
+        }  */
+
+        .status{
+            height:15%;
+            width:36%;
+            top:25%;
+            left:34%;
+            border:2px solid rgb(35, 28, 75);
+            background-color: rgb(68, 68, 68);
+
+        }
+        .statusA{
+            height:60%;
+            width:30%;
+            top:0%;
+            left:0%;
+            
+            background-color: rgb(133, 133, 133);
+        }
+        .statusL{
+            top:30%;
+            left:20%;
+            font-size: 25px;
+        }
+        .statusB{
+            left:32%;
+            top:25%;
+            font-size: 20px;
+            
+        }
+
+        .statusC{
+            height:40%;
+            width:100%;
+            top:60%;
+            
+            background-color: rgb(29, 29, 29);
+        }
+
+        #Account_balance{
+            font-size: 30px;
+            top:18%;
+            
+            color: rgb(189, 188, 188);
+        }
+        .statusM{
+            font-size: 30px;
+            top:18%;
+            left:5%;
+            color: rgb(189, 188, 188);
+        }
+        #Account_D{
+            top:35%;
+            left:20%;
+        }
+
+        .ch-data{
+            top:40%;
+            left:34%;
+            height:40%;
+            width:18%;
+            background-color: rgb(20, 60, 139);
+            border:4px solid rgb(29, 29, 29);
+        }
+        .boss-vs{
+            top:40%;
+            left:52%;
+            height:40%;
+            width:18%;
+            background-color: rgb(139, 20, 56);
+            border:4px solid rgb(29, 29, 29);
+        }
+        .enter{
+            height:20%;
+            width:49.2%;
+            left:51%;
+            background-color: crimson;
+            border:4px solid rgb(29, 29, 29);
+        }
+        .frame3{
+            top:18%;
+            left:51%;
+            height:82.5%;
+            width:49.2%;
+            background-color: rgb(84, 56, 149);
+            border:4px solid rgb(29, 29, 29);
+        }
+
+        .starColor{
+            content:'★';
+            display:inline-block;
+            color:#cea608;
+            position:absolute;
+           
+
+        }
+
+        .Knight_cot{
+            top:70%;
+            left:0%;
+            height:30%;
+            width:35%;
+            background-color: rgb(219, 32, 104);
+            border:4px solid rgb(29, 29, 29);
+
+        }
+
+        .your_kinght{
+            top:93%;
+            left:0%;
+            height:16%;
+            width:30%;
+           
+        }
+        .playerS{
+            top:18%;
+            left:76%;
+            height:75%;
+            width:20%;
+            background-color:rgb(215, 250, 205);;
+            border:4px solid rgb(29, 29, 29);
+
+        }
+
+        .playerN{
+            top:0%;
+            left:0%;
+            height:12%;
+            width:100%;
+            background-color:rgb(86, 201, 185);;
+            /* border:2px solid rgb(29, 29, 29); */
+        }
+    </style>
+
+    <script>
+        //以下是智能合約
+        var myContract;
+        var coinbase;
+
+		async function text5(){
+            coinbase = await web3.eth.getCoinbase();
+            $("#Account_ID").text(coinbase);
+
+			var contract_address = "0x1DdA3267112Ce6923ad0f88a91363AC6cF414874";//合約位置
+            var contract_abi = [{"constant":false,"inputs":[{"name":"_to","type":"address"},{"name":"_tokenId","type":"uint256"}],"name":"approve","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"_owner","type":"address"}],"name":"getKnightByOwner","outputs":[{"name":"","type":"uint256[]"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[],"name":"createKnights","outputs":[],"payable":true,"stateMutability":"payable","type":"function"},{"constant":true,"inputs":[{"name":"_tokenId","type":"uint256"}],"name":"seeLV","outputs":[{"name":"Lv","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"KingLv","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"_tokenId","type":"uint256"}],"name":"seeHealth","outputs":[{"name":"Health","type":"uint16"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"getKnight","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"_tokenId","type":"uint256"}],"name":"seeStar","outputs":[{"name":"Star","type":"uint16"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"_tokenId","type":"uint256"}],"name":"seeExp","outputs":[{"name":"Exp","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"KingID","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"_tokenId","type":"uint256"}],"name":"ownerOf","outputs":[{"name":"_owner","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"player","type":"uint256"}],"name":"LevelUp","outputs":[],"payable":true,"stateMutability":"payable","type":"function"},{"constant":true,"inputs":[{"name":"_owner","type":"address"}],"name":"balanceOf","outputs":[{"name":"_balance","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"_tokenId","type":"uint256"}],"name":"seeStrong","outputs":[{"name":"Strong","type":"uint16"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[],"name":"withdrawEther","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"Challenger","type":"uint256"}],"name":"ChallengeKing","outputs":[],"payable":true,"stateMutability":"payable","type":"function"},{"constant":true,"inputs":[],"name":"KingHE","outputs":[{"name":"","type":"uint16"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"KingDE","outputs":[{"name":"","type":"uint16"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"KingSp","outputs":[{"name":"","type":"uint16"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"","type":"uint256"}],"name":"knights","outputs":[{"name":"Star","type":"uint16"},{"name":"Health","type":"uint16"},{"name":"Strong","type":"uint16"},{"name":"Speed","type":"uint16"},{"name":"Defense","type":"uint16"},{"name":"Lv","type":"uint256"},{"name":"Exp","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_to","type":"address"},{"name":"_tokenId","type":"uint256"}],"name":"transfer","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"_tokenId","type":"uint256"}],"name":"takeOwnership","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"theKing","outputs":[{"name":"AD","type":"address"},{"name":"ID","type":"uint256"},{"name":"Lv","type":"uint256"},{"name":"HE","type":"uint16"},{"name":"ST","type":"uint16"},{"name":"DE","type":"uint16"},{"name":"SP","type":"uint16"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"","type":"uint256"}],"name":"KnightToOwner","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"KingST","outputs":[{"name":"","type":"uint16"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"_tokenId","type":"uint256"}],"name":"seeDefense","outputs":[{"name":"Defense","type":"uint16"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"_tokenId","type":"uint256[]"},{"name":"owner","type":"address"}],"name":"checkAllOwner","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"_tokenId","type":"uint256"}],"name":"seeSpeed","outputs":[{"name":"Speed","type":"uint16"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"newOwner","type":"address"}],"name":"transferOwnership","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"KingAddress","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"anonymous":false,"inputs":[{"indexed":false,"name":"_tokenId","type":"uint256"},{"indexed":false,"name":"LV","type":"uint256"},{"indexed":false,"name":"Health","type":"uint16"},{"indexed":false,"name":"Strong","type":"uint16"},{"indexed":false,"name":"Speed","type":"uint16"},{"indexed":false,"name":"Defense","type":"uint16"}],"name":"Challenge","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"name":"","type":"string"},{"indexed":false,"name":"health","type":"uint16"}],"name":"RemainHealth","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"name":"","type":"address"},{"indexed":false,"name":"","type":"uint256"},{"indexed":false,"name":"ID","type":"uint256"}],"name":"NewKing","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"name":"win","type":"string"}],"name":"Winner","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"name":"_from","type":"address"},{"indexed":false,"name":"_to","type":"address"},{"indexed":false,"name":"_tokenId","type":"uint256"}],"name":"Transfer","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"name":"_from","type":"address"},{"indexed":false,"name":"_to","type":"address"},{"indexed":false,"name":"_tokenId","type":"uint256"}],"name":"Approval","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"name":"_to","type":"address"},{"indexed":false,"name":"_from","type":"address"},{"indexed":false,"name":"_tokenId","type":"uint256"}],"name":"Take","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"name":"_tokenId","type":"uint256"},{"indexed":false,"name":"Star","type":"uint16"},{"indexed":false,"name":"Health","type":"uint16"},{"indexed":false,"name":"Strong","type":"uint16"},{"indexed":false,"name":"Speed","type":"uint16"},{"indexed":false,"name":"Defense","type":"uint16"},{"indexed":false,"name":"Lv","type":"uint256"},{"indexed":false,"name":"Exp","type":"uint256"}],"name":"Create","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"previousOwner","type":"address"},{"indexed":true,"name":"newOwner","type":"address"}],"name":"OwnershipTransferred","type":"event"}];
+            myContract = new web3.eth.Contract(contract_abi, contract_address);
+			// var balance_contract = await web3.eth.getBalance(contract_address);//調用合約金額
+			// $("#contract_s").text(" "+web3.utils.fromWei(balance_contract));
+			//$("#test1").text(" "+contract_address);
+
+            var contract_balance = await myContract.methods.getKnight().call({from: coinbase});
+            $("#knight_count").text(contract_balance);//取得騎士總數量
+            var countKnightGo = contract_balance;
+
+            var contract_balance = await myContract.methods.getKnightByOwner(coinbase).call({from: coinbase});
+            $("#Your_k").text(" "+contract_balance);  //你擁有的騎士ID
+
+            for(var i=0;i<countKnightGo;i++){//產生遊戲玩家對照ID
+              var Owner_balance = await myContract.methods.ownerOf(i).call({from: coinbase});
+            
+              var para = document.createElement("p");
+
+              var node = document.createTextNode(".  ID "+i+" : "+Owner_balance);
+              //var mybr = document.createElement('br');
+              
+              para.appendChild(node);
+              var element = document.getElementById("ffkoe");
+              var mybr = document.createElement('br');
+              var mybr1 = document.createElement('br');
+              element.appendChild(mybr);
+              
+              element.appendChild(mybr1);
+
+              element.appendChild(para);
+          }
+            
+		}
+
+		text5();
+
+        function picture(){
+            $("#image").hide();
+            $("#image2").hide();
+            $("#image3").hide();
+            $("#image4").hide();
+            $("#image5").hide();
+            $("#image6").hide();
+        }
+        picture();
+
+        var ablit = 0;
+        async function enter(){
+        
+         
+         var cot;
+         var elem; 
+
+         var as = document.getElementById("knight_ID").value;
+            $("#ID_s").text(as);
+
+
+        var contract_balance = await myContract.methods.seeHealth(as).call({from: coinbase});//調用生命
+            $("#Health_s").text(" "+contract_balance);
+            cot = healthCot(parseInt(contract_balance),5);
+            elem = document.getElementsByClassName("health");   
+            elem[0].style.width = cot+"px";
+
+
+         var contract_balance = await myContract.methods.seeStrong(as).call({from: coinbase});
+            $("#Strong_s").text(" "+contract_balance);
+            cot = cots(parseInt(contract_balance),30);
+            elem = document.getElementsByClassName("power");   
+            elem[0].style.width = cot+"px";
+
+         var contract_balance = await myContract.methods.seeSpeed(as).call({from: coinbase});
+            $("#Speed_s").text(" "+contract_balance);
+            cot = cots(parseInt(contract_balance),30);
+            elem = document.getElementsByClassName("fast");   
+            elem[0].style.width = cot+"px";
+
+         var contract_balance = await myContract.methods.seeDefense(as).call({from: coinbase});
+            $("#Defense_s").text(" "+contract_balance);
+            cot = cots(parseInt(contract_balance),30);
+            elem = document.getElementsByClassName("defense");   
+            elem[0].style.width = cot+"px";
+
+        var contract_balance = await myContract.methods.seeExp(as).call({from: coinbase});
+            $("#Exp_s").text(" "+contract_balance);
+            cot = cots(parseInt(contract_balance),30);
+            elem = document.getElementsByClassName("EXP");   
+            elem[0].style.width = cot+"px";
+
+        var contract_balance = await myContract.methods.seeLV(as).call({from: coinbase});
+            $("#Lv_s").text(" "+contract_balance);
+            cot = cots(parseInt(contract_balance),30);
+            elem = document.getElementsByClassName("level");   
+            elem[0].style.width = cot+"px";
+
+
+        var contract_balance = await myContract.methods.seeStar(as).call({from: coinbase});
+              var textS="";
+                for(var i=0;i<contract_balance;i++){
+                  textS=textS+"★";
+                }
+                $("#Star_s").text(textS);
+        
+        if(as%6==0){
+            $("#image2").hide();
+            $("#image3").hide();
+            $("#image4").hide();
+            $("#image5").hide();
+            $("#image6").hide();
+            $("#image").show();          
+        }else if(as%6==1){  
+            $("#image2").show();
+            $("#image3").hide();
+            $("#image4").hide();
+            $("#image5").hide();
+            $("#image6").hide();
+            $("#image").hide();
+        }else if(as%6==2){
+            $("#image2").hide();
+            $("#image3").show();
+            $("#image4").hide();
+            $("#image5").hide();
+            $("#image6").hide();
+            $("#image").hide();
+            
+        }else if(as%6==3){
+            $("#image2").hide();
+            $("#image3").hide();
+            $("#image4").show();
+            $("#image5").hide();
+            $("#image6").hide();
+            $("#image").hide();
+        }else if(as%6==4){
+            $("#image2").hide();
+            $("#image3").hide();
+            $("#image4").hide();
+            $("#image5").show();
+            $("#image6").hide();
+            $("#image").hide();
+        }else if(as%6==5){
+            $("#image2").hide();
+            $("#image3").hide();
+            $("#image4").hide();
+            $("#image5").hide();
+            $("#image6").show();
+            $("#image").hide();
+        }
+
+        ablit = as;
+         
+       }
+
+       function cots(a,b){
+        return (a*2.5) + b;
+
+       }
+       function healthCot(a,b){
+        return a*1.5+b;
+       }
+
+       async function createKnights(){
+           
+            myContract.methods.createKnights().send({from: coinbase ,value:"50000000000000000"})
+			        .then(function(receipt){
+
+              alert("交易成功，你已經擁有自己的騎士了");
+			        location.reload();
+                    window.location.reload();//畫面重新整理
+			      });
+            
+            
+
+
+        }
+
+        async function LevelUP(){//騎士等級提升
+            myContract.methods.LevelUp(ablit).send({from: coinbase ,value:"20000000000000000"})
+			        .then(function(receipt){
+
+              alert("交易成功，妳的騎士增加了 2 exp");
+			        location.reload();
+                    window.location.reload();//畫面重新整理
+			      });
+
+        }
+        
+        async function Donate(){
+            web3.eth.sendTransaction({
+              from: coinbase,
+              to: '0xda452be86171874a4c4E8a00C7Bba0E22406b547',
+              value: '70000000000000000'
+          })
+          .then(function(receipt){
+            alert("已贊助0.07 ETH，感謝你的支持");
+              
+          });
+        }
+
+        function gotoContract(){
+            window.open("https://rinkeby.etherscan.io/address/0x1dda3267112ce6923ad0f88a91363ac6cf414874");
+        }
+    
+        // function getEther(){
+        //  var EthApi = 'https://api.binance.com/api/v3/avgPrice?symbol=ETHUSDT';
+        //  EthObj = JSON.parse(EthApi);
+        //  $("#ETH_cost").text(EthObj.price);
+        //  }
+        //  getEther();
+    // request.open('GET', requestURL);
+
+        async function transferKnight(){
+            var address_new = document.getElementById("Input_address").value;
+            var ID_new = document.getElementById("Input_ID").value;
+
+
+            myContract.methods.transfer(address_new,ID_new).send({from: coinbase ,value:"0"})
+			        .then(function(receipt){
+
+              alert("交易成功，騎士"+ID_new+"已轉移到"+address_new);
+			        location.reload();
+                    
+			      });
+
+        }
+    
+    </script>
+
+    
+    
+    </html>
