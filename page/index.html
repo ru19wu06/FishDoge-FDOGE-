@@ -43,8 +43,6 @@
 
         //let web3 = new Web3("wss://mainnet.infura.io/ws/v3/094050d79dc24c87b21f1ab21c343597");
         var coinbase;//設定帳戶
-       
-
         if (typeof web3 !== 'undefined') {
 		  web3 = new Web3(web3.currentProvider);
           
@@ -52,9 +50,10 @@
           
 		} else {
 		  // 確認是否使用metamask地址
-		  web3 = new Web3("wss://mainnet.infura.io/ws/v3/094050d79dc24c87b21f1ab21c343597");
+		  web3 = new Web3("wss://mainnet.infura.io/ws/v3/b728a5b97fb74e7fb413a930f3b69e06");
          
 		}
+
 
     </script>
     <div id="doc" class="markdown-body container-fluid comment-enabled" data-hard-breaks="true"><h1 id="The-FishDoge-Coin" data-id="The-FishDoge-Coin"><a class="anchor hidden-xs" href="#The-FishDoge-Coin" title="The-FishDoge-Coin"><span class="octicon octicon-link"></span></a><span>The FishDoge Coin</span></h1><p><span>This is the project of FishDoge(FDOGE) on BSC(Binance smart chain)</span></p><p><img src="https://raw.githubusercontent.com/ru19wu06/FishDoge_FDOGE/main/1_dG0vuMrsz3GOfU1FgCmeNQ.jpeg" alt="image"></p><br><h2 id="Introduction-介紹" data-id="Introduction-介紹"><a class="anchor hidden-xs" href="#Introduction-介紹" title="Introduction-介紹"><span class="octicon octicon-link"></span></a><span>Introduction 介紹</span></h2><ul>
@@ -94,9 +93,11 @@
     <br>
     <br>
     <button class="button_dot" onclick="Donate()">贊助團隊</button>
-    <h1>FDOGE 目前用途</h1>
+    <h1>FDOGE 用途</h1>
 
     <h3 style="border-color:#aaaaee;border-style:solid;border-width:3px;padding:5px;"><span>FishDoge coin 可以用以做為 Load of Hugo 團隊的顧問費，每一千萬顆可以諮詢一小時</span></h3>
+    <button class="button_dot" onclick="ConnectToTeam()">聯絡團隊</button>
+
 
 
 </p>
@@ -201,6 +202,10 @@
         $("#FDOGE_value").text(address_balance);
         $("#FDOGE_style").css("background-color: #bfc396");
 
+    }
+
+    function ConnectToTeam(){
+        window.open('https://www.facebook.com/profile.php?id=100000515290844');
     }
 
 
