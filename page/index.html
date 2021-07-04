@@ -7,8 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.36/dist/web3.min.js" integrity="sha256-nWBTbvxhJgjslRyuAKJHK+XcZPlCnmIAAMixz6EefVk=" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.36/dist/web3.min.js"
+        integrity="sha256-nWBTbvxhJgjslRyuAKJHK+XcZPlCnmIAAMixz6EefVk=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="mobile-web-app-capable" content="yes">
 
@@ -18,16 +20,22 @@
     <!-- <link rel="icon" type="image/png" href="https://hackmd.io/favicon.png">
     <link rel="apple-touch-icon" href="https://hackmd.io/apple-touch-icon.png"> -->
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css" integrity="sha256-3iu9jgsy9TpTwXKb7bNQzqWekRX7pPK+2OLj3R922fo=" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/3.5.0/octicons.min.css" integrity="sha256-QiWfLIsCT02Sdwkogf6YMiQlj4NE84MKkzEMkZnMGdg=" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/themes/prism.min.css" integrity="sha256-vtR0hSWRc3Tb26iuN2oZHt3KRUomwTufNIf5/4oeCyg=" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/css/basic/emojify.min.css" integrity="sha256-UOrvMOsSDSrW6szVLe8ZDZezBxh5IoIfgTwdNDgTjiU=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css"
+        integrity="sha256-3iu9jgsy9TpTwXKb7bNQzqWekRX7pPK+2OLj3R922fo=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/3.5.0/octicons.min.css"
+        integrity="sha256-QiWfLIsCT02Sdwkogf6YMiQlj4NE84MKkzEMkZnMGdg=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/themes/prism.min.css"
+        integrity="sha256-vtR0hSWRc3Tb26iuN2oZHt3KRUomwTufNIf5/4oeCyg=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/css/basic/emojify.min.css"
+        integrity="sha256-UOrvMOsSDSrW6szVLe8ZDZezBxh5IoIfgTwdNDgTjiU=" crossorigin="anonymous" />
     <link href='./style.css' rel='stylesheet' type='text/css'>
     <link href='./style2.css' rel='stylesheet' type='text/css'>
-    
-    
+
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -39,177 +47,308 @@
 
 <body>
     <script>
-         
+
 
         //let web3 = new Web3("wss://mainnet.infura.io/ws/v3/094050d79dc24c87b21f1ab21c343597");
         var coinbase;//設定帳戶
         if (typeof web3 !== 'undefined') {
-		  web3 = new Web3(web3.currentProvider);
-          
-          //alert("請使用MetaMask登入");
-          
-		} else {
-		  // 確認是否使用metamask地址
-		  web3 = new Web3("wss://mainnet.infura.io/ws/v3/b728a5b97fb74e7fb413a930f3b69e06");
-         
-		}
+            web3 = new Web3(web3.currentProvider);
+
+            //alert("請使用MetaMask登入");
+
+        } else {
+            // 確認是否使用metamask地址
+            web3 = new Web3("wss://mainnet.infura.io/ws/v3/b728a5b97fb74e7fb413a930f3b69e06");
+
+        }
 
 
     </script>
-    <div id="doc" class="markdown-body container-fluid comment-enabled" data-hard-breaks="true"><h1 id="The-FishDoge-Coin" data-id="The-FishDoge-Coin"><a class="anchor hidden-xs" href="#The-FishDoge-Coin" title="The-FishDoge-Coin"><span class="octicon octicon-link"></span></a><span>The FishDoge Coin</span></h1><p><span>This is the project of FishDoge(FDOGE) on BSC(Binance smart chain)</span></p><p><img src="https://raw.githubusercontent.com/ru19wu06/FishDoge_FDOGE/main/1_dG0vuMrsz3GOfU1FgCmeNQ.jpeg" alt="image"></p><br><h2 id="Introduction-介紹" data-id="Introduction-介紹"><a class="anchor hidden-xs" href="#Introduction-介紹" title="Introduction-介紹"><span class="octicon octicon-link"></span></a><span>Introduction 介紹</span></h2><ul>
-<li><span>Full name 全名 : Fish Doge coin</span></li>
-<li><span>Codename 代號 : FDOGE</span></li>
-<li><span>Total Yield 總產量 : 200000000000 兩千億</span></li>
-<li><span>Block-chain : BSC (Binance smart chain)</span></li>
-<li><span>Contract Address : 0x361d8552d7db423ec0cb097a5911fe453d205374</span></li>
-<li><span>Owner Address 持有人 : 0x66666694Ff556B311111Ce95830d3A363ad52C63</span></li>
-<li><span>Team 開發團隊 : Lord of Hugo</span></li>
-<li><span>Manager : Aaron</span></li>
-<li><span>交易平台 : <a href="https://exchange.pancakeswap.finance/#/swap?outputCurrency=0x361d8552d7db423ec0cb097a5911fe453d205374">Pancake V2 BNB-FDOGE USDT-BNB</a></span></li>
-<li><span>價格觀測平台 : <a href="https://dex.guru/token/0x361d8552d7db423ec0cb097a5911fe453d205374-bsc">Guru DEX</a></span></li>
+    <div id="doc" class="markdown-body container-fluid comment-enabled" data-hard-breaks="true">
+        <h1 id="The-FishDoge-Coin" data-id="The-FishDoge-Coin"><a class="anchor hidden-xs" href="#The-FishDoge-Coin"
+                title="The-FishDoge-Coin"><span class="octicon octicon-link"></span></a><span>The FishDoge Coin</span>
+        </h1>
+        <p><span>This is the project of FishDoge(FDOGE) on BSC(Binance smart chain)</span></p>
+        <p><img src="https://raw.githubusercontent.com/ru19wu06/FishDoge_FDOGE/main/1_dG0vuMrsz3GOfU1FgCmeNQ.jpeg"
+                alt="image"></p><br>
+        <h2 id="Introduction-介紹" data-id="Introduction-介紹"><a class="anchor hidden-xs" href="#Introduction-介紹"
+                title="Introduction-介紹"><span class="octicon octicon-link"></span></a><span>Introduction 介紹</span></h2>
+        <ul>
+            <li><span>Full name 全名 : Fish Doge coin</span></li>
+            <li><span>Codename 代號 : FDOGE</span></li>
+            <li><span>Total Yield 總產量 : 200000000000 兩千億</span></li>
+            <li><span>Block-chain : BSC (Binance smart chain)</span></li>
+            <li><span>Contract Address : 0x361d8552d7db423ec0cb097a5911fe453d205374</span></li>
+            <li><span>Owner Address 持有人 : 0x66666694Ff556B311111Ce95830d3A363ad52C63</span></li>
+            <li><span>Team 開發團隊 : Lord of Hugo</span></li>
+            <li><span>Manager : Aaron</span></li>
+            <li><span>交易平台 : <a
+                        href="https://exchange.pancakeswap.finance/#/swap?outputCurrency=0x361d8552d7db423ec0cb097a5911fe453d205374">Pancake
+                        V2 BNB-FDOGE USDT-BNB</a></span></li>
+            <li><span>價格觀測平台 : <a href="https://dex.guru/token/0x361d8552d7db423ec0cb097a5911fe453d205374-bsc">Guru
+                        DEX</a></span></li>
 
-<br/>
+            <br />
 
-</ul><h2 id="View" data-id="View"><a class="anchor hidden-xs" href="#View" title="View"><span class="octicon octicon-link"></span></a><span>View</span></h2><ul>
-<li><span>BSC : </span><a href="https://bscscan.com/token/0x361d8552d7db423ec0cb097a5911fe453d205374" target="_blank" rel="noopener"><span>0x00A91642Acf51E1562ad97724BAF64458BF20bc2</span></a></li>
-<li><span>Price 價格 : </span><a href="https://poocoin.app/tokens/0x361d8552d7db423ec0cb097a5911fe453d205374" target="_blank" rel="noopener"><span>Poocoin</span></a></li>
-<li><span>Webpage : not yet</span></li>
-<li><span>BSC : </span><a href="https://davidcolor153.medium.com/%E9%AD%9A%E7%8B%97%E5%B9%A3%E6%93%8D%E4%BD%9C%E6%95%99%E5%AD%B8-da418cccda6a" target="_blank" rel="noopener"><span>操作教學</span></a></li>
-</ul><br><h2 id="Purpose-目標" data-id="Purpose-目標"><a class="anchor hidden-xs" href="#Purpose-目標" title="Purpose-目標"><span class="octicon octicon-link"></span></a><span>Purpose 目標</span></h2><h3 id="目標一" data-id="目標一"><a class="anchor hidden-xs" href="#目標一" title="目標一"><span class="octicon octicon-link"></span></a><span>目標一</span></h3><ul>
-<li><span>讓人了解到發行數位貨幣是多麼的容易，而自己所持有的資產多沒有價值，遠離數位貨幣騙局，讓FishDoge coin 成為一種警惕。</span></li>
-</ul><p><em><span>Let the user to understand that Cryptocurrency is easy to create just like FDOGE.</span></em></p><br><h3 id="目標二" data-id="目標二"><a class="anchor hidden-xs" href="#目標二" title="目標二"><span class="octicon octicon-link"></span></a><span>目標二</span></h3><ul>
-<li><span>讓一些沒有接觸過區塊鏈的用戶可以有動機去了解區塊鏈的運作，並自己手動操作而不透過交易所</span></li>
-</ul><p><em><span>Let the user who is new with BlockChain can understand how Crypto works.</span></em></p><br><h3 id="目標三" data-id="目標三"><a class="anchor hidden-xs" href="#目標三" title="目標三"><span class="octicon octicon-link"></span></a><span>目標三</span></h3><ul>
-<li><span>讓FishDoge Coin可以變成大家開心持有，當作玩具交易的媒介。</span></li>
-</ul><p><em><span>Hold fishDoge coin and have fun with it.</span></em></p><br>
+        </ul>
+        <h2 id="View" data-id="View"><a class="anchor hidden-xs" href="#View" title="View"><span
+                    class="octicon octicon-link"></span></a><span>View</span></h2>
+        <ul>
+            <li><span>BSC : </span><a href="https://bscscan.com/token/0x361d8552d7db423ec0cb097a5911fe453d205374"
+                    target="_blank" rel="noopener"><span>0x00A91642Acf51E1562ad97724BAF64458BF20bc2</span></a></li>
+            <li><span>Price 價格 : </span><a href="https://poocoin.app/tokens/0x361d8552d7db423ec0cb097a5911fe453d205374"
+                    target="_blank" rel="noopener"><span>Poocoin</span></a></li>
+            <li><span>Webpage : not yet</span></li>
+            <li><span>BSC : </span><a
+                    href="https://davidcolor153.medium.com/%E9%AD%9A%E7%8B%97%E5%B9%A3%E6%93%8D%E4%BD%9C%E6%95%99%E5%AD%B8-da418cccda6a"
+                    target="_blank" rel="noopener"><span>操作教學</span></a></li>
+        </ul><br>
+        <h2 id="Purpose-目標" data-id="Purpose-目標"><a class="anchor hidden-xs" href="#Purpose-目標" title="Purpose-目標"><span
+                    class="octicon octicon-link"></span></a><span>Purpose 目標</span></h2>
+        <h3 id="目標一" data-id="目標一"><a class="anchor hidden-xs" href="#目標一" title="目標一"><span
+                    class="octicon octicon-link"></span></a><span>目標一</span></h3>
+        <ul>
+            <li><span>讓人了解到發行數位貨幣是多麼的容易，而自己所持有的資產多沒有價值，遠離數位貨幣騙局，讓FishDoge coin 成為一種警惕。</span></li>
+        </ul>
+        <p><em><span>Let the user to understand that Cryptocurrency is easy to create just like FDOGE.</span></em></p>
+        <br>
+        <h3 id="目標二" data-id="目標二"><a class="anchor hidden-xs" href="#目標二" title="目標二"><span
+                    class="octicon octicon-link"></span></a><span>目標二</span></h3>
+        <ul>
+            <li><span>讓一些沒有接觸過區塊鏈的用戶可以有動機去了解區塊鏈的運作，並自己手動操作而不透過交易所</span></li>
+        </ul>
+        <p><em><span>Let the user who is new with BlockChain can understand how Crypto works.</span></em></p><br>
+        <h3 id="目標三" data-id="目標三"><a class="anchor hidden-xs" href="#目標三" title="目標三"><span
+                    class="octicon octicon-link"></span></a><span>目標三</span></h3>
+        <ul>
+            <li><span>讓FishDoge Coin可以變成大家開心持有，當作玩具交易的媒介。</span></li>
+        </ul>
+        <p><em><span>Hold fishDoge coin and have fun with it.</span></em></p><br>
 
 
 
-<h2 id="開發團隊-Load-of-Hugo" data-id="開發團隊-Load-of-Hugo"><a class="anchor hidden-xs" href="#開發團隊-Load-of-Hugo" title="開發團隊-Load-of-Hugo"><span class="octicon octicon-link"></span></a><span>開發團隊 Load of Hugo</span></h2>
-<p>
-    <span>這是一個由幾個社會新鮮人自發性組成的團隊，專門做一些有趣的事情</span><br>
-    <span>有五年投資Crypto經驗，參與過 Cypherpunks文章撰寫&翻譯，FZTH-區塊鏈媒體合作作家</span><br>
-    <span>也接智能合約撰寫委託</span>
-    <br>
-    <br>
-    <button class="button_dot" onclick="Donate()">贊助團隊</button>
-    <h1>FDOGE 用途</h1>
+        <h2 id="開發團隊-Load-of-Hugo" data-id="開發團隊-Load-of-Hugo"><a class="anchor hidden-xs" href="#開發團隊-Load-of-Hugo"
+                title="開發團隊-Load-of-Hugo"><span class="octicon octicon-link"></span></a><span>開發團隊 Load of Hugo</span>
+        </h2>
+        <p>
+            <span>這是一個由幾個社會新鮮人自發性組成的團隊，專門做一些有趣的事情</span><br>
+            <span>有五年投資Crypto經驗，參與過 Cypherpunks文章撰寫&翻譯，FZTH-區塊鏈媒體合作作家</span><br>
+            <span>也接智能合約撰寫委託</span>
+            <br>
+            <br>
+            <button class="button_dot" onclick="Donate()">贊助團隊</button>
+        <h1>FDOGE 用途</h1>
 
-    <h3 style="border-color:#aaaaee;border-style:solid;border-width:3px;padding:5px;"><span>FishDoge coin 可以用以做為 Load of Hugo 團隊的顧問費，每一千萬顆可以諮詢一小時</span></h3>
-    <button class="button_dot" onclick="ConnectToTeam()">聯絡團隊</button>
+        <h3 style="border-color:#aaaaee;border-style:solid;border-width:3px;padding:5px;"><span>FishDoge coin 可以用以做為
+                Load of Hugo 團隊的顧問費，每一千萬顆可以諮詢一小時</span></h3>
+        <button class="button_dot" onclick="ConnectToTeam()">聯絡團隊</button>
 
 
 
-</p>
-</div>
+        </p>
+    </div>
     <div class="ui-toc dropup unselectable hidden-print" style="display:none;">
         <div class="pull-right dropdown">
-            <a id="tocLabel" class="ui-toc-label btn btn-default" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" title="Table of content">
+            <a id="tocLabel" class="ui-toc-label btn btn-default" data-toggle="dropdown" href="#" role="button"
+                aria-haspopup="true" aria-expanded="false" title="Table of content">
                 <i class="fa fa-bars"></i>
             </a>
             <ul id="ui-toc" class="ui-toc-dropdown dropdown-menu" aria-labelledby="tocLabel">
-                <div class="toc"><ul class="nav">
-<li class=""><a href="#The-FishDoge-Coin" title="The FishDoge Coin">The FishDoge Coin</a><ul class="nav">
-<li><a href="#Introduction-介紹" title="Introduction 介紹">Introduction 介紹</a></li>
-<li class=""><a href="#View" title="View">View</a></li>
-<li><a href="#Purpose-目標" title="Purpose 目標">Purpose 目標</a><ul class="nav">
-<li><a href="#目標一" title="目標一">目標一</a></li>
-<li><a href="#目標二" title="目標二">目標二</a></li>
-<li><a href="#目標三" title="目標三">目標三</a></li>
-</ul>
-</li>
-<li><a href="#開發團隊-Load-of-Hugo" title="開發團隊 Load of Hugo">開發團隊 Load of Hugo</a></li>
-</ul>
-</li>
-</ul>
-</div><div class="toc-menu"><a class="expand-toggle" href="#">全部展開</a><a class="back-to-top" href="#">回到頂部</a><a class="go-to-bottom" href="#">移至底部</a></div>
+                <div class="toc">
+                    <ul class="nav">
+                        <li class=""><a href="#The-FishDoge-Coin" title="The FishDoge Coin">The FishDoge Coin</a>
+                            <ul class="nav">
+                                <li><a href="#Introduction-介紹" title="Introduction 介紹">Introduction 介紹</a></li>
+                                <li class=""><a href="#View" title="View">View</a></li>
+                                <li><a href="#Purpose-目標" title="Purpose 目標">Purpose 目標</a>
+                                    <ul class="nav">
+                                        <li><a href="#目標一" title="目標一">目標一</a></li>
+                                        <li><a href="#目標二" title="目標二">目標二</a></li>
+                                        <li><a href="#目標三" title="目標三">目標三</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#開發團隊-Load-of-Hugo" title="開發團隊 Load of Hugo">開發團隊 Load of Hugo</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="toc-menu"><a class="expand-toggle" href="#">全部展開</a><a class="back-to-top"
+                        href="#">回到頂部</a><a class="go-to-bottom" href="#">移至底部</a></div>
             </ul>
         </div>
     </div>
-    <div id="ui-toc-affix" class="ui-affix-toc ui-toc-dropdown unselectable hidden-print" data-spy="affix" style="top:17px;display:none;" null null>
-        <div class="toc"><ul class="nav">
-<li><h4 class="font_style"><span id="login_address">Not logged in</span></h4></li>
-<li><span style="margin-left: 8px;">你擁有的FDOGE: <br/></span><span class="FDOGE_style" style="margin-left:10px;background-color:#f0e883 ;"  id="FDOGE_value"><a>0</a></span></li>
+    <div id="ui-toc-affix" class="ui-affix-toc ui-toc-dropdown unselectable hidden-print" data-spy="affix"
+        style="top:17px;display:none;" null null>
+        <div class="toc">
+            <ul class="nav">
+                <li>
+                    <h4 class="font_style"><span id="login_address">Not logged in</span></h4>
+                </li>
+                <li><span style="margin-left: 8px;">你擁有的FDOGE: <br /></span><span class="FDOGE_style"
+                        style="margin-left:10px;background-color:#f0e883 ;" id="FDOGE_value"><a>0</a></span></li>
 
-<br>
-<li class=""><a href="#The-FishDoge-Coin" title="The FishDoge Coin">The FishDoge Coin</a><ul class="nav">
-<li><a href="#Introduction-介紹" title="Introduction 介紹">Introduction 介紹</a></li>
-<li class=""><a href="#View" title="View">View</a></li>
-<li><a href="#Purpose-目標" title="Purpose 目標">Purpose 目標</a><ul class="nav">
-<li><a href="#目標一" title="目標一">目標一</a></li>
-<li><a href="#目標二" title="目標二">目標二</a></li>
-<li><a href="#目標三" title="目標三">目標三</a></li>
-</ul>
-</li>
-<li><a href="#開發團隊-Load-of-Hugo" title="開發團隊 Load of Hugo">開發團隊 Load of Hugo</a></li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="toc-menu"><a class="expand-toggle" href="#">全部展開</a><a class="back-to-top" href="#">回到頂部</a><a class="go-to-bottom" href="#">移至底部</a></div>
-    
-</div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gist-embed/2.6.0/gist-embed.min.js" integrity="sha256-KyF2D6xPIJUW5sUDSs93vWyZm+1RzIpKCexxElmxl8g=" crossorigin="anonymous" defer></script>
+                <br>
+                <li class=""><a href="#The-FishDoge-Coin" title="The FishDoge Coin">The FishDoge Coin</a>
+                    <ul class="nav">
+                        <li><a href="#Introduction-介紹" title="Introduction 介紹">Introduction 介紹</a></li>
+                        <li class=""><a href="#View" title="View">View</a></li>
+                        <li><a href="#Purpose-目標" title="Purpose 目標">Purpose 目標</a>
+                            <ul class="nav">
+                                <li><a href="#目標一" title="目標一">目標一</a></li>
+                                <li><a href="#目標二" title="目標二">目標二</a></li>
+                                <li><a href="#目標三" title="目標三">目標三</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#開發團隊-Load-of-Hugo" title="開發團隊 Load of Hugo">開發團隊 Load of Hugo</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="toc-menu">
+            <a class="expand-toggle" href="#">全部展開</a>
+            <a class="back-to-top" href="#">回到頂部</a>
+            <a class="go-to-bottom" href="#">移至底部</a>
+        </div>
+
+        <div class="sc-fFehDp hEvkWp sc-ewSSRw fDTLhF" style="background-color: cornflowerblue;border-style:ridge;border-color: rgb(111, 175, 51);">
+            <div class="sc-jRQAMF sc-gKckTs sc-hJZJLb iODQYo kNJaHk dHFVjD">
+                <div class="sc-jRQAMF sc-gKckTs gdRLbh jdecgA">
+                    <div class="sc-jRQAMF sc-gKckTs iODQYo flnewE">
+                        <h2 color="text" class="sc-gsDJrp sc-iwjezw dhvnrT dRvZwz">Exchange</h2>
+                        <div class="sc-jRQAMF sc-gKckTs iODQYo jdecgA">
+                            <div color="textSubtle" font-size="14px" class="sc-gsDJrp gDjFbF">Trade tokens in an instant
+                            </div>
+                            <div color="textSubtle" font-size="14px" class="sc-gsDJrp gDjFbF">立即交易FDOGE</div>
+                            <br/>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+            <div id="swap-page" class="sc-JEigz hblHEV">
+                <div class="sc-gyEloo hKzTkA">
+                    <div id="swap-currency-input" class="sc-edESPO fZjiTS">
+                        <div class="sc-jlsrtQ ivKlKr">
+                            <div class="sc-jvvkMf KOQkr">
+                                <div class="sc-jRQAMF sc-dUbuoE sc-htJSpn iODQYo cOONby ixfgSN">
+                                    <div font-size="14px" color="text" class="sc-gsDJrp cgqpct">From</div>
+                                    <div font-size="14px" color="text" class="sc-gsDJrp cgqpct"
+                                        style="display: inline; cursor: pointer;">Balance: 0.0816316</div>
+                                </div>
+                            </div>
+                            <div class="sc-hkgtOd bxCmBV"><input class="sc-jivCuG decdgp token-amount-input"
+                                    inputmode="decimal" title="Token Amount" autocomplete="off" autocorrect="off"
+                                    type="text" pattern="^[0-9]*[.,]?[0-9]*$" placeholder="0.0" minlength="1"
+                                    maxlength="79" spellcheck="false" value="0.05"><button class="sc-hKwCoD iSAXaV"
+                                    scale="sm">MAX</button><button
+                                    class="sc-hKwCoD iSAXaV sc-bSqbRM dlCkVf open-currency-select-button" scale="sm">
+                                    <div class="sc-jRQAMF sc-gKckTs iODQYo bblTKA"><svg viewBox="0 0 16 16" width="24px"
+                                            color="text" xmlns="http://www.w3.org/2000/svg" class="sc-bdvvaa iQxzfF"
+                                            style="margin-right: 8px;">
+                                            <circle cx="8" cy="8" r="8" fill="#F0B90B"></circle>
+                                            <path
+                                                d="M5.01656 8.00006L3.79256 9.23256L2.56006 8.00006L3.79256 6.76756L5.01656 8.00006ZM8.00006 5.01656L10.1081 7.12456L11.3406 5.89206L9.23256 3.79256L8.00006 2.56006L6.76756 3.79256L4.66806 5.89206L5.90056 7.12456L8.00006 5.01656ZM12.2076 6.76756L10.9836 8.00006L12.2161 9.23256L13.4401 8.00006L12.2076 6.76756ZM8.00006 10.9836L5.89206 8.87556L4.66806 10.1081L6.77606 12.2161L8.00006 13.4401L9.23256 12.2076L11.3406 10.0996L10.1081 8.87556L8.00006 10.9836ZM8.00006 9.23256L9.23256 8.00006L8.00006 6.76756L6.76756 8.00006L8.00006 9.23256Z"
+                                                fill="#FFFDFA"></path>
+                                        </svg>
+                                        <div id="pair" color="text" class="sc-gsDJrp gnVtGo">BNB</div>
+                                        <svg
+                                            viewBox="0 0 24 24" color="text" width="20px"
+                                            xmlns="http://www.w3.org/2000/svg" class="sc-bdvvaa iQxzfF">
+                                            <path d="M8.11997 9.29006L12 13.1701L15.88 9.29006C16.27 8.90006 16.9 8.90006 17.29 9.29006C17.68 9.68006 17.68 10.3101 17.29 10.7001L12.7 15.2901C12.31 15.6801 11.68 15.6801 11.29 15.2901L6.69997 10.7001C6.30997 10.3101 6.30997 9.68006 6.69997 9.29006C7.08997 8.91006 7.72997 8.90006 8.11997 9.29006Z"></path>
+                                        </svg>
+                                    </div>
+                                </button></div>
+                        </div>
+                    </div>
+                    <div class="sc-gyEloo iHnAek">
+                        <div class="sc-jRQAMF sc-dUbuoE sc-hjGYWY iODQYo eFNWAf dpiwqc" style="padding: 0px 1rem;">
+                            <div class="sc-gHjzJe dxiYKd"><svg viewBox="0 0 24 24" width="16px" color="primary"
+                                    xmlns="http://www.w3.org/2000/svg" class="sc-bdvvaa dqTYWn">
+                                    <path
+                                        d="M11 5V16.17L6.11997 11.29C5.72997 10.9 5.08997 10.9 4.69997 11.29C4.30997 11.68 4.30997 12.31 4.69997 12.7L11.29 19.29C11.68 19.68 12.31 19.68 12.7 19.29L19.29 12.7C19.68 12.31 19.68 11.68 19.29 11.29C18.9 10.9 18.27 10.9 17.88 11.29L13 16.17V5C13 4.45 12.55 4 12 4C11.45 4 11 4.45 11 5Z">
+                                    </path>
+                                </svg></div>
+                        </div>
+                    </div>
+                    <div id="swap-currency-output" class="sc-edESPO fZjiTS">
+                        <div class="sc-jlsrtQ ivKlKr">
+                            <div class="sc-jvvkMf KOQkr">
+                                <div class="sc-jRQAMF sc-dUbuoE sc-htJSpn iODQYo cOONby ixfgSN">
+                                    <div font-size="14px" color="text" class="sc-gsDJrp cgqpct">To (estimated)</div>
+                                    <div font-size="14px" color="text" class="sc-gsDJrp cgqpct"
+                                        style="display: inline; cursor: pointer;">Balance: 89937700</div>
+                                </div>
+                            </div>
+                            <div class="sc-hkgtOd bxCmBV"><input class="sc-jivCuG decdgp token-amount-input"
+                                    inputmode="decimal" title="Token Amount" autocomplete="off" autocorrect="off"
+                                    type="text" pattern="^[0-9]*[.,]?[0-9]*$" placeholder="0.0" minlength="1"
+                                    maxlength="79" spellcheck="false" value="20673200"><button
+                                    class="sc-hKwCoD iSAXaV sc-bSqbRM dlCkVf open-currency-select-button" scale="sm">
+                                    <div class="sc-jRQAMF sc-gKckTs iODQYo bblTKA"><svg viewBox="0 0 24 24"
+                                            class="sc-bdvvaa iQxzfF sc-gjNGvZ fBeIew" color="text" width="20px"
+                                            xmlns="http://www.w3.org/2000/svg" style="margin-right: 8px;">
+                                            <path
+                                                d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20ZM11 16H13V18H11V16ZM12.61 6.04C10.55 5.74 8.73 7.01 8.18 8.83C8 9.41 8.44 10 9.05 10H9.25C9.66 10 9.99 9.71 10.13 9.33C10.45 8.44 11.4 7.83 12.43 8.05C13.38 8.25 14.08 9.18 14 10.15C13.9 11.49 12.38 11.78 11.55 13.03C11.55 13.04 11.54 13.04 11.54 13.05C11.53 13.07 11.52 13.08 11.51 13.1C11.42 13.25 11.33 13.42 11.26 13.6C11.25 13.63 11.23 13.65 11.22 13.68C11.21 13.7 11.21 13.72 11.2 13.75C11.08 14.09 11 14.5 11 15H13C13 14.58 13.11 14.23 13.28 13.93C13.3 13.9 13.31 13.87 13.33 13.84C13.41 13.7 13.51 13.57 13.61 13.45C13.62 13.44 13.63 13.42 13.64 13.41C13.74 13.29 13.85 13.18 13.97 13.07C14.93 12.16 16.23 11.42 15.96 9.51C15.72 7.77 14.35 6.3 12.61 6.04Z">
+                                            </path>
+                                        </svg>
+                                        <div id="pair" color="text" class="sc-gsDJrp gnVtGo">FDOGE</div><svg
+                                            viewBox="0 0 24 24" color="text" width="20px"
+                                            xmlns="http://www.w3.org/2000/svg" class="sc-bdvvaa iQxzfF">
+                                            <path
+                                                d="M8.11997 9.29006L12 13.1701L15.88 9.29006C16.27 8.90006 16.9 8.90006 17.29 9.29006C17.68 9.68006 17.68 10.3101 17.29 10.7001L12.7 15.2901C12.31 15.6801 11.68 15.6801 11.29 15.2901L6.69997 10.7001C6.30997 10.3101 6.30997 9.68006 6.69997 9.29006C7.08997 8.91006 7.72997 8.90006 8.11997 9.29006Z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                </button></div>
+                        </div>
+                    </div>
+                    <div class="sc-gyEloo cYCfsX" style="padding: 0px 16px;">
+                        <div class="sc-jRQAMF sc-dUbuoE sc-htJSpn iODQYo cOONby ixfgSN">
+                            <div color="text" class="sc-gsDJrp sc-bUhGej gnVtGo gMDmXa">Price</div>
+                            <div color="text" class="sc-gsDJrp gnVtGo" style="justify-content: center; align-items: center; display: flex;">0.00000000241858 BNB per FDOGE
+                                <button class="sc-dcgxYM hEqqOs"><svg viewBox="0 0 24 24" width="14px" color="text" xmlns="http://www.w3.org/2000/svg" class="sc-bdvvaa iQxzfF">
+                                        <path
+                                            d="M12 6V7.79C12 8.24 12.54 8.46 12.85 8.14L15.64 5.35C15.84 5.15 15.84 4.84 15.64 4.64L12.85 1.85C12.54 1.54 12 1.76 12 2.21V4C7.58 4 4 7.58 4 12C4 13.04 4.2 14.04 4.57 14.95C4.84 15.62 5.7 15.8 6.21 15.29C6.48 15.02 6.59 14.61 6.44 14.25C6.15 13.56 6 12.79 6 12C6 8.69 8.69 6 12 6ZM17.79 8.71C17.52 8.98 17.41 9.4 17.56 9.75C17.84 10.45 18 11.21 18 12C18 15.31 15.31 18 12 18V16.21C12 15.76 11.46 15.54 11.15 15.86L8.36 18.65C8.16 18.85 8.16 19.16 8.36 19.36L11.15 22.15C11.46 22.46 12 22.24 12 21.8V20C16.42 20 20 16.42 20 12C20 10.96 19.8 9.96 19.43 9.05C19.16 8.38 18.3 8.2 17.79 8.71Z">
+                                        </path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sc-jRQAMF cgLUaK">
+                    <button class="sc-hKwCoD hVlBKu" id="swap-button" width="100%" scale="md">Swap</button>
+                </div>
+
+            </div>
+        </div>
+        <!-- SWAP end -->
+
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gist-embed/2.6.0/gist-embed.min.js"
+        integrity="sha256-KyF2D6xPIJUW5sUDSs93vWyZm+1RzIpKCexxElmxl8g=" crossorigin="anonymous" defer></script>
     <script src="./style_script.js"></script>
+    <script src="./web3/function.js"></script>
+    <script>
 
-    
+        var pancake_contract_address = '0x10ED43C718714eb63d5aA57B78B54704E256024E';
+        var pancake_ABI = [{"inputs":[{"internalType":"address","name":"_factory","type":"address"},{"internalType":"address","name":"_WETH","type":"address"}],"stateMutability":"nonpayable","type":"constructor"},{"inputs":[],"name":"WETH","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"tokenA","type":"address"},{"internalType":"address","name":"tokenB","type":"address"},{"internalType":"uint256","name":"amountADesired","type":"uint256"},{"internalType":"uint256","name":"amountBDesired","type":"uint256"},{"internalType":"uint256","name":"amountAMin","type":"uint256"},{"internalType":"uint256","name":"amountBMin","type":"uint256"},{"internalType":"address","name":"to","type":"address"},{"internalType":"uint256","name":"deadline","type":"uint256"}],"name":"addLiquidity","outputs":[{"internalType":"uint256","name":"amountA","type":"uint256"},{"internalType":"uint256","name":"amountB","type":"uint256"},{"internalType":"uint256","name":"liquidity","type":"uint256"}],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"token","type":"address"},{"internalType":"uint256","name":"amountTokenDesired","type":"uint256"},{"internalType":"uint256","name":"amountTokenMin","type":"uint256"},{"internalType":"uint256","name":"amountETHMin","type":"uint256"},{"internalType":"address","name":"to","type":"address"},{"internalType":"uint256","name":"deadline","type":"uint256"}],"name":"addLiquidityETH","outputs":[{"internalType":"uint256","name":"amountToken","type":"uint256"},{"internalType":"uint256","name":"amountETH","type":"uint256"},{"internalType":"uint256","name":"liquidity","type":"uint256"}],"stateMutability":"payable","type":"function"},{"inputs":[],"name":"factory","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"amountOut","type":"uint256"},{"internalType":"uint256","name":"reserveIn","type":"uint256"},{"internalType":"uint256","name":"reserveOut","type":"uint256"}],"name":"getAmountIn","outputs":[{"internalType":"uint256","name":"amountIn","type":"uint256"}],"stateMutability":"pure","type":"function"},{"inputs":[{"internalType":"uint256","name":"amountIn","type":"uint256"},{"internalType":"uint256","name":"reserveIn","type":"uint256"},{"internalType":"uint256","name":"reserveOut","type":"uint256"}],"name":"getAmountOut","outputs":[{"internalType":"uint256","name":"amountOut","type":"uint256"}],"stateMutability":"pure","type":"function"},{"inputs":[{"internalType":"uint256","name":"amountOut","type":"uint256"},{"internalType":"address[]","name":"path","type":"address[]"}],"name":"getAmountsIn","outputs":[{"internalType":"uint256[]","name":"amounts","type":"uint256[]"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"amountIn","type":"uint256"},{"internalType":"address[]","name":"path","type":"address[]"}],"name":"getAmountsOut","outputs":[{"internalType":"uint256[]","name":"amounts","type":"uint256[]"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"amountA","type":"uint256"},{"internalType":"uint256","name":"reserveA","type":"uint256"},{"internalType":"uint256","name":"reserveB","type":"uint256"}],"name":"quote","outputs":[{"internalType":"uint256","name":"amountB","type":"uint256"}],"stateMutability":"pure","type":"function"},{"inputs":[{"internalType":"address","name":"tokenA","type":"address"},{"internalType":"address","name":"tokenB","type":"address"},{"internalType":"uint256","name":"liquidity","type":"uint256"},{"internalType":"uint256","name":"amountAMin","type":"uint256"},{"internalType":"uint256","name":"amountBMin","type":"uint256"},{"internalType":"address","name":"to","type":"address"},{"internalType":"uint256","name":"deadline","type":"uint256"}],"name":"removeLiquidity","outputs":[{"internalType":"uint256","name":"amountA","type":"uint256"},{"internalType":"uint256","name":"amountB","type":"uint256"}],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"token","type":"address"},{"internalType":"uint256","name":"liquidity","type":"uint256"},{"internalType":"uint256","name":"amountTokenMin","type":"uint256"},{"internalType":"uint256","name":"amountETHMin","type":"uint256"},{"internalType":"address","name":"to","type":"address"},{"internalType":"uint256","name":"deadline","type":"uint256"}],"name":"removeLiquidityETH","outputs":[{"internalType":"uint256","name":"amountToken","type":"uint256"},{"internalType":"uint256","name":"amountETH","type":"uint256"}],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"token","type":"address"},{"internalType":"uint256","name":"liquidity","type":"uint256"},{"internalType":"uint256","name":"amountTokenMin","type":"uint256"},{"internalType":"uint256","name":"amountETHMin","type":"uint256"},{"internalType":"address","name":"to","type":"address"},{"internalType":"uint256","name":"deadline","type":"uint256"}],"name":"removeLiquidityETHSupportingFeeOnTransferTokens","outputs":[{"internalType":"uint256","name":"amountETH","type":"uint256"}],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"token","type":"address"},{"internalType":"uint256","name":"liquidity","type":"uint256"},{"internalType":"uint256","name":"amountTokenMin","type":"uint256"},{"internalType":"uint256","name":"amountETHMin","type":"uint256"},{"internalType":"address","name":"to","type":"address"},{"internalType":"uint256","name":"deadline","type":"uint256"},{"internalType":"bool","name":"approveMax","type":"bool"},{"internalType":"uint8","name":"v","type":"uint8"},{"internalType":"bytes32","name":"r","type":"bytes32"},{"internalType":"bytes32","name":"s","type":"bytes32"}],"name":"removeLiquidityETHWithPermit","outputs":[{"internalType":"uint256","name":"amountToken","type":"uint256"},{"internalType":"uint256","name":"amountETH","type":"uint256"}],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"token","type":"address"},{"internalType":"uint256","name":"liquidity","type":"uint256"},{"internalType":"uint256","name":"amountTokenMin","type":"uint256"},{"internalType":"uint256","name":"amountETHMin","type":"uint256"},{"internalType":"address","name":"to","type":"address"},{"internalType":"uint256","name":"deadline","type":"uint256"},{"internalType":"bool","name":"approveMax","type":"bool"},{"internalType":"uint8","name":"v","type":"uint8"},{"internalType":"bytes32","name":"r","type":"bytes32"},{"internalType":"bytes32","name":"s","type":"bytes32"}],"name":"removeLiquidityETHWithPermitSupportingFeeOnTransferTokens","outputs":[{"internalType":"uint256","name":"amountETH","type":"uint256"}],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"tokenA","type":"address"},{"internalType":"address","name":"tokenB","type":"address"},{"internalType":"uint256","name":"liquidity","type":"uint256"},{"internalType":"uint256","name":"amountAMin","type":"uint256"},{"internalType":"uint256","name":"amountBMin","type":"uint256"},{"internalType":"address","name":"to","type":"address"},{"internalType":"uint256","name":"deadline","type":"uint256"},{"internalType":"bool","name":"approveMax","type":"bool"},{"internalType":"uint8","name":"v","type":"uint8"},{"internalType":"bytes32","name":"r","type":"bytes32"},{"internalType":"bytes32","name":"s","type":"bytes32"}],"name":"removeLiquidityWithPermit","outputs":[{"internalType":"uint256","name":"amountA","type":"uint256"},{"internalType":"uint256","name":"amountB","type":"uint256"}],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"uint256","name":"amountOut","type":"uint256"},{"internalType":"address[]","name":"path","type":"address[]"},{"internalType":"address","name":"to","type":"address"},{"internalType":"uint256","name":"deadline","type":"uint256"}],"name":"swapETHForExactTokens","outputs":[{"internalType":"uint256[]","name":"amounts","type":"uint256[]"}],"stateMutability":"payable","type":"function"},{"inputs":[{"internalType":"uint256","name":"amountOutMin","type":"uint256"},{"internalType":"address[]","name":"path","type":"address[]"},{"internalType":"address","name":"to","type":"address"},{"internalType":"uint256","name":"deadline","type":"uint256"}],"name":"swapExactETHForTokens","outputs":[{"internalType":"uint256[]","name":"amounts","type":"uint256[]"}],"stateMutability":"payable","type":"function"},{"inputs":[{"internalType":"uint256","name":"amountOutMin","type":"uint256"},{"internalType":"address[]","name":"path","type":"address[]"},{"internalType":"address","name":"to","type":"address"},{"internalType":"uint256","name":"deadline","type":"uint256"}],"name":"swapExactETHForTokensSupportingFeeOnTransferTokens","outputs":[],"stateMutability":"payable","type":"function"},{"inputs":[{"internalType":"uint256","name":"amountIn","type":"uint256"},{"internalType":"uint256","name":"amountOutMin","type":"uint256"},{"internalType":"address[]","name":"path","type":"address[]"},{"internalType":"address","name":"to","type":"address"},{"internalType":"uint256","name":"deadline","type":"uint256"}],"name":"swapExactTokensForETH","outputs":[{"internalType":"uint256[]","name":"amounts","type":"uint256[]"}],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"uint256","name":"amountIn","type":"uint256"},{"internalType":"uint256","name":"amountOutMin","type":"uint256"},{"internalType":"address[]","name":"path","type":"address[]"},{"internalType":"address","name":"to","type":"address"},{"internalType":"uint256","name":"deadline","type":"uint256"}],"name":"swapExactTokensForETHSupportingFeeOnTransferTokens","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"uint256","name":"amountIn","type":"uint256"},{"internalType":"uint256","name":"amountOutMin","type":"uint256"},{"internalType":"address[]","name":"path","type":"address[]"},{"internalType":"address","name":"to","type":"address"},{"internalType":"uint256","name":"deadline","type":"uint256"}],"name":"swapExactTokensForTokens","outputs":[{"internalType":"uint256[]","name":"amounts","type":"uint256[]"}],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"uint256","name":"amountIn","type":"uint256"},{"internalType":"uint256","name":"amountOutMin","type":"uint256"},{"internalType":"address[]","name":"path","type":"address[]"},{"internalType":"address","name":"to","type":"address"},{"internalType":"uint256","name":"deadline","type":"uint256"}],"name":"swapExactTokensForTokensSupportingFeeOnTransferTokens","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"uint256","name":"amountOut","type":"uint256"},{"internalType":"uint256","name":"amountInMax","type":"uint256"},{"internalType":"address[]","name":"path","type":"address[]"},{"internalType":"address","name":"to","type":"address"},{"internalType":"uint256","name":"deadline","type":"uint256"}],"name":"swapTokensForExactETH","outputs":[{"internalType":"uint256[]","name":"amounts","type":"uint256[]"}],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"uint256","name":"amountOut","type":"uint256"},{"internalType":"uint256","name":"amountInMax","type":"uint256"},{"internalType":"address[]","name":"path","type":"address[]"},{"internalType":"address","name":"to","type":"address"},{"internalType":"uint256","name":"deadline","type":"uint256"}],"name":"swapTokensForExactTokens","outputs":[{"internalType":"uint256[]","name":"amounts","type":"uint256[]"}],"stateMutability":"nonpayable","type":"function"},{"stateMutability":"payable","type":"receive"}];
+        var pancake_Contract = new web3.eth.Contract(pancake_ABI, pancake_contract_address);
+
+        
+    </script>
+
+
 </body>
 
 
-<script>
-
-    var HDOGE_Contract;
-    HDOGE_Contract = "0x361d8552d7db423ec0cb097a5911fe453d205374";
-    var contract_ABI = [{"inputs":[],"payable":false,"stateMutability":"nonpayable","type":"constructor"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"owner","type":"address"},{"indexed":true,"internalType":"address","name":"spender","type":"address"},{"indexed":false,"internalType":"uint256","name":"value","type":"uint256"}],"name":"Approval","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"previousOwner","type":"address"},{"indexed":true,"internalType":"address","name":"newOwner","type":"address"}],"name":"OwnershipTransferred","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"from","type":"address"},{"indexed":true,"internalType":"address","name":"to","type":"address"},{"indexed":false,"internalType":"uint256","name":"value","type":"uint256"}],"name":"Transfer","type":"event"},{"constant":true,"inputs":[],"name":"_decimals","outputs":[{"internalType":"uint8","name":"","type":"uint8"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"_name","outputs":[{"internalType":"string","name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"_symbol","outputs":[{"internalType":"string","name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"internalType":"address","name":"owner","type":"address"},{"internalType":"address","name":"spender","type":"address"}],"name":"allowance","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"internalType":"address","name":"spender","type":"address"},{"internalType":"uint256","name":"amount","type":"uint256"}],"name":"approve","outputs":[{"internalType":"bool","name":"","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"internalType":"address","name":"spender","type":"address"}],"name":"approve","outputs":[{"internalType":"bool","name":"","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"internalType":"address","name":"account","type":"address"}],"name":"balanceOf","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"internalType":"uint256","name":"amount","type":"uint256"}],"name":"burn","outputs":[{"internalType":"bool","name":"","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"decimals","outputs":[{"internalType":"uint8","name":"","type":"uint8"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"internalType":"address","name":"spender","type":"address"},{"internalType":"uint256","name":"subtractedValue","type":"uint256"}],"name":"decreaseAllowance","outputs":[{"internalType":"bool","name":"","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"getOwner","outputs":[{"internalType":"address","name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"internalType":"address","name":"spender","type":"address"},{"internalType":"uint256","name":"addedValue","type":"uint256"}],"name":"increaseAllowance","outputs":[{"internalType":"bool","name":"","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"name","outputs":[{"internalType":"string","name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"internalType":"address","name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[],"name":"renounceOwnership","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"symbol","outputs":[{"internalType":"string","name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"totalSupply","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"internalType":"address","name":"recipient","type":"address"},{"internalType":"uint256","name":"amount","type":"uint256"}],"name":"transfer","outputs":[{"internalType":"bool","name":"","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"internalType":"address","name":"sender","type":"address"},{"internalType":"address","name":"recipient","type":"address"},{"internalType":"uint256","name":"amount","type":"uint256"}],"name":"transferFrom","outputs":[{"internalType":"bool","name":"","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"internalType":"address","name":"newOwner","type":"address"}],"name":"transferOwnership","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"}];
-  
-    var myContract = new web3.eth.Contract(contract_ABI, HDOGE_Contract);
-
-    var coinbase;
-
-    async function text5(){
-        coinbase = await web3.eth.getCoinbase();
-
-        login_check();
-    }
-    text5();
-    
-    async function Donate(){
-        web3.eth.sendTransaction({
-          from: coinbase,
-          to: '0x66666694Ff556B311111Ce95830d3A363ad52C63',
-          value: '70000000000000000'
-      })
-      .then(function(receipt){
-        alert("已贊助0.07 ETH，感謝你的支持");
-          
-      });
-    }
-
-    async function login_check(){
-        var add = coinbase.substring(0,15)
-        add = add +"....";
-        $("#login_address").text(add);
-        FDOGE_balance();
-
-    }
-
-    async function FDOGE_balance(){
-        var address_balance = await myContract.methods.balanceOf(coinbase).call({from: coinbase});
-        address_balance = address_balance.substring(0,9)+" 顆 ";
-
-        $("#FDOGE_value").text(address_balance);
-        $("#FDOGE_style").css("background-color: #bfc396");
-
-    }
-
-    function ConnectToTeam(){
-        window.open('https://www.facebook.com/profile.php?id=100000515290844');
-    }
-
-
-</script>
 
 
 

@@ -108,10 +108,12 @@ interface IPancakeRouter01 {
         address to,
         uint deadline
     ) external returns (uint[] memory amounts);
+
     function swapExactETHForTokens(uint amountOutMin, address[] calldata path, address to, uint deadline)
         external
         payable
         returns (uint[] memory amounts);
+
     function swapTokensForExactETH(uint amountOut, uint amountInMax, address[] calldata path, address to, uint deadline)
         external
         returns (uint[] memory amounts);
@@ -636,14 +638,7 @@ contract PancakeRouter is IPancakeRouter02 {
         );
         _swap(amounts, path, to);
     }
-    function swapExactETHForTokens(uint amountOutMin, address[] calldata path, address to, uint deadline)
-        external
-        virtual
-        override
-        payable
-        ensure(deadline)
-        returns (uint[] memory amounts)
-    {
+    function swapExactETHForTokens(uint amountOutMin, address[] calldata path, address to, uint deadline)external virtual override payable ensure(deadline) returns (uint[] memory amounts){
         require(path[0] == WETH, 'PancakeRouter: INVALID_PATH');
         amounts = PancakeLibrary.getAmountsOut(factory, msg.value, path);
         require(amounts[amounts.length - 1] >= amountOutMin, 'PancakeRouter: INSUFFICIENT_OUTPUT_AMOUNT');
@@ -719,6 +714,7 @@ contract PancakeRouter is IPancakeRouter02 {
             amountOutput = PancakeLibrary.getAmountOut(amountInput, reserveInput, reserveOutput);
             }
             (uint amount0Out, uint amount1Out) = input == token0 ? (uint(0), amountOutput) : (amountOutput, uint(0));
+
             address to = i < path.length - 2 ? PancakeLibrary.pairFor(factory, output, path[i + 2]) : _to;
             pair.swap(amount0Out, amount1Out, to, new bytes(0));
         }
