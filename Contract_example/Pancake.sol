@@ -807,13 +807,7 @@ contract PancakeRouter is IPancakeRouter02 {
         return PancakeLibrary.getAmountIn(amountOut, reserveIn, reserveOut);
     }
 
-    function getAmountsOut(uint amountIn, address[] memory path)
-        public
-        view
-        virtual
-        override
-        returns (uint[] memory amounts)
-    {
+    function getAmountsOut(uint amountIn, address[] memory path)public view virtual override returns (uint[] memory amounts){
         return PancakeLibrary.getAmountsOut(factory, amountIn, path);
     }
 
