@@ -225,101 +225,103 @@
             <a class="go-to-bottom" href="#">移至底部</a>
         </div>
 
-        <div class="Swap_board sc-fFehDp hEvkWp sc-ewSSRw fDTLhF" style="background-color: cornflowerblue;border-style:ridge;border-color: rgb(111, 175, 51);">
-            <div class="sc-jRQAMF sc-gKckTs sc-hJZJLb iODQYo kNJaHk dHFVjD">
-                <div class="sc-jRQAMF sc-gKckTs gdRLbh jdecgA">
-                    <div class="sc-jRQAMF sc-gKckTs iODQYo flnewE">
-                        <h2 color="text" class="sc-gsDJrp sc-iwjezw dhvnrT dRvZwz">Exchange</h2>
-                        <h4 color="textSubtle" font-size="14px" class="sc-gsDJrp gDjFbF">立即交易FDOGE</h4>
-                        <div class="sc-jRQAMF sc-gKckTs iODQYo jdecgA">
-                            <div color="textSubtle" font-size="14px" class="sc-gsDJrp gDjFbF">Trade tokens in an instant
-                            </div>
-                        
-                            <button onclick="approve_FDOGE()">Approve FDOGE</button>
-                            
-                            <br/>
-                        </div>
-                    </div>
-                </div>
-               
-            </div>
-            <div id="swap-page" class="sc-JEigz hblHEV">
-                <div class="sc-gyEloo hKzTkA">
-                    <div id="swap-currency-input" class="sc-edESPO fZjiTS">
-                        <div class="sc-jlsrtQ ivKlKr">
-                            <div class="sc-jvvkMf KOQkr">
-                                <div class="sc-jRQAMF sc-dUbuoE sc-htJSpn iODQYo cOONby ixfgSN">
-                                    <div font-size="14px" color="text" class="sc-gsDJrp cgqpct">From</div>
-                                    <div font-size="14px" color="text" class="sc-gsDJrp cgqpct"
-                                        style="display: inline; cursor: pointer;">Balance :<span id="account1">0<a></a></span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="sc-hkgtOd bxCmBV">
-                                <input id="input_value"
-                                    inputmode="decimal" title="Token Amount" autocomplete="off" autocorrect="off"
-                                    type="text" pattern="^[0-9]*[.,]?[0-9]*$" placeholder="0.0" minlength="1"
-                                    maxlength="79" spellcheck="false" value="0">
-                                    <button class="sc-hKwCoD iSAXaV" scale="sm" onclick="get_apir_value()">get</button>
-                                    <button class="sc-hKwCoD iSAXaV sc-bSqbRM dlCkVf open-currency-select-button" scale="sm">
-                                    <div class="sc-jRQAMF sc-gKckTs iODQYo bblTKA"><svg viewBox="0 0 16 16" width="24px"
-                                            color="text" xmlns="http://www.w3.org/2000/svg" class="sc-bdvvaa iQxzfF"
-                                            style="margin-right: 8px;">
-                                            <circle cx="8" cy="8" r="8" fill="#F0B90B"></circle>
-                                            <path
-                                                d="M5.01656 8.00006L3.79256 9.23256L2.56006 8.00006L3.79256 6.76756L5.01656 8.00006ZM8.00006 5.01656L10.1081 7.12456L11.3406 5.89206L9.23256 3.79256L8.00006 2.56006L6.76756 3.79256L4.66806 5.89206L5.90056 7.12456L8.00006 5.01656ZM12.2076 6.76756L10.9836 8.00006L12.2161 9.23256L13.4401 8.00006L12.2076 6.76756ZM8.00006 10.9836L5.89206 8.87556L4.66806 10.1081L6.77606 12.2161L8.00006 13.4401L9.23256 12.2076L11.3406 10.0996L10.1081 8.87556L8.00006 10.9836ZM8.00006 9.23256L9.23256 8.00006L8.00006 6.76756L6.76756 8.00006L8.00006 9.23256Z"
-                                                fill="#FFFDFA">
-                                            </path>
-                                        </svg>
-                                        <div id="pair" color="text" class="sc-gsDJrp gnVtGo">BNB</div>
-                                       
-                                    </div>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="sc-gyEloo iHnAek">
-                        <div class="sc-jRQAMF sc-dUbuoE sc-hjGYWY iODQYo eFNWAf dpiwqc" style="padding: 0px 1rem;">
-                            <div class="sc-gHjzJe dxiYKd"><svg viewBox="0 0 24 24" width="16px" color="primary"
-                                    xmlns="http://www.w3.org/2000/svg" class="sc-bdvvaa dqTYWn">
-                                    <path
-                                        d="M11 5V16.17L6.11997 11.29C5.72997 10.9 5.08997 10.9 4.69997 11.29C4.30997 11.68 4.30997 12.31 4.69997 12.7L11.29 19.29C11.68 19.68 12.31 19.68 12.7 19.29L19.29 12.7C19.68 12.31 19.68 11.68 19.29 11.29C18.9 10.9 18.27 10.9 17.88 11.29L13 16.17V5C13 4.45 12.55 4 12 4C11.45 4 11 4.45 11 5Z">
-                                    </path>
-                                </svg></div>
-                        </div>
-                    </div>
-                    <div id="swap-currency-output" class="sc-edESPO fZjiTS">
-                        <div class="sc-jlsrtQ ivKlKr">
-                            <div class="sc-jvvkMf KOQkr">
-                                <div class="sc-jRQAMF sc-dUbuoE sc-htJSpn iODQYo cOONby ixfgSN">
-                                    <div font-size="14px" color="text" class="sc-gsDJrp cgqpct">To (estimated)</div>
-                                    <div font-size="14px" color="text" class="sc-gsDJrp cgqpct"
-                                        style="display: inline; cursor: pointer;">Balance :<span id="FDOGE_value1"></span>
-                                     </div>
-                                </div>
-                            </div>
-                            <div class="sc-hkgtOd bxCmBV">
-                                <input id="get_FDOGE" class="sc-jivCuG decdgp token-amount-input"
-                                    pattern="^[0-9]*[.,]?[0-9]*$" value="0" >
-                                    <button class="sc-hKwCoD iSAXaV sc-bSqbRM dlCkVf open-currency-select-button" scale="sm">
-                                    <div class="sc-jRQAMF sc-gKckTs iODQYo bblTKA">
-                                        <div id="pair" color="text" class="sc-gsDJrp gnVtGo">FDOGE</div>
-                                    </div>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                  
-                </div>
-
-                <div class="sc-jRQAMF cgLUaK">
-                    <button class="sc-hKwCoD hVlBKu" id="swap-button" width="100%" scale="md">Swap</button>
-                </div>
-
-            </div>
-        </div>
+        
         <!-- SWAP end -->
 
+    </div>
+    <!-- SWAP begin -->
+    <div class="Swap_board sc-fFehDp hEvkWp sc-ewSSRw fDTLhF" style="background-color: cornflowerblue;border-style:ridge;border-color: rgb(111, 175, 51);">
+        <div class="sc-jRQAMF sc-gKckTs sc-hJZJLb iODQYo kNJaHk dHFVjD">
+            <div class="sc-jRQAMF sc-gKckTs gdRLbh jdecgA">
+                <div class="sc-jRQAMF sc-gKckTs iODQYo flnewE">
+                    <h2 color="text" class="sc-gsDJrp sc-iwjezw dhvnrT dRvZwz">Exchange</h2>
+                    <h4 color="textSubtle" font-size="14px" class="sc-gsDJrp gDjFbF">立即交易FDOGE</h4>
+                    <div class="sc-jRQAMF sc-gKckTs iODQYo jdecgA">
+                        <div color="textSubtle" font-size="14px" class="sc-gsDJrp gDjFbF">Trade tokens in an instant
+                        </div>
+                    
+                        <button onclick="approve_FDOGE()">Approve FDOGE</button>
+                        
+                        <br/>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+        <div id="swap-page" class="sc-JEigz hblHEV">
+            <div class="sc-gyEloo hKzTkA">
+                <div id="swap-currency-input" class="sc-edESPO fZjiTS">
+                    <div class="sc-jlsrtQ ivKlKr">
+                        <div class="sc-jvvkMf KOQkr">
+                            <div class="sc-jRQAMF sc-dUbuoE sc-htJSpn iODQYo cOONby ixfgSN">
+                                <div font-size="14px" color="text" class="sc-gsDJrp cgqpct">From</div>
+                                <div font-size="14px" color="text" class="sc-gsDJrp cgqpct"
+                                    style="display: inline; cursor: pointer;">Balance :<span id="account1">0<a></a></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sc-hkgtOd bxCmBV">
+                            <input id="input_value"
+                                inputmode="decimal" title="Token Amount" autocomplete="off" autocorrect="off"
+                                type="text" pattern="^[0-9]*[.,]?[0-9]*$" placeholder="0.0" minlength="1"
+                                maxlength="79" spellcheck="false" value="0">
+                                <button class="sc-hKwCoD iSAXaV" scale="sm" onclick="get_apir_value()">get</button>
+                                <button class="sc-hKwCoD iSAXaV sc-bSqbRM dlCkVf open-currency-select-button" scale="sm">
+                                <div class="sc-jRQAMF sc-gKckTs iODQYo bblTKA"><svg viewBox="0 0 16 16" width="24px"
+                                        color="text" xmlns="http://www.w3.org/2000/svg" class="sc-bdvvaa iQxzfF"
+                                        style="margin-right: 8px;">
+                                        <circle cx="8" cy="8" r="8" fill="#F0B90B"></circle>
+                                        <path
+                                            d="M5.01656 8.00006L3.79256 9.23256L2.56006 8.00006L3.79256 6.76756L5.01656 8.00006ZM8.00006 5.01656L10.1081 7.12456L11.3406 5.89206L9.23256 3.79256L8.00006 2.56006L6.76756 3.79256L4.66806 5.89206L5.90056 7.12456L8.00006 5.01656ZM12.2076 6.76756L10.9836 8.00006L12.2161 9.23256L13.4401 8.00006L12.2076 6.76756ZM8.00006 10.9836L5.89206 8.87556L4.66806 10.1081L6.77606 12.2161L8.00006 13.4401L9.23256 12.2076L11.3406 10.0996L10.1081 8.87556L8.00006 10.9836ZM8.00006 9.23256L9.23256 8.00006L8.00006 6.76756L6.76756 8.00006L8.00006 9.23256Z"
+                                            fill="#FFFDFA">
+                                        </path>
+                                    </svg>
+                                    <div id="pair" color="text" class="sc-gsDJrp gnVtGo">BNB</div>
+                                   
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="sc-gyEloo iHnAek">
+                    <div class="sc-jRQAMF sc-dUbuoE sc-hjGYWY iODQYo eFNWAf dpiwqc" style="padding: 0px 1rem;">
+                        <div class="sc-gHjzJe dxiYKd"><svg viewBox="0 0 24 24" width="16px" color="primary"
+                                xmlns="http://www.w3.org/2000/svg" class="sc-bdvvaa dqTYWn">
+                                <path
+                                    d="M11 5V16.17L6.11997 11.29C5.72997 10.9 5.08997 10.9 4.69997 11.29C4.30997 11.68 4.30997 12.31 4.69997 12.7L11.29 19.29C11.68 19.68 12.31 19.68 12.7 19.29L19.29 12.7C19.68 12.31 19.68 11.68 19.29 11.29C18.9 10.9 18.27 10.9 17.88 11.29L13 16.17V5C13 4.45 12.55 4 12 4C11.45 4 11 4.45 11 5Z">
+                                </path>
+                            </svg></div>
+                    </div>
+                </div>
+                <div id="swap-currency-output" class="sc-edESPO fZjiTS">
+                    <div class="sc-jlsrtQ ivKlKr">
+                        <div class="sc-jvvkMf KOQkr">
+                            <div class="sc-jRQAMF sc-dUbuoE sc-htJSpn iODQYo cOONby ixfgSN">
+                                <div font-size="14px" color="text" class="sc-gsDJrp cgqpct">To (estimated)</div>
+                                <div font-size="14px" color="text" class="sc-gsDJrp cgqpct"
+                                    style="display: inline; cursor: pointer;">Balance :<span id="FDOGE_value1"></span>
+                                 </div>
+                            </div>
+                        </div>
+                        <div class="sc-hkgtOd bxCmBV">
+                            <input id="get_FDOGE" class="sc-jivCuG decdgp token-amount-input"
+                                pattern="^[0-9]*[.,]?[0-9]*$" value="0" >
+                                <button class="sc-hKwCoD iSAXaV sc-bSqbRM dlCkVf open-currency-select-button" scale="sm">
+                                <div class="sc-jRQAMF sc-gKckTs iODQYo bblTKA">
+                                    <div id="pair" color="text" class="sc-gsDJrp gnVtGo">FDOGE</div>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+              
+            </div>
+
+            <div class="sc-jRQAMF cgLUaK">
+                <button class="sc-hKwCoD hVlBKu" id="swap-button" width="100%" scale="md">Swap</button>
+            </div>
+
+        </div>
     </div>
 
 
@@ -330,7 +332,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gist-embed/2.6.0/gist-embed.min.js"
         integrity="sha256-KyF2D6xPIJUW5sUDSs93vWyZm+1RzIpKCexxElmxl8g=" crossorigin="anonymous" defer></script>
     <script src="./style_script.js"></script>
+    <script src="./web3/ABI.js"></script>
     <script src="./web3/function.js"></script>
+    
     <script>
 
         
