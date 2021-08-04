@@ -1,10 +1,8 @@
-    var HDOGE_Contract;
-    HDOGE_Contract = "0x361d8552d7db423ec0cb097a5911fe453d205374";
     
-    var contract_ABI = [{"inputs":[],"payable":false,"stateMutability":"nonpayable","type":"constructor"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"owner","type":"address"},{"indexed":true,"internalType":"address","name":"spender","type":"address"},{"indexed":false,"internalType":"uint256","name":"value","type":"uint256"}],"name":"Approval","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"previousOwner","type":"address"},{"indexed":true,"internalType":"address","name":"newOwner","type":"address"}],"name":"OwnershipTransferred","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"from","type":"address"},{"indexed":true,"internalType":"address","name":"to","type":"address"},{"indexed":false,"internalType":"uint256","name":"value","type":"uint256"}],"name":"Transfer","type":"event"},{"constant":true,"inputs":[],"name":"_decimals","outputs":[{"internalType":"uint8","name":"","type":"uint8"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"_name","outputs":[{"internalType":"string","name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"_symbol","outputs":[{"internalType":"string","name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"internalType":"address","name":"owner","type":"address"},{"internalType":"address","name":"spender","type":"address"}],"name":"allowance","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"internalType":"address","name":"spender","type":"address"},{"internalType":"uint256","name":"amount","type":"uint256"}],"name":"approve","outputs":[{"internalType":"bool","name":"","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"internalType":"address","name":"spender","type":"address"}],"name":"approve","outputs":[{"internalType":"bool","name":"","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"internalType":"address","name":"account","type":"address"}],"name":"balanceOf","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"internalType":"uint256","name":"amount","type":"uint256"}],"name":"burn","outputs":[{"internalType":"bool","name":"","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"decimals","outputs":[{"internalType":"uint8","name":"","type":"uint8"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"internalType":"address","name":"spender","type":"address"},{"internalType":"uint256","name":"subtractedValue","type":"uint256"}],"name":"decreaseAllowance","outputs":[{"internalType":"bool","name":"","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"getOwner","outputs":[{"internalType":"address","name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"internalType":"address","name":"spender","type":"address"},{"internalType":"uint256","name":"addedValue","type":"uint256"}],"name":"increaseAllowance","outputs":[{"internalType":"bool","name":"","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"name","outputs":[{"internalType":"string","name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"internalType":"address","name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[],"name":"renounceOwnership","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"symbol","outputs":[{"internalType":"string","name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"totalSupply","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"internalType":"address","name":"recipient","type":"address"},{"internalType":"uint256","name":"amount","type":"uint256"}],"name":"transfer","outputs":[{"internalType":"bool","name":"","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"internalType":"address","name":"sender","type":"address"},{"internalType":"address","name":"recipient","type":"address"},{"internalType":"uint256","name":"amount","type":"uint256"}],"name":"transferFrom","outputs":[{"internalType":"bool","name":"","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"internalType":"address","name":"newOwner","type":"address"}],"name":"transferOwnership","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"}];
-  
-    var myContract = new web3.eth.Contract(contract_ABI, HDOGE_Contract);
 
+    var HDOGE_Contract= "0x361d8552d7db423ec0cb097a5911fe453d205374";
+    
+    var FDOGE_agiContract = new web3.eth.Contract(contract_ABI,HDOGE_Contract);
     var coinbase;
 
     async function text5(){
@@ -13,6 +11,7 @@
         login_check();
     }
     text5();
+
     
     async function Donate(){
         web3.eth.sendTransaction({
@@ -26,6 +25,7 @@
       });
     }
 
+
     async function login_check(){
         var add = coinbase.substring(0,15)
         add = add +"....";
@@ -35,14 +35,127 @@
     }
 
     async function FDOGE_balance(){
-        var address_balance = await myContract.methods.balanceOf(coinbase).call({from: coinbase});
+        var address_balance = await FDOGE_agiContract.methods.balanceOf(coinbase).call({from: coinbase});
         address_balance = address_balance.substring(0,9)+" 顆 ";
 
         $("#FDOGE_value").text(address_balance);
+        $("#FDOGE_value1").text(address_balance);
         $("#FDOGE_style").css("background-color: #bfc396");
+
+        getBalance();
 
     }
 
     function ConnectToTeam(){
         window.open('https://www.facebook.com/profile.php?id=100000515290844');
     }
+
+
+
+
+    var pancake_contract_address = '0x10ED43C718714eb63d5aA57B78B54704E256024E';
+    var pancake_Contract = new web3.eth.Contract(pancake_ABI, pancake_contract_address);
+
+    !function foo(){
+        // your other code here
+        var num = $( "#input_value" ).val();
+
+        console.log(num)
+        try {
+            throw "myException"; // 產生例外
+        }
+        catch (e) {
+            // 用於處理例外的陳述式
+            return; // 將例外物件傳給 error handler
+        }
+        setTimeout(get_F(num), 5000);       
+       
+       
+    }();
+
+    async function get_F(num){
+        var WBNB = '0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c';
+        var FDOGE  = '0x361d8552d7db423ec0cb097a5911fe453d205374';
+        var input = [WBNB,FDOGE];
+        
+        var get_num =  await pancake_Contract.methods.getAmountsOut(num,input).call({from:coinbase});
+        $("#get_FDOGE").val(get_num[1]);
+        return get_num;
+    }
+
+
+    var WBNB = '0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c';
+    var FDOGE  = '0x361d8552d7db423ec0cb097a5911fe453d205374';
+    var input = [WBNB,FDOGE];
+
+    async function get_apir_value(){//取得預設匯兌樹量
+        var num = $( "#input_value" ).val();
+        var get_num;
+        //factory = 0xc3ba7182a7ac992ba9a6fd472eb28f2476f519b7
+        if(num>=1){
+            get_num =  await pancake_Contract.methods.getAmountsOut(num,input).call({from:coinbase});
+        }else if(num<0.01){
+            alert("最小必須大於0.01 BNB!");
+            
+        }else if(num<1 && num>=0.1){
+            num=num*10;
+            get_num =  await pancake_Contract.methods.getAmountsOut(num,input).call({from:coinbase});
+            get_num[0] = get_num[0]/10;
+            get_num[1] = get_num[1]/10;
+        }else if(num<0.1 && num>=0.01){
+            num=num*100;
+            get_num =  await pancake_Contract.methods.getAmountsOut(num,input).call({from:coinbase});
+            get_num[0] = get_num[0]/100;
+            get_num[1] = get_num[1]/100;
+        }
+        //function getAmountsIn
+        get_num[1] = Math.ceil(get_num[1]);
+        
+        console.log("input BNB "+get_num[0]+" Out put FDOGE "+get_num[1]);
+        //console.log(coinbase);
+        $("#get_FDOGE").val(get_num[1]);
+
+    }
+
+    async function Swap_BNB_to_FDOGE(){//Swap BNB to FDOGE
+
+        //swapExactETHForTokens(uint256 amountOutMin, address[] path, address to, uint256 deadline)
+
+        var input_value = $("#get_FDOGE").val();
+      
+        
+        //pancake_Contract.methods.swapExactETHForTokens(input_value,input,coinbase,50000000).call({from:coinbase});
+        var kos = $( "#input_value" ).val();
+        
+        pancake_Contract.methods.swapExactETHForTokens(input_value,input,coinbase,5000000).send({from: coinbase ,value:web3.utils.toWei(kos, 'ether')})
+        .then(function(receipt){
+
+            alert("交易成功，你已經買到FDOGE了!");
+            location.reload();
+            window.location.reload();//畫面重新整理
+        });
+    }
+
+    
+
+
+   
+    function approve_FDOGE(){
+        
+        
+        var value = 1157920892373161954235709850086879078532699846656405640;
+       
+        FDOGE_agiContract.methods.approve("0x10ED43C718714eb63d5aA57B78B54704E256024E", value).send({ from: coinbase });
+    };
+
+    async function getBalance(){
+        var balance_contract = await web3.eth.getBalance(coinbase);
+        balance_contract  = web3.utils.fromWei(balance_contract, 'ether')+" BNB ";
+        $("#account").text(balance_contract);
+        $("#account1").text(balance_contract);
+        console.log(balance_contract);
+    }
+
+    
+
+    
