@@ -13,6 +13,21 @@
 }
 
 
+.button_dot2{
+  background-color: #3d95be;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 10px;
+  margin: 4px 2px;
+  cursor: pointer;
+  margin-right: 20%;
+}
+
+
 
 
 .font_style{
