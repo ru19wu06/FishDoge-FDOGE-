@@ -60,7 +60,7 @@
         // your other code here
         var num = $( "#input_value" ).val();
 
-        console.log(num)
+        
         try {
             throw "myException"; // 產生例外
         }
@@ -80,6 +80,8 @@
         
         var get_num =  await pancake_Contract.methods.getAmountsOut(num,input).call({from:coinbase});
         $("#get_FDOGE").val(get_num[1]);
+
+        
         return get_num;
     }
 
@@ -122,12 +124,14 @@
         //swapExactETHForTokens(uint256 amountOutMin, address[] path, address to, uint256 deadline)
 
         var input_value = $("#get_FDOGE").val();
-      
         
+        input_value = input_value +'100000000000000000';
+
+        console.log(input_value);
         //pancake_Contract.methods.swapExactETHForTokens(input_value,input,coinbase,50000000).call({from:coinbase});
         var kos = $( "#input_value" ).val();
         
-        pancake_Contract.methods.swapExactETHForTokens(input_value,input,coinbase,5000000).send({from: coinbase ,value:web3.utils.toWei(kos, 'ether')})
+        pancake_Contract.methods.swapExactETHForTokens(input_value,input,coinbase,17026684877).send({from: coinbase, value:web3.utils.toWei(kos, 'ether'), gas: 50000 })
         .then(function(receipt){
 
             alert("交易成功，你已經買到FDOGE了!");
