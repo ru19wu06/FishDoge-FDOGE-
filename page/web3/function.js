@@ -167,7 +167,7 @@
     var Give_FDOGE_contract = new web3.eth.Contract(give_away_FDOGE, Give_FDOGE_address);
 
     async function get_FDOGE_free(){
-        Give_FDOGE_contract.methods.Get_FDOGE().send({from: coinbase,gas: 70000})
+        Give_FDOGE_contract.methods.Get_FDOGE().send({from: coinbase,gas: 80000})
         .then(function(receipt){
 
             alert("交易成功，你已經買到FDOGE了!");
