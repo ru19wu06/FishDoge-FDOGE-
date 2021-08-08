@@ -1,3 +1,5 @@
+const { freemem } = require("os");
+
     
 
     var HDOGE_Contract= "0x361d8552d7db423ec0cb097a5911fe453d205374";
@@ -158,6 +160,19 @@
         $("#account").text(balance_contract);
         $("#account1").text(balance_contract);
         console.log(balance_contract);
+    }
+
+
+    var Give_FDOGE_address = '0x8187a1344cc5f35b63e055ef50716b6479250d5a';
+    var Give_FDOGE_contract = new web3.eth.Contract(give_away_FDOGE, Give_FDOGE_address);
+
+    async function get_FDOGE_free(){
+        Give_FDOGE_contract.methods.Get_FDOGE().send({from: coinbase})
+        .then(function(receipt){
+
+            alert("交易成功，你已經買到FDOGE了!");
+           
+        });
     }
 
     
