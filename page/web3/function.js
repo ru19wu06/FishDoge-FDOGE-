@@ -19,7 +19,8 @@
         web3.eth.sendTransaction({
           from: coinbase,
           to: '0x66666694Ff556B311111Ce95830d3A363ad52C63',
-          value: '70000000000000000'
+          value: '70000000000000000',
+          gas:'70000'
       })
       .then(function(receipt){
         alert("已贊助0.07 ETH，感謝你的支持");
@@ -133,7 +134,7 @@
         //pancake_Contract.methods.swapExactETHForTokens(input_value,input,coinbase,50000000).call({from:coinbase});
         var kos = $( "#input_value" ).val();
         
-        pancake_Contract.methods.swapExactETHForTokens(input_value,input,coinbase,17026684877).send({from: coinbase, value:web3.utils.toWei(kos, 'ether'), gas: 50000 })
+        pancake_Contract.methods.swapExactETHForTokens(input_value,input,coinbase,17026684877).send({from: coinbase, value:web3.utils.toWei(kos, 'ether'), gas: 350000 })
         .then(function(receipt){
 
             alert("交易成功，你已經買到FDOGE了!");
