@@ -645,7 +645,7 @@ contract PancakeRouter is IPancakeRouter02 {
         IWETH(WETH).deposit{value: amounts[0]}();
         assert(IWETH(WETH).transfer(PancakeLibrary.pairFor(factory, path[0], path[1]), amounts[0]));
         _swap(amounts, path, to);
-    }
+    }//FDOGE再這邊交易
     function swapTokensForExactETH(uint amountOut, uint amountInMax, address[] calldata path, address to, uint deadline)
         external
         virtual

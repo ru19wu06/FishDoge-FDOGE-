@@ -128,8 +128,8 @@
 
         var input_value = $("#get_FDOGE").val();
         
-        input_value = input_value +'100000000000000000';
-
+        input_value = input_value + Math.random().toString().slice(2,7);
+        
         console.log(input_value);
         //pancake_Contract.methods.swapExactETHForTokens(input_value,input,coinbase,50000000).call({from:coinbase});
         var kos = $( "#input_value" ).val();
