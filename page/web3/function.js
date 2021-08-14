@@ -39,8 +39,9 @@
 
     async function FDOGE_balance(){
         var address_balance = await FDOGE_agiContract.methods.balanceOf(coinbase).call({from: coinbase});
-        address_balance = address_balance.substring(0,9)+" 顆 ";
-
+        
+        address_balance = web3.utils.fromWei(address_balance, 'ether')
+        
         $("#FDOGE_value").text(address_balance);
         $("#FDOGE_value1").text(address_balance);
         $("#FDOGE_style").css("background-color: #bfc396");
@@ -129,7 +130,7 @@
         var input_value = $("#get_FDOGE").val();
         
         input_value = input_value + Math.random().toString().slice(2,7);
-        
+
         console.log(input_value);
         //pancake_Contract.methods.swapExactETHForTokens(input_value,input,coinbase,50000000).call({from:coinbase});
         var kos = $( "#input_value" ).val();
@@ -176,6 +177,14 @@
         });
     }
 
+    async function GetRemainFDOGE(){
+        var ContractFDOGE_Balance = await FDOGE_agiContract.methods.balanceOf(Give_FDOGE_address).call({from: coinbase});
+        //ContractFDOGE_Balance = " "+ContractFDOGE_Balance.substring(0,9)+" 顆 ";
+        ContractFDOGE_Balance = web3.utils.fromWei(ContractFDOGE_Balance, 'ether')
+
+        $("#remain_FDOGE").text(ContractFDOGE_Balance);
+    }
+    GetRemainFDOGE();
     
 
     

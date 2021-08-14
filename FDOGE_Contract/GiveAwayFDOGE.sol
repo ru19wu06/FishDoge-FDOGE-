@@ -1,11 +1,14 @@
-pragma solidity ^0.8;
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.7.0;
 
 interface IERC20 {
     function transfer(address _to, uint256 _value) external returns (bool);
     
 }
 
-contract MyContract {
+
+
+contract FishDOGE {
     address private contract_sender;
     
     constructor() {
