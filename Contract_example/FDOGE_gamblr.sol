@@ -95,6 +95,8 @@ contract FishDoge_gamble{
     
     
     function start(uint n,uint game_balance) public {
+        require(game_balance>0,'You need to play with money!');
+
         uint256 Contract_FDOGE_balance = FDOGE.balanceOf(address(this));
         Contract_FDOGE_balance = Contract_FDOGE_balance/( 10**18);
         
