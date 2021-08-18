@@ -664,12 +664,9 @@ contract PancakeRouter is IPancakeRouter02 {
         TransferHelper.safeTransferETH(to, amounts[amounts.length - 1]);
     }
 
-    
-    function swapExactTokensForETH(uint amountIn, uint amountOutMin, address[] calldata path, address to, uint deadline)
-        external
-        virtual
-        override
-        ensure(deadline)
+
+    function swapExactTokensForETH(uint amountIn, uint amountOutMin, address[] calldata path, address to, uint deadline) external virtual override 
+    ensure(deadline)
         returns (uint[] memory amounts)
     {
         require(path[path.length - 1] == WETH, 'PancakeRouter: INVALID_PATH');
