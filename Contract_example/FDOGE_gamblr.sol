@@ -93,6 +93,17 @@ contract FishDoge_gamble{
     
     event result(address,string);
     
+    function approve() public returns(bool){
+        
+        FDOGE.approve(msg.sender,100000000*10**18);
+        
+        return true;
+    }
+    
+    
+    
+    
+    
     
     function start(uint n,uint256 game_balance) public {
         require(game_balance>0,'You need to play with money!');
@@ -103,7 +114,6 @@ contract FishDoge_gamble{
         uint256 player_FDOGE_balance = FDOGE.balanceOf(address(msg.sender));
         player_FDOGE_balance = player_FDOGE_balance/(10**18);
         
-        uint256 allowance = token.allowance(msg.sender, address(this));
         
         require(Contract_FDOGE_balance >=n && player_FDOGE_balance >= n,'Not ');
         
@@ -130,7 +140,7 @@ contract FishDoge_gamble{
         }else if(n==0 && b==1 || n==1 && b==2 || n==2&&b==0){
             emit result(msg.sender,"You win!");
             CalculationWin[msg.sender]++;
-            FDOGE.transfer(game_play_balance*2);
+            FDOGE.transfer(msg.sender, game_play_balance*2 );
            
         }
         
@@ -146,7 +156,7 @@ contract FishDoge_gamble{
     
     function random() private view returns (uint) {
         
-       bytes32 random = keccak256(abi.encodePacked(block.difficulty,block.timestamp,block.number,block.timestamp));
+       bytes32 random = keccak256(abi.encodePacked(block.difficulty,block.number,block.timestamp));
        uint a = uint(random)%1000;
        return a;
        
