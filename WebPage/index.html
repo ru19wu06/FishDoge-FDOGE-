@@ -38,6 +38,7 @@
           <li><a href="#goal">用途</a></li>
           <li><a href="#team">開發團隊</a></li>
           <li><a href="#swap">SWAP</a></li>
+          
           <li><span id="login_address" class="FDOGE_style" style="margin-left:10px;background-color:#f0e883 ;"  >
             登入Metamask 
           </span></li>
@@ -55,7 +56,9 @@
         <a class="button" href="https://pancakeswap.finance/swap"><span>PANCAKE</span></a>
         <a class="button" href="#swap"><span>SWAP</span></a>
         <a class="button" href="https://davidcolor153.medium.com/%E9%AD%9A%E7%8B%97%E5%B9%A3%E6%93%8D%E4%BD%9C%E6%95%99%E5%AD%B8-da418cccda6a"><span>操作教學</span></a><br>
-        <a class="bscbutton" href="https://bscscan.com/token/0x361d8552d7db423ec0cb097a5911fe453d205374">BSC: 0x00A91642Acf51E1562ad97724BAF64458BF20bc2</a>
+        <a class="button" href="#info"><span>基礎資訊</span></a>
+        <br/>
+        <a class="bscbutton" href="https://bscscan.com/token/0x361d8552d7db423ec0cb097a5911fe453d205374">BSC:0x361d8552d7db423ec0cb097a5911fe453d205374</a>
       </div>
     </div>
   <!-- whitepaper -->
@@ -82,6 +85,7 @@
           <p>FishDoge coin 可以用以做為 Load of Hugo 團隊的顧問費<br>每一千萬顆可以諮詢一小時</p>
           <button class="button" onclick="open_new_page()">聯絡團隊</button>
           <button class="button" onclick="get_FDOGE_free()">領取5萬FDOGE</button>
+          
         </div>   
         <p class="text-bottom">
           魚狗幣 將與你，區塊鏈，幣安鏈永存<span class="text-line"></span>
@@ -96,7 +100,13 @@
           <div class="block">
             <img src="pic/Aaron yen.jpg" alt="">
             <h3>Aaron yen</h3>
-            <p>CEO</p>
+            <h1>CEO</h1>
+            <h4>Cypherpunks - 密碼龐克台灣成員</h4>
+            <h4>FZTH - 專欄作家</h4>
+            <h4>Walkin - 作家</h4>
+            <h4>區塊鏈疑難雜症工程師</h4>
+            <br>
+            <h3>喜歡思考一些有趣的議題，解決問題主義者</h3>
           </div>
           <div class="block">
             <img src="pic/David color.jpg" alt="">
@@ -106,7 +116,12 @@
           <div class="block">
             <img src="pic/Fish Dog.jpg" alt="">
             <h3>Fish Dog</h3>
-            <p>A Fish Dog</p>
+            <h1>Model</h1>
+            <h4>A Fish,Can do nothing </h4>
+            <h4>A Dog,Can do nothing </h4>
+            
+            <br>
+            <h3>喜歡玩英雄聯盟，巫師三，昆特牌</h3>
           </div>
         </div>
       </div>
@@ -114,15 +129,16 @@
   <!-- swap -->
     <div id="swap" class="container">
       <div class="swap">
-        <h2>Exchange</h2>
-        <p>Trade tokens in an instant</p>
+        <h2>Swap Exchange</h2>
+        <h3>Trade tokens in an instant</h3>
+        <h3>用 BNB 購買 FDOGE</h3>
         <hr>
         <h3>Form</h3>
         <input class="text_field" id="input_value" type="input_value" placeholder="0.0">
-        <p>BNB</p>
+        <p style="font-weight:bold;">BNB</p>
         <h3>To</h3> 
         <input class="text_field" type="input_value" id="get_FDOGE" placeholder="0.0">
-        <p>FDOGE</p>
+        <p style="font-weight:bold;">FDOGE</p>
         <button class="button" onclick="get_apir_value()">GET</button>
         <button class="button" onclick="Swap_BNB_to_FDOGE()">SWAP</button>
       </div>
