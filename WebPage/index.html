@@ -4,12 +4,31 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fish Doge Coin</title>
+  <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.36/dist/web3.min.js"
+        integrity="sha256-nWBTbvxhJgjslRyuAKJHK+XcZPlCnmIAAMixz6EefVk=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
   <link rel="stylesheet" href="style.css">
+  <link href='./style2.css' rel='stylesheet' type='text/css'>
 </head>
 <body>
   <!-- js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script>
+
+    //let web3 = new Web3("wss://mainnet.infura.io/ws/v3/094050d79dc24c87b21f1ab21c343597");
+    var coinbase;//設定帳戶
+    if (typeof web3 !== 'undefined') {
+        web3 = new Web3(web3.currentProvider);
+
+        //alert("請使用MetaMask登入");
+    } else {
+        // 確認是否使用metamask地址
+        web3 = new Web3("wss://mainnet.infura.io/ws/v3/b728a5b97fb74e7fb413a930f3b69e06");
+    }
+
+</script>
   <!-- header -->
     <div class="header">
       <nav>
@@ -19,6 +38,10 @@
           <li><a href="#goal">用途</a></li>
           <li><a href="#team">開發團隊</a></li>
           <li><a href="#swap">SWAP</a></li>
+          <li><span id="login_address" class="FDOGE_style" style="margin-left:10px;background-color:#f0e883 ;"  >
+            登入Metamask 
+          </span></li>
+
         </ul>
       </nav>
     </div>
@@ -57,8 +80,8 @@
         <div class="content">
           <h2>用途</h2>      
           <p>FishDoge coin 可以用以做為 Load of Hugo 團隊的顧問費<br>每一千萬顆可以諮詢一小時</p>
-          <button class="button">聯絡團隊</button>
-          <button class="button">領取5萬FDOGE</button>
+          <button class="button" onclick="open_new_page()">聯絡團隊</button>
+          <button class="button" onclick="get_FDOGE_free()">領取5萬FDOGE</button>
         </div>   
         <p class="text-bottom">
           魚狗幣 將與你，區塊鏈，幣安鏈永存<span class="text-line"></span>
@@ -95,13 +118,13 @@
         <p>Trade tokens in an instant</p>
         <hr>
         <h3>Form</h3>
-        <input class="text_field" type="input_value" placeholder="0.0">
+        <input class="text_field" id="input_value" type="input_value" placeholder="0.0">
         <p>BNB</p>
         <h3>To</h3> 
-        <input class="text_field" type="input_value" placeholder="0.0">
+        <input class="text_field" type="input_value" id="get_FDOGE" placeholder="0.0">
         <p>FDOGE</p>
-        <button class="button">GET</button>
-        <button class="button">SWAP</button>
+        <button class="button" onclick="get_apir_value()">GET</button>
+        <button class="button" onclick="Swap_BNB_to_FDOGE()">SWAP</button>
       </div>
     </div>
   <!-- footer -->
@@ -142,5 +165,8 @@
       }
     </script>
   <script src="index.js"></script>
+  <script src="./web3/ABI.js"></script>
+  <script src="./web3/function.js"></script>
+  <script src="./ordinary_js/link.js"></script>
 </body>
 </html>
