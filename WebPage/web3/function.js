@@ -5,7 +5,10 @@
       //Will Start the metamask extension
     async function login_In_button(){
       ethereum.request({ method: 'eth_requestAccounts' });
+      window.location.reload();
     }
+
+   
     
 
     var HDOGE_Contract= "0x361d8552d7db423ec0cb097a5911fe453d205374";
@@ -35,7 +38,7 @@
         var address_balance = await FDOGE_agiContract.methods.balanceOf(coinbase).call({from: coinbase});
         
         address_balance = web3.utils.fromWei(address_balance, 'ether')
-        
+        address_balance = Math.floor(address_balance);
         $("#FDOGE_value").text(address_balance);
         $("#FDOGE_value1").text(address_balance);
         $("#FDOGE_style").css("background-color: #bfc396");
@@ -93,6 +96,8 @@
         var num = $( "#input_value" ).val();
         var get_num;
         //factory = 0xc3ba7182a7ac992ba9a6fd472eb28f2476f519b7
+
+        
         if(num>=1){
             get_num =  await pancake_Contract.methods.getAmountsOut(num,input).call({from:coinbase});
         }else if(num<0.01){
@@ -167,11 +172,14 @@
 
     async function getBalance(){
         var balance_contract = await web3.eth.getBalance(coinbase);
-        balance_contract  = web3.utils.fromWei(balance_contract, 'ether')+" BNB ";
+        balance_contract  = web3.utils.fromWei(balance_contract, 'ether');
+        balance_contract = Math.round(balance_contract * 100000)/100000;
+
         $("#account").text(balance_contract);
         $("#account1").text(balance_contract);
         console.log(balance_contract);
     }
+
 
 
     var Give_FDOGE_address = '0x8187a1344cc5f35b63e055ef50716b6479250d5a';

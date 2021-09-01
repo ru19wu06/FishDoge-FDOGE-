@@ -158,7 +158,9 @@
 
     async function getBalance(){
         var balance_contract = await web3.eth.getBalance(coinbase);
-        balance_contract  = web3.utils.fromWei(balance_contract, 'ether')+" BNB ";
+        balance_contract  = web3.utils.fromWei(balance_contract, 'ether');
+        balance_contract = Math.round(balance_contract * 1000)/1000;
+
         $("#account").text(balance_contract);
         $("#account1").text(balance_contract);
         console.log(balance_contract);

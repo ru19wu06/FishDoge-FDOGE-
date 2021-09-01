@@ -28,6 +28,8 @@
         web3 = new Web3("wss://mainnet.infura.io/ws/v3/b728a5b97fb74e7fb413a930f3b69e06");
     }
 
+    
+
 </script>
   <!-- header -->
     <div class="header">
@@ -65,7 +67,7 @@
     <div id="whitepaper" class="container">
       <div class="paper">
         <h2>白皮書<div class="line"></div></h2>
-        <p class="content">聽到這麼多狗幣發財，你是否也對狗型代幣充滿期待呢?<br>
+        <p style="font-size: 22px;" class="content">聽到這麼多狗幣發財，你是否也對狗型代幣充滿期待呢?<br>
           充滿期待的同時最遺憾的，就是沒有上到車。<br><br>
       沒關係，現在有了 FisdDoge Coin魚狗幣(FDOGE)，一個使人快樂，使人滿足的，它可以完成你對狗的幻想，不管是哪一方面輕鬆，手上擁有一大把於狗幣的你將會是幸福的。<br><br>
       一顆 FDOGE 的價值等同於一顆FDOGE，不多不少不消不漲，比穩定幣還要穩定，你可以透過BSC幣安智能鏈使用BNB購買，當然不想花錢也能支付些微手續費免費領取FDOGE。<br><br>
@@ -119,7 +121,11 @@
         <br/>
         <h3><span style="font-size: 25px;" >0.5% </span>用來改善FishDoge宇宙</h3>
         <br/>
+        <h3><span style="font-size: 25px;" >0.5% </span>送給逛這個網站的路人</h3>
+        <br/>
         <button class="button" onclick="get_FDOGE_free()">領取5萬FDOGE</button>
+        <br/>
+        <div>目前剩餘未領 FDOGE : <span id="remain_FDOGE"></span></div>
         
       </div>   
       <p class="text-bottom">
@@ -131,7 +137,7 @@
   <!-- team -->
     <div id="team" class="container">
       <div class="team">        
-        <h2>開發團隊</h2>        
+        <h2>開發團隊 Load of Hugo</h2>        
         <div class="team_block">
           <div class="block">
             <img src="pic/Aaron yen.jpg" alt="">
@@ -171,9 +177,11 @@
         <h3>用 BNB 購買 FDOGE</h3>
         <hr>
         <h3>Form</h3>
+        <h3>BNB Balance : <span id="account1">0<a></a></span></h3>
         <input class="text_field" id="input_value" type="input_value" placeholder="0.0">
         <p style="font-weight:bold;">BNB</p>
         <h3>To</h3> 
+        <h3>FDOGE Balance : <span id="FDOGE_value1"></span></h3>
         <input class="text_field" type="input_value" id="get_FDOGE" placeholder="0.0">
         <p style="font-weight:bold;">FDOGE</p>
         <button class="button" onclick="get_apir_value()">GET</button>
