@@ -20,6 +20,8 @@
         var add = coinbase.substring(0,15)
         add = add +"....";
         $("#login_address").text(add);
+        concole.log(add);
+
         FDOGE_balance();
 
     }
@@ -174,7 +176,7 @@
         Give_FDOGE_contract.methods.Get_FDOGE().send({from: coinbase,gas: 80000})
         .then(function(receipt){
 
-            alert("交易成功，你已經買到FDOGE了!");
+            alert("你已經拿到五萬 FDOGE ，該慶祝了吧!");
            
         });
     }
