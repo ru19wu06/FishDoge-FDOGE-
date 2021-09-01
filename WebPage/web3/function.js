@@ -1,5 +1,11 @@
 
+    //const ethereumButton = document.querySelector('.enableEthereumButton');
 
+   
+      //Will Start the metamask extension
+    async function login_In_button(){
+      ethereum.request({ method: 'eth_requestAccounts' });
+    }
     
 
     var HDOGE_Contract= "0x361d8552d7db423ec0cb097a5911fe453d205374";
@@ -20,8 +26,7 @@
         var add = coinbase.substring(0,15)
         add = add +"....";
         $("#login_address").text(add);
-        concole.log(add);
-
+       
         FDOGE_balance();
 
     }
