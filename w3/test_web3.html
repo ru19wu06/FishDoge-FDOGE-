@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.36/dist/web3.min.js"  integrity="sha256-nWBTbvxhJgjslRyuAKJHK+XcZPlCnmIAAMixz6EefVk=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>    
+</head>
+
+<body>
+    <script>
+        var coinbase;//設定帳戶
+        if (typeof web3 !== 'undefined') {
+            web3 = new Web3(web3.currentProvider);
+
+        } else {
+            // 確認是否使用metamask地址
+            web3 = new Web3("wss://mainnet.infura.io/ws/v3/b728a5b97fb74e7fb413a930f3b69e06");
+        }
+    </script>
+
+    <title>按鈕連接</title>
+
+    <button onclick="FDOGE_balance()">測試按鈕</button>
+    <br/>
+    <button onclick="spl()">測試按鈕2</button>
+
+
+
+
+
+    <script src="./web3_abi.js"></script>
+
+</body>
