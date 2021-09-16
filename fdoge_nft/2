@@ -1,7 +1,7 @@
 {
-    "name": "David FishDoggie",
+    "name": "Zombie FishDoggie",
     "description": "A Cute FishDoge, Can do nothing",
-    "image": "https://ru19wu06.github.io/FishDoge_FDOGE/fdoge_nft/1x/Fdoggie1.png",
+    "image": "https://ru19wu06.github.io/FishDoge_FDOGE/fdoge_nft/1x/Fdoggie3.png",
     "attributes": [
     {
       "trait_type": "Base", 
@@ -13,7 +13,7 @@
     }, 
     {
       "trait_type": "Rarity", 
-      "value": 1
+      "value": 2
     }, 
     {
       "trait_type": "Personality", 
@@ -22,7 +22,7 @@
     {
       "display_type": "boost_number", 
       "trait_type": "Aqua Power", 
-      "value": 40
+      "value": 70
     }, 
     {
       "display_type": "number", 

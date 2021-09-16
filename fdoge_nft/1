@@ -1,7 +1,7 @@
 {
-    "name": "David FishDoggie",
+    "name": "Solana FishDoggie",
     "description": "A Cute FishDoge, Can do nothing",
-    "image": "https://ru19wu06.github.io/FishDoge_FDOGE/fdoge_nft/1x/Fdoggie1.png",
+    "image": "https://ru19wu06.github.io/FishDoge_FDOGE/fdoge_nft/1x/Fdoggie2.png",
     "attributes": [
     {
       "trait_type": "Base", 
@@ -9,11 +9,11 @@
     }, 
     {
       "trait_type": "Level", 
-      "value": 1
+      "value": 10
     }, 
     {
       "trait_type": "Rarity", 
-      "value": 1
+      "value": 7
     }, 
     {
       "trait_type": "Personality", 

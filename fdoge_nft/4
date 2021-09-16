@@ -1,7 +1,7 @@
 {
-    "name": "David FishDoggie",
-    "description": "A Cute FishDoge, Can do nothing",
-    "image": "https://ru19wu06.github.io/FishDoge_FDOGE/fdoge_nft/1x/Fdoggie1.png",
+    "name": "Fryed FishDoggie",
+    "description": "A Cute FishDoge, already fryed",
+    "image": "https://ru19wu06.github.io/FishDoge_FDOGE/fdoge_nft/1x/Fdoggie5.png",
     "attributes": [
     {
       "trait_type": "Base", 
@@ -9,11 +9,11 @@
     }, 
     {
       "trait_type": "Level", 
-      "value": 1
+      "value": 2
     }, 
     {
       "trait_type": "Rarity", 
-      "value": 1
+      "value": 3
     }, 
     {
       "trait_type": "Personality", 
@@ -22,7 +22,7 @@
     {
       "display_type": "boost_number", 
       "trait_type": "Aqua Power", 
-      "value": 40
+      "value": 10
     }, 
     {
       "display_type": "number", 
