@@ -27,7 +27,7 @@ contract FDOGE_NFT is ERC721 {
     uint256 private Total_Mint = 0;
     uint256 private Remaining_WABY = 0;
 
-    
+    string public baseTokenURI;
 
     bool public saleActive = false; //開啟交易
     bool public allowListIsActive = false;
@@ -41,7 +41,7 @@ contract FDOGE_NFT is ERC721 {
     event WabyCteated(uint256 indexed id);
 
     constructor() ERC721( "DopeWaby" , "Waby" ){//BaseURI 待定
-        setBaseURI('https://ru19wu06.github.io/FishDoge_FDOGE/fdoge_nft/');
+        //setBaseURI('https://ru19wu06.github.io/FishDoge_FDOGE/fdoge_nft/');
         devAddress = msg.sender;
     }
     
@@ -134,7 +134,8 @@ contract FDOGE_NFT is ERC721 {
         return baseTokenURI;
     }
 
-    function setBaseURI(string memory baseURI) public onlyOwner {
+    function setBaseURI(string memory baseURI) public  {
+        require(msg.sender == devAddress);
         baseTokenURI = baseURI;
     }
 
