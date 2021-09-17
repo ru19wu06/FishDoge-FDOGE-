@@ -194,6 +194,8 @@
         });
     }
 
+    
+
     async function GetRemainFDOGE(){
         var ContractFDOGE_Balance = await FDOGE_agiContract.methods.balanceOf(Give_FDOGE_address).call({from: coinbase});
         //ContractFDOGE_Balance = " "+ContractFDOGE_Balance.substring(0,9)+" 顆 ";
@@ -204,4 +206,24 @@
     GetRemainFDOGE();
     
 
+    var fdoge_NFT_contract = '0xa37828e8755c38051a7d767de83235c51956e9e0';
+    var FDOGE_NFT_cost = new web3.eth.Contract(Fdoge_NFT_ABI,fdoge_NFT_contract);
+    
+    async function Mint_NFT(){
+        
+        var openSea = 'https://testnets.opensea.io/'+coinbase;
+
+        FDOGE_NFT_cost.methods.setTokenURI(0,"77").send({from: coinbase,gas: 80000})
+        .then(function(receipt){
+
+            alert("你已經拿到FDOGE NFT了");
+
+
+            window.open(openSea);
+           
+        });
+
+        // var bal = await FDOGE_agiContract.methods.balanceOf(coinbase);
+        // console.log(bal);
+    }
     
