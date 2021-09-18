@@ -40,7 +40,7 @@ contract FDOGE_NFT is ERC721 {
     
     event WabyCteated(uint256 indexed id);
 
-    constructor() ERC721( "DopeWaby" , "Waby" ){//BaseURI 待定
+    constructor() ERC721( "Fish Doggie" , "FDGE" ){//BaseURI 待定
         //setBaseURI('https://ru19wu06.github.io/FishDoge_FDOGE/fdoge_nft/');
         devAddress = msg.sender;
     }
@@ -56,7 +56,7 @@ contract FDOGE_NFT is ERC721 {
         
     }
 
-    function _totalSupply() internal view returns(uint){ //Waby總產量
+    function totalSupply() internal view returns(uint){ //Waby總產量
         return MAX_Token_supply;
     }
 
