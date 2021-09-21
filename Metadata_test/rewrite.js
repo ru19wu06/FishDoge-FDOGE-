@@ -14,7 +14,7 @@ var Metadata = {} ;
 
 var jsonString = JSON.stringify(Metadata);
 
-for(var a=1;a<=3;a++){
+for(var a=1;a<=5;a++){
 
     var fileName = String(a);
     var names = 'test'+a;
