@@ -9,7 +9,7 @@ import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/utils/math/SafeMath.sol";
 
 
-contract DopeWaby is ERC721 {
+contract FDOGE_NFT is ERC721 {
  
     using SafeMath for uint256;
 
@@ -27,7 +27,7 @@ contract DopeWaby is ERC721 {
     uint256 private Total_Mint = 0;
     uint256 private Remaining_WABY = 0;
 
-    
+    string public baseTokenURI;
 
     bool public saleActive = false; //開啟交易
     bool public allowListIsActive = false;
@@ -40,7 +40,9 @@ contract DopeWaby is ERC721 {
     
     event WabyCteated(uint256 indexed id);
 
-    constructor(string memory BaseURI) ERC721( "DopeWaby" , "Waby" ){//BaseURI 待定
+    constructor() ERC721( "ABCDE" , "ACE" ){//BaseURI 待定
+        //setBaseURI('https://ru19wu06.github.io/FishDoge_FDOGE/fdoge_nft/');
+        //https://ru19wu06.github.io/FishDoge_FDOGE/MetadataTest/
         devAddress = msg.sender;
     }
     
@@ -55,7 +57,7 @@ contract DopeWaby is ERC721 {
         
     }
 
-    function _totalSupply() internal view returns(uint){ //Waby總產量
+    function totalSupply() public view returns(uint){ //Waby總產量
         return MAX_Token_supply;
     }
 
@@ -126,6 +128,16 @@ contract DopeWaby is ERC721 {
         WabyUpgraded[waby] = true;
         NumberOfUpgrades[msg.sender] = NumberOfUpgrades[msg.sender] -1;
            
+    }
+    
+    
+   function _baseURI() internal view virtual override returns (string memory) {
+        return baseTokenURI;
+    }
+
+    function setBaseURI(string memory baseURI) public  {
+        require(msg.sender == devAddress);
+        baseTokenURI = baseURI;
     }
 
 
