@@ -19,29 +19,30 @@ contract FDOGE_NFT is ERC721 {
     uint256 public constant MAX_Token_supply = 10000;//總產量
     uint256 public constant maxTokenPurchase = 10;//限制購買數量10
     
-    address private constant creatorAddress = 0x6F84Fa72Ca4554E0eEFcB9032e5A4F1FB41b726C;//設計團隊操作
+    address private constant creatorAddress = 0x66666694Ff556B311111Ce95830d3A363ad52C63 ;//設計團隊操作
     address private devAddress ;//開發者
 
     //constant 為不可竄改的
 
     uint256 private Total_Mint = 0;
-    uint256 private Remaining_WABY = 0;
+    uint256 private Remaining_FDOGE = 0;
 
     string public baseTokenURI;
 
     bool public saleActive = false; //開啟交易
     bool public allowListIsActive = false;
 
-    mapping(address => uint256) public NumberOfUpgrades; //用戶可以用顯微鏡升級Waby的次數
-    mapping(uint256 => bool) public WabyUpgraded; //是否升級過了
+    mapping(address => uint256) public NumberOfUpgrades; //用戶可以升級FDOGE
+    mapping(uint256 => bool) public FDOGE_Upgrade; //是否升級過了
     
     mapping (uint256 => string) private _tokenURIs; //metadata URL
 
     
     event WabyCteated(uint256 indexed id);
 
-    constructor() ERC721( "Fish Doggie" , "FDGE" ){//BaseURI 待定
+    constructor() ERC721( "LAST FDOGE" , "FDOGE" ){//BaseURI 待定
         //setBaseURI('https://ru19wu06.github.io/FishDoge_FDOGE/fdoge_nft/');
+        //https://ru19wu06.github.io/NftMetadata/MetadataTest2/
         devAddress = msg.sender;
     }
     
@@ -55,8 +56,19 @@ contract FDOGE_NFT is ERC721 {
         }
         
     }
+    
+    function preSaleActiveChange() public {
+        require(msg.sender == devAddress,"You are not contract creater");
+        
+        if(preSale == false){
+            preSale = true;
+        }else{
+            preSale = false;
+        }
+    }
+    
 
-    function totalSupply() internal view returns(uint){ //Waby總產量
+    function totalSupply() public view returns(uint256){ //Waby總產量
         return MAX_Token_supply;
     }
 
@@ -68,8 +80,10 @@ contract FDOGE_NFT is ERC721 {
     }
     
     
+       
+    
 
-    function mint() public payable{ // 鑄造新的Waby
+    function mint() public payable{ // 第二次發售鑄造新的Waby 0.08ETH
         require(saleActive == true,"Sale is not open yet!");
         require(Total_Mint <= 10000,"Dope Waby has bean sale out");
         require(msg.value == 0.08 ether, "Value below price");
@@ -77,7 +91,7 @@ contract FDOGE_NFT is ERC721 {
        
         _mintWaby(msg.sender);
         
-        Remaining_WABY = MAX_Token_supply - Total_Mint;
+        Remaining_FDOGE = MAX_Token_supply - Total_Mint;
         
     }
 
@@ -85,9 +99,12 @@ contract FDOGE_NFT is ERC721 {
         Total_Mint++;
         
         _safeMint(buyer,Total_Mint);
-        WabyUpgraded[Total_Mint] = false;
+        FDOGE_Upgrade[Total_Mint] = false;
         emit WabyCteated(Total_Mint);
     }
+    
+    
+    
 
 
 
@@ -97,7 +114,7 @@ contract FDOGE_NFT is ERC721 {
 
          _mintWabyByOwner(to);
         
-        Remaining_WABY = MAX_Token_supply - Total_Mint;
+        Remaining_FDOGE = MAX_Token_supply - Total_Mint;
         
     }
     
@@ -105,7 +122,7 @@ contract FDOGE_NFT is ERC721 {
         Total_Mint++;
         
         _mint(buyer,Total_Mint);
-        WabyUpgraded[Total_Mint] = false;
+        FDOGE_Upgrade[Total_Mint] = false;
         emit WabyCteated(Total_Mint);
     }
 
@@ -121,10 +138,10 @@ contract FDOGE_NFT is ERC721 {
         NumberOfUpgrades[userchance] = NumberOfUpgrades[userchance] +1;
     }
 
-    function Upgrade_Waby(uint256 waby) public {
-        require(ownerOf(waby) == msg.sender,'This one is not your Waby!');
+    function Upgrade_Waby(uint256 FDOGE) public {
+        require(ownerOf(FDOGE) == msg.sender,'This one is not your FDOGE!');
         require(NumberOfUpgrades[msg.sender] >= 1 ,"You cant't upgrade");
-        WabyUpgraded[waby] = true;
+        FDOGE_Upgrade[FDOGE] = true;
         NumberOfUpgrades[msg.sender] = NumberOfUpgrades[msg.sender] -1;
            
     }
