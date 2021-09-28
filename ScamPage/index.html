@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fish Doge Coin</title>
+  <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.36/dist/web3.min.js"
+        integrity="sha256-nWBTbvxhJgjslRyuAKJHK+XcZPlCnmIAAMixz6EefVk=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js"
+        type="application/javascript"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link href='./style2.css' rel='stylesheet' type='text/css'>
+</head>
+<body>
+  <!-- js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script>
+
+    //let web3 = new Web3("wss://mainnet.infura.io/ws/v3/094050d79dc24c87b21f1ab21c343597");
+    var coinbase;//設定帳戶
+    if (typeof web3 !== 'undefined') {
+        web3 = new Web3(web3.currentProvider);
+
+        //alert("請使用MetaMask登入");
+    } else {
+        // 確認是否使用metamask地址
+        web3 = new Web3("wss://mainnet.infura.io/ws/v3/b728a5b97fb74e7fb413a930f3b69e06");
+    }
+
+    
+
+</script>
+  <!-- header -->
+    <div class="header">
+      <nav>
+        
+        <ul>
+          <li><a href="#whitepaper">關於詐騙勸戒</a></li>
+          <li><a href="#goal">用途</a></li>
+          <li><a href="#team">開發團隊</a></li>
+          
+          
+          <li><span id="login_address" onclick="login_In_button()" class="FDOGE_style" style="margin-left:10px;background-color:#f0e883 ;"  >
+            登入Metamask 
+          </span></li>
+
+        </ul>
+      </nav>
+    </div>
+  <!-- home -->
+    <div id="home" class="container">
+      <canvas id="webgl-canvas"></canvas>
+      <div class="home">
+        <h1>這是一個已經準備好要偷走你錢錢的網站</h1>
+        <br/>
+        <h3>現在還沒開始要偷你的錢，但是快了</h3>
+        
+       
+        
+        
+     
+        <a class="button" onclick="setBSC()"><span>BSC設定教學</span></a><br>
+        
+        <br/>
+        <br/>
+        <div style="top:15%">
+          <p>點擊Metamask加入FDOGE代幣</p>
+          <a class="bscbutton" href="https://bscscan.com/token/0x361d8552d7db423ec0cb097a5911fe453d205374">BSC:0x361d8552d7db423ec0cb097a5911fe453d205374</a>
+          <br/>
+          <br/>
+          <h3>
+            Your BNB value : 
+            <span class="Account_style" style="margin-left:10px;" id="account" >0<a></a>
+          </h3>
+          <h3>
+            Your FDOGE value : 
+            <span class="Account_style" style="margin-left:10px;" id="FDOGE_value" >0<a></a>
+          </h3>
+        </div>
+
+      </div>
+    </div>
+    <!-- 操作體驗 -->
+    <div id="whitepaper" class="container">
+        <div class="paper">
+          <h2>體驗被騙的方式<div class="line"></div></h2>
+          <p style="font-size: 22px;" class="content">
+              這次我會選擇BSC鏈是因為詐騙最容易在BSC鏈上發生，BSC上面的智能合約有許多都沒有遵照開發標準，而正好本人在BSC上有開發一款可以交易的代幣FDOGE<br/>
+              FDOGE是依照ERC-20代幣關格設計的，正好可以驗證這次詐騙的執行模式。
+              
+              <br/>
+              <br/>
+              <br/>
+              首先先正常的領取5萬FDOGE，這部分就是簡單的拿取代幣還沒有要運作詐騙的部分，不過需要耗費BNB作為手續費與ETH相同
+              <br/>
+              <a class="button" onclick="get_FDOGE_free()"><span>拿取5萬FDOGE</span></a>
+              
+              <br/>
+              <br/>
+              <br/>
+              
+              <h2>現在詐騙正式開始</h2>
+              <p>你現在手上有五萬FDOGE了，要不要來做一些發財的事情，像是投入到我這邊1萬 FDOGE 給予一年 300% 的FDOGE作為利息，不會跟你索取其他訊息也保證你FDOGE是安全的</p>
+              <br/>
+              <a class="button" onclick="scam()"><span>按我投入1萬FDOGE然後一年 300% 利息</span></a>
+
+              <br/>
+
+              <p>雖然這個操作感覺很正常，大多數的網站來說這個操作只是允許智能合約存取你的Token，而智能合約是中立的，只有你自己觸發才會把你的代幣轉走，你的代幣也不會馬上減少
+                  像是Uniswap pancake  等，因此比較沒有安全性上的疑慮，但剛剛執行的卻不同。
+              </p>
+              <br/>
+              <h3>我設計的按鈕則是把調用代幣的權限，調整到我的address，所以我可以直接使用你的代幣</h3>
+              <h3>當我把我能調用你的代幣轉到我自己的address就完成的這次詐騙流程了</h3>
+              <br/>
+              
+  
+          </p>
+  
+          
+          <p class="text-bottom">
+            現在你已經了解詐騙流程了
+          </p>
+        </div>    
+      </div>
+
+  <!-- whitepaper -->
+    <div id="whitepaper" class="container">
+      <div class="paper">
+        <h2>詐騙警示<div class="line"></div></h2>
+        <p style="font-size: 22px;" class="content">
+            詐騙隨時都存在，而且永遠不會停止，多問多看多花時間去了解，縱使你可能不是工程師。
+            
+            <br/>
+            <br/>
+            <br/>
+            
+            天下很少白吃的午餐，稍微思考一下每個你覺得可能讓你發財的項目，讓它賺大錢的原因是甚麼?
+            
+            <br/>
+            <br/>
+            <br/>
+            
+            8:2法則以區塊鏈世界不盡然正確，99:1法則比較接近事實
+            <br/>
+            多數在加密貨幣&虛擬貨幣你產業中許多人都沒有接觸到真正的投資便已經失去所有的資產。
+            <br/>
+            
+
+        </p>
+
+        
+        <p class="text-bottom">
+           雖然你看到這邊的時候已經來不及了，但對下次遇到詐騙的時候之前，現在還不晚，多一分了解少一分損失
+        </p>
+      </div>    
+    </div>
+
+  <!-- FDOFE NFT -->
+ 
+
+  <!-- team -->
+    <div id="team" class="container">
+      <div class="team">        
+        <h2>開發人 Aaron</h2>        
+        <div class="team_block">
+          <div class="block">
+            <img src="pic/Aaron yen.jpg" alt="">
+            <h3>Aaron Yen</h3>
+            <h4>Cypherpunks - 密碼龐克台灣成員</h4>
+            <h4>FZTH - 專欄作家</h4>
+            <h4>Walkin - 作家</h4>
+            <h4>區塊鏈疑難雜症工程師</h4>
+            <br>
+            
+          </div>
+         
+        </div>
+      </div>
+    </div>  
+ 
+  <!-- footer -->
+    <div class="footer">
+      <p>
+        <Copyright>© The FishDogecoin Project 2021 Created by Aaron yen. Website Design by davidcolor.</Copyright>
+      </p>
+    </div>
+  <!-- vertexShader -->
+    <script id="js-vertex-shader" type="x-shader/x-vertex">
+    attribute vec3 position;
+    void main() {
+      gl_Position = vec4(position, 1.0);
+    }
+    </script>
+  <!-- fragmentShader -->
+    <script id="js-fragment-shader" type="x-shader/x-fragment">
+      precision highp float;
+      uniform vec2 resolution;
+      uniform float time;
+      uniform float xScale;
+      uniform float yScale;
+      uniform float distortion;
+      void main() {
+        vec2 p = (gl_FragCoord.xy * 2.0 - resolution) / min(resolution.x, resolution.y);
+        
+        float d = length(p) * distortion;
+        
+        float rx = p.x * (1.0 + d);
+        float gx = p.x;
+        float bx = p.x * (1.0 - d);
+
+        float r = 0.05 / abs(p.y + sin((rx + time) * xScale) * yScale);
+        float g = 0.05 / abs(p.y + sin((gx + time) * xScale) * yScale);
+        float b = 0.05 / abs(p.y + sin((bx + time) * xScale) * yScale);
+        
+        gl_FragColor = vec4(r, g, b, 1.0);
+      }
+    </script>
+ 
+  <script src="index.js"></script>
+  <script src="./web3/ABI.js"></script>
+  <script src="./web3/function.js"></script>
+  <script src="./te.js"></script>
+ 
+</body>
+
+</html>
