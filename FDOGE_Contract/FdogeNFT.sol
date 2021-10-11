@@ -15,8 +15,8 @@ contract FDOGE_NFT is ERC721 {
 
     string public TOKEN_PROVENANCE = ""; // IPFS 發行時執行
 
-    uint256 public constant tonkenPrice = 80000000000000000; //0.08 * 10 ** 18 總共 0.08 ETH
-    uint256 public constant MAX_Token_supply = 50;//總產量
+    uint256 public constant tonkenPrice = 10000000000000000; //0.01 * 10 ** 18 總共 0.01 ETH
+    uint256 public constant MAX_Token_supply = 100;//總產量
     
     
     address private constant creatorAddress = 0x66666694Ff556B311111Ce95830d3A363ad52C63 ;//設計團隊操作
@@ -38,9 +38,9 @@ contract FDOGE_NFT is ERC721 {
     mapping (uint256 => string) private _tokenURIs; //metadata URL
 
     
-    event FDOGECteated(uint256 indexed id);
+    event FDOGECreated(uint256 indexed id);
 
-    constructor() ERC721( "Perfect FDoggie" , "FDOGE" ){//BaseURI 待定
+    constructor() ERC721( "Perfect FishDoggie" , "FDOGE" ){//BaseURI 待定
         //setBaseURI('https://ru19wu06.github.io/FishDoge_FDOGE/fdoge_nft/');
         //https://ru19wu06.github.io/NftMetadata/MetadataTest2/
         devAddress = msg.sender;
@@ -76,9 +76,9 @@ contract FDOGE_NFT is ERC721 {
 
     function mint() public payable{ // FDOGE 0.08ETH
         require(saleActive == true,"Sale is not open yet!");
-        require(Total_Mint <= 10000,"Dope FDOGE has bean sale out");
-        require(msg.value == 0.08 ether, "Value below price");
-        require(balanceOf(msg.sender) <= 10,"You buy too much FDOGE!!");
+        require(Total_Mint <= 100,"Dope FDOGE has bean sale out");
+        require(msg.value == 0.01 ether, "Value below price");
+        
        
         _mintFDOGE(msg.sender);
         
@@ -91,7 +91,7 @@ contract FDOGE_NFT is ERC721 {
         
         _safeMint(buyer,Total_Mint);
         FDOGE_Upgrade[Total_Mint] = false;
-        emit FDOGECteated(Total_Mint);
+        emit FDOGECreated(Total_Mint);
     }
     
     
@@ -109,12 +109,12 @@ contract FDOGE_NFT is ERC721 {
         
     }
     
-    function _mintFDOGEByOwner(address buyer) private{
+    function _mintFDOGEByOwner(address any) private{
         Total_Mint++;
         
-        _mint(buyer,Total_Mint);
+        _mint(any,Total_Mint);
         FDOGE_Upgrade[Total_Mint] = false;
-        emit FDOGECteated(Total_Mint);
+        emit FDOGECreated(Total_Mint);
     }
 
     
@@ -124,18 +124,7 @@ contract FDOGE_NFT is ERC721 {
     }
     
     
-    function GiveUserUpgradeChance(address userchance) public {
-        require(msg.sender == creatorAddress || msg.sender == devAddress);
-        NumberOfUpgrades[userchance] = NumberOfUpgrades[userchance] +1;
-    }
-
-    function Upgrade_FDOGE(uint256 FDOGE) public {
-        require(ownerOf(FDOGE) == msg.sender,'This one is not your FDOGE!');
-        require(NumberOfUpgrades[msg.sender] >= 1 ,"You cant't upgrade");
-        FDOGE_Upgrade[FDOGE] = true;
-        NumberOfUpgrades[msg.sender] = NumberOfUpgrades[msg.sender] -1;
-           
-    }
+    
     
     
    function _baseURI() internal view virtual override returns (string memory) {
