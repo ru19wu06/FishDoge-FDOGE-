@@ -15,8 +15,8 @@ contract FDOGE_NFT is ERC721 {
 
     string public TOKEN_PROVENANCE = ""; // IPFS 發行時執行
 
-    uint256 public constant tonkenPrice = 10000000000000000; //0.01 * 10 ** 18 總共 0.01 ETH
-    uint256 public constant MAX_Token_supply = 100;//總產量
+    uint256 private constant tonkenPrice = 10000000000000000; //0.01 * 10 ** 18 總共 0.01 ETH
+    uint256 private constant MAX_Token_supply = 200;//總產量
     
     
     address private constant creatorAddress = 0x66666694Ff556B311111Ce95830d3A363ad52C63 ;//設計團隊操作
@@ -30,7 +30,7 @@ contract FDOGE_NFT is ERC721 {
     string public baseTokenURI;
 
     bool public saleActive = false; //開啟交易
-    bool public allowListIsActive = false;
+   
 
     mapping(address => uint256) public NumberOfUpgrades; //用戶可以升級FDOGE
     mapping(uint256 => bool) public FDOGE_Upgrade; //是否升級過了
