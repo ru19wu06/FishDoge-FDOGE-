@@ -1,6 +1,12 @@
 
     //const ethereumButton = document.querySelector('.enableEthereumButton');
 
+    async function network_detect(){
+        web3.eth.net.getNetworkType().then(console.log);
+        
+    }
+
+    network_detect();
    
       //Will Start the metamask extension
     async function login_In_button(){
@@ -8,6 +14,7 @@
       window.location.reload();
     }
 
+    
    
     
 
