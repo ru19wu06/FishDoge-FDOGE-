@@ -1,0 +1,191 @@
+html,body{
+    height: 100%;
+    width: 100%;
+    padding: 0px;
+    margin:0px;
+}
+  * {
+    background-color: black;
+    color: white;
+    font-family: 微軟正黑體;
+    position: relative;
+    text-align: center;
+  }
+  /* 常規設置 */
+  a {  
+    padding: 5px 10px;
+    border-radius: 15px;
+    text-decoration: none;
+  }
+  h1 {
+    font-size: 50px;
+    text-shadow: 0px 2px 13px rgb(119 227 239 / 28%), 0px 4px 26px rgb(119 227 239 / 34%);
+  }
+  h2 {
+    font-size: 35px;
+    text-shadow: 0px 2px 13px rgb(119 227 239 / 28%), 0px 4px 26px rgb(119 227 239 / 34%);
+  }
+  h3 {
+    font-size: 25px;
+    text-shadow: 0px 2px 13px rgb(119 227 239 / 28%), 0px 4px 26px rgb(119 227 239 / 34%);
+  }
+  h4 {
+    font-size: 15px;
+  }
+  img {
+    width: 300px;
+  }
+  /* 導覽列 */
+  #nav {
+    display: inline-block;
+    z-index: 1;
+    text-align: center;
+    width: 100%;
+    /* height: 100px; */
+    /* background-color: white; */
+  }
+  #nav .nav{
+    background-color: black;
+    display: inline-block;
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    /* visibility:hidden; */
+
+  }
+  ul {  
+    background-color: black;
+    list-style: none;
+    display: inline-block;
+  }
+  li {  
+    display: inline-block;
+  }
+  #nav a,button {  
+    background-color: black;
+    border: none;  
+    font-size: 20px;
+    text-decoration: none;
+    display: inline-block;
+    letter-spacing: 2px;
+    height: 50px;
+    line-height: 50px;
+  }
+  #nav button{
+    background-color: red;
+    padding: 0px 15px;
+  }
+  
+  /* swap */
+  #swap{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 100vh;
+    background-color: #0f0d0f;
+  }
+  .swap {
+    display: inline-block;
+    width: 80%;
+    max-width: 500px;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);    
+    /* margin-top: 100px; */
+    border-radius: 10px;
+    padding: 10px 20px;
+    background-color: rgb(31,34,37);
+    box-shadow: 0 9px 20px 0px rgba(0,0,0,0.7), 0 -4px 20px 0px rgba(255,255,255,0.1);
+  }
+  .swap a{
+    background-color: rgb(31,34,37);
+  }
+  .swap p{
+    font-size: 12px;
+  }
+  .swap h2{
+    padding : 20px 0px;
+    background-color: rgb(31,34,37);
+  }
+  .swap h3{
+    text-align: left;
+    font-size: 15px;  
+    background-color: rgb(31,34,37);
+  }
+  .swap span{
+    background-color: rgb(31,34,37);
+  }
+  .swap hr{
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .swap .text_field{ 
+    border: none;
+    letter-spacing: 2px;
+    font-family: Poppins;
+    font-weight: bold;
+    display: inline-block;
+    text-align: center;
+    width: 70%;  
+    background: rgb(31,34,37);
+    box-shadow: inset 0 4px 10px 0px rgba(0,0,0,0.7), inset 0 -4px 20px 0px rgba(255,255,255,0.1);
+    border-radius: 10px;
+    padding: 15px;
+  }
+  .swap button{ 
+    margin: 20px;   
+    border: none;
+    background: rgb(29,32,35);
+    box-shadow: 0 9px 20px 0px rgba(0,0,0,0.7), 0 -4px 20px 0px rgba(255,255,255,0.1);
+    color: #77E3EF;
+    text-shadow: 0px 2px 13px rgb(119 227 239 / 28%), 0px 4px 26px rgb(119 227 239 / 34%);
+    border-radius: 10px;
+    padding: 0px 20px;
+    font-weight: bold;
+  }
+  .swap button:hover{     
+    background: rgb(29,32,35);
+    box-shadow: inset 0 4px 10px 0px rgba(0,0,0,0.7), inset 0 -4px 20px 0px rgba(255,255,255,0.1);
+  }  
+  .swap h3{  
+    text-align: center;
+  }
+  .swap input{
+    text-align: left;
+    outline: none;
+    background-color: rgb(29,32,35);
+  /*   border: none; */
+  }
+  .swap .btn-field{
+    background-color: rgb(31,34,37);
+  }
+
+   
+    
+  @media screen and (max-width: 1024px) { 
+      #nav .nav ,#footer{
+          position: relative;
+      }
+      .nav{          
+        position: relative;
+        width: 100%;
+      }
+      #swap{
+          margin-top: 200px;
+      }
+  }
+  @media screen and (max-height: 950px) { 
+      #nav .nav ,#footer{
+          position: relative;
+      }
+      #swap{
+          margin-top: 200px;
+      }
+      .nav{          
+        position: relative;
+        width: 100%;
+      }
+  }

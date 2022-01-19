@@ -1,0 +1,230 @@
+* {
+    background-color: black;
+    color: white;
+    font-family: 微軟正黑體;
+    position: relative;
+    text-align: center;
+  }
+  /* 常規設置 */
+  a {  
+    padding: 5px 10px;
+    border-radius: 15px;
+    text-decoration: none;
+  }
+  h1 {
+    font-size: 50px;
+    text-shadow: 0px 2px 13px rgb(119 227 239 / 28%), 0px 4px 26px rgb(119 227 239 / 34%);
+  }
+  h2 {
+    font-size: 35px;
+    text-shadow: 0px 2px 13px rgb(119 227 239 / 28%), 0px 4px 26px rgb(119 227 239 / 34%);
+  }
+  h3 {
+    font-size: 25px;
+    text-shadow: 0px 2px 13px rgb(119 227 239 / 28%), 0px 4px 26px rgb(119 227 239 / 34%);
+  }
+  h4 {
+    font-size: 15px;
+  }
+  img {
+    width: 300px;
+  }
+  /* 導覽列 */
+  #nav {
+    display: inline-block;
+    position: fixed;
+    z-index: 1;
+    text-align: center;
+    width: 100%;
+    left: 0;
+    top: 0;
+  }
+  ul {  
+    list-style: none;
+    display: inline-block;
+  }
+  li {  
+    display: inline-block;
+  }
+  #nav a,button {  
+    border: none;  
+    font-size: 20px;
+    text-decoration: none;
+    display: inline-block;
+    letter-spacing: 2px;
+    height: 50px;
+    line-height: 50px;
+  }
+  #nav button{
+    background-color: red;
+    padding: 0px 15px;
+  }
+  
+  /* 首頁 */
+  #banner {  
+    display: inline-block;
+  }
+  #banner .container{
+    padding: 15px;
+    margin: 10px;
+  }
+  #banner h1{
+    margin-top: 300px;
+  }
+  #banner .bsc-address{
+    border: none;
+  }
+  #banner .address-container{
+    margin-bottom: 120px;
+  }
+  #banner a{  
+    text-shadow: 0px 2px 13px rgb(119 227 239 / 28%), 0px 4px 26px rgb(119 227 239 / 34%);  
+    background-image: linear-gradient(135deg, #60C0CB 18.23%, #6868FC 100%);
+    box-shadow: 0px 2px 13px rgb(119 227 239 / 28%), 0px 4px 26px rgb(119 227 239 / 34%);
+    margin-left: 10px;
+  }
+  #banner a:hover{
+    box-shadow: inset 0px 2px 13px rgb(119 227 239 / 28%), inset 0px 4px 26px rgb(119 227 239 / 34%);
+    
+  }
+  
+  /* 白皮書 */
+  #use .text{
+    display: inline-block;
+    max-width: 576px;
+  /*   font-size: 14px; */
+    padding-left: 20px;
+    padding-right: 20px;
+    vertical-align: text-top;
+  }
+  #use .text ul{
+    padding: 0px;
+    list-style-type: square;
+  }
+  #use .text p,li{
+    text-align: center;  
+  }
+  #use .text h4{
+    font-size: 12px;
+    text-align: right;
+  }
+  #use .pic{
+    width: 556px;/*padding的關係-20px*/
+    height: 480px;
+    display: inline-block;
+    vertical-align: text-top;
+  }
+  #use img{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);  
+  }
+  #use .container{
+    padding-bottom: 100px;
+  }
+  
+  /* Roadmap */
+  #roadmap {
+    padding-bottom: 100px;
+  }
+  #roadmap .pic{
+    width: 556px;/*padding的關係-20px*/
+    display: inline-block;
+    vertical-align: text-top;
+    height: 480px;
+  }
+  #roadmap .text{
+    display: inline-block;
+    width: 576px;
+    font-size: 14px;
+    padding-left: 20px;
+    padding-right: 20px;
+    vertical-align: text-top;
+    height: 480px;
+  }
+  #roadmap img{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);    
+  }
+  #roadmap .wrap{
+    width: 576px;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);    
+  }
+  
+  /* 開發團隊 */
+  #team .block{
+    display: inline-block;
+    width: 576px;  
+    vertical-align: text-top;
+    margin-bottom: 100px;
+  }
+  #team h4{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  #team .container{
+    padding-bottom: 100px;
+  }
+  #team h3,h2{
+    text-shadow: none;
+  }
+  
+  /* 頁尾 */
+  #footer {
+  /*   background-color: black;  */
+    height: 30px;
+    line-height:  30px;
+  }
+  #footer copyright{
+    font-family: Poppins;  
+  }
+  
+  #use,#roadmap,#team {
+    max-width: 1600px;
+    border: solid 1px #60C0CB;
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-top: 100px;
+  }
+  
+  @media screen and (max-width: 1800px) { 
+    #use,#roadmap,#team {
+      margin: 100px;
+    }
+  }
+    
+  @media screen and (max-width: 992px) {  
+    #use,#roadmap,#team {
+      margin: 50px;
+    }
+  }
+  @media screen and (max-width: 768px) { 
+    #use,#roadmap,#team {
+      margin: 20px;
+    }
+    #use .pic{
+      width: 90%;
+    }
+    #roadmap .pic{
+      width: 90%;
+    }
+    #roadmap .text{
+      width: 80%;
+  /*     border: solid 1px red; */
+    }
+    #roadmap .wrap{
+      width: 100%;
+  /*     border: solid 1px green; */
+      box-sizing: Border-box;
+      padding: 10px;
+    }
+    #team .block{
+      width: 100%;
+    }
+  }

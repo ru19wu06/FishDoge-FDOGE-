@@ -1,0 +1,149 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins);
+
+.nft{
+  font-size: 0px;
+  max-width: 800px;
+  margin: 100px auto;
+  height: 450px;
+}
+.picture{  
+  display: inline-block;
+  font-size: 20px;
+  box-sizing: border-box;
+  height: 200px;
+  text-align: center;
+  vertical-align: top;
+  padding: 10px;
+  width: 50%;
+  height: 100%;  
+}
+.picture img{
+  position: absolute;
+  width: 100%;
+  height: 80%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+}
+.block{
+  display: inline-block;
+  font-size: 20px;
+  box-sizing: border-box;
+/*   height: 200px; */
+  text-align: center;
+  vertical-align: top;
+/*   border: solid 2px black; */
+}
+.right{  
+  width: 50%;
+  height: 100%;
+  font-size: 0px;
+}
+.mintblock{
+  width: 100%;
+  height: 360px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+}
+.info{
+  width: 100%;
+  font-size: 0px;
+  padding: 0px;
+  margin: 0px;
+}
+.fee{
+  font-size: 18px;
+  width: 50%;
+  height: 100%;
+  border: none;
+  margin: 0px;
+  border: solid 3px black;
+}
+.unit_price{
+  font-size: 18px;
+  width: 50%;
+  height: 100%;
+  border: none;
+  color: white;
+  background-color: black;
+  margin: 0px;
+  vertical-align: center;
+  border: solid 3px black;
+}
+.btn{
+  color: white;
+  letter-spacing: 2px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 30px;
+  margin: 0px 10px;
+}
+.btn.wallet_btn{
+  background-color: #fa3800;
+}
+.btn.mint_btn{
+  background-color: #016FFF;
+}
+.cal_btn{
+  background-color: black;
+  border-radius: 50%;
+}
+.max_btn{
+  background-color: black;
+  color: #5DEB17;
+}
+.amount_field{
+  border: solid 2px black;
+  width: 50px;
+  color: #F58B47;
+  font-size: 20px;
+  text-align: center;
+}
+.total_display{
+  margin: 0px 20px;
+  color: #F58B47;
+}
+.purchase{
+  margin-top: 43px;
+  padding-top: 20px;
+  width: 100%;
+  border: solid 3px black;
+  border-top: none;
+}
+.zone{
+/*   border: solid 1px black; */
+  display: flex;          
+  align-items: center;
+  justify-content: center;
+  padding: 20px 10px;
+}
+.zone button{  
+  cursor:pointer;
+}
+.green_text{
+  color: #5DEB17;
+}
+.percent{  
+  position: relative;
+  width: 200px;
+  height: 16px;
+  margin: 0 10px;
+  border-radius: 10px;
+  background: #151515;
+  overflow: hidden;
+  border: none;
+}
+.percent .progress{  
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  border-radius: 10px;
+  background: linear-gradient(45deg, #1fe6ff, #BAF857);
+}
