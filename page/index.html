@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>
+        The FishDoge Coin
+    </title>
+    <link href='index.css' rel='stylesheet' type='text/css'>
+    <link href='swap.css' rel='stylesheet' type='text/css'>
+    <link href='nftpage.css' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    <div id="app">
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue-router/3.4.3/vue-router.js' integrity='sha512-3y+1622sE9JcYGIob4bKvJI6qMHpzrsloehokHVZBk1Lx7lr7H5p6IOqIkRQzB0Ids5l11W3n+vK50xArypH5g==' crossorigin='anonymous'></script>
+    <script>
+        const Index={
+            template:`<div>
+                <section>
+                    <div id="banner">
+                    <h1>The FishDoge Coin</h1>
+                    <img src="https://i.imgur.com/8ZYUZdD.gif" alt="">
+                    <h3>The only crypto coin you need</h3>
+                    <div class="container">
+                        <a href="">PANCAKE</a>
+                        <a href="">SWAP</a>
+                        <a href="">操作教學</a>
+                    </div>
+                    <div class="address-container"> 
+                        <a class="bsc-address" href="">BSC:0x361d8552d7db423ec0cb097a5911fe453d205374</a>
+                    </div>
+                    </div>
+                </section>
+                <section>
+                    <div id="use">
+                    <h1>白皮書</h1>
+                    <div class="container">      
+                        <div class="text">
+                        <p>狗幣暴發戶勢不可擋，你是否也對狗型代幣充滿期待呢?最遺憾的是你還沒上車阿!沒關係，現在有FishDoge Coin魚狗幣(FDOGE)，滿足你對狗狗的幻想，不管哪一方面，擁有一大把魚狗幣的你終將幸福。</p>
+                        <h3>注意事項</h3>
+                        <ul>
+                            <li>一顆 FDOGE 的價值等同於一顆FDOGE，不多不少不消不漲，比穩定幣還要穩!</li>
+                            <li>透過BSC幣安智能鏈使用BNB購買，不想花錢也能支付微量手續費領取FDOGE。</li>
+                            <li>不要在意漲跌，魚狗幣的價格為 0，數學上 0 = ∞ ，FDOGE價值=無限。</li>
+                            <li>永遠記住 1 FDOGE = 1 FDOGE，海枯石爛，滴水穿石，大千世界，三民主義，恆久不變。</li>
+                        </ul>
+                        <h3>用途</h3>
+                        <ul>
+                            <li>FishDoge Coin 可以用作Load of Hugo團隊的顧問諮詢費，一千萬顆FDOGE/hr。</li>
+                            <li>跟別人炫耀：你有FDOGE嗎?我有!</li>
+                            <li>拿著FDOGE幻想自己暴富就很開心了，這樣還不夠嗎???</li>
+                        </ul>
+                        <h4>魚狗幣與你、區塊鏈、幣安鏈永存於世</h4>
+                        </div>
+                        <div class="pic">
+                        <img src="https://i.kfs.io/playlist/global/66915808v1/cropresize/600x600.jpg" alt="">
+                        </div>
+                    </div>
+                    </div>
+                </section>
+                <section>
+                    <div id="roadmap">
+                    <h1>Roadmap</h1>
+                    <div class="container">
+                        <div class="pic">
+                        <img src="https://i.kfs.io/playlist/global/66915808v1/cropresize/600x600.jpg" alt="">
+                    </div>
+                    <div class="text">
+                        <div class="wrap">
+                        <h3>FDOGE 配額</h3>
+                        <h4>總發行量:2000億</h4>
+                        <ul>
+                        <li>0.5% 用來改善FishDoge宇宙</li>
+                        <li>0.5% 送給逛這個網站的路人</li>
+                        <li>1% 空投Airdrop - 給各位可愛的用戶</li>
+                        <li>1% 給Fish Dog本人 - FishDog先生貢獻不可計量</li>
+                        <li>2% 開發團隊 Load of Hugo - 企業團隊經營，應該的</li>
+                        <li>95% CEO - 背後的主宰者宇宙的魔王統治一切</li>
+                        </ul>
+                        </div>      
+                    </div>
+                    </div>   
+                </div>  
+                    
+                </section>
+                <section>
+                    <div id="team">
+                    <div class="title">
+                        <h1>開發團隊</h1>
+                    </div>
+                    <div class="container">   
+                        <div class="block">
+                        <div class="pfp">
+                            <img src="https://i.kfs.io/playlist/global/66915808v1/cropresize/600x600.jpg" alt="">
+                        </div>
+                        <h3>顏培祐</h3>
+                        <h2>CEO</h2>
+                        <h4>
+                            Cypherpunks - 密碼龐克台灣成員<br>
+                            FZTH - 專欄作家<br>
+                            Walkin - 作家<br>
+                            區塊鏈疑難雜症工程師<br>
+                        </h4>
+                        <h3>喜歡思考一些有趣的議題，解決問題主義者</h3>
+                        </div>  
+                        <div class="block">
+                        <div class="pfp">
+                            <img src="https://i.kfs.io/playlist/global/66915808v1/cropresize/600x600.jpg" alt="">
+                        </div>
+                        <h3>王渝翔</h3>
+                        <h2>Mascot</h2>
+                        <h4>Call me “The Fishdoge” who always searching for best strongest NFT and only gives you the best information by fishdoge.crypto,MCV/AlienFrens Holder🐈👽💎🚀</h4>
+                        <h3>我很有錢</h3>
+                        </div> 
+                        <div class="block">
+                        <div class="pfp">
+                            <img src="https://i.kfs.io/playlist/global/66915808v1/cropresize/600x600.jpg" alt="">
+                        </div>
+                        <h3>顏大衛</h3>
+                        <h2>Front-End</h2>
+                        <h4>Crypto Aritist<br>
+                            Front-End Developer
+                        </h4>
+                        <h3>解決解決問題主義者主義者</h3>
+                        </div>
+                        <div class="block">
+                        <div class="pfp">
+                            <img src="https://i.kfs.io/playlist/global/66915808v1/cropresize/600x600.jpg" alt="">
+                        </div>
+                        <h3>顏毓潁</h3>
+                        <h2>Back-End PooPoo</h2>
+                        <h4>
+                            Front-End rookie<br>
+                            Restaurant - shareholder
+                        </h4>
+                        <h3>製造問題主義者</h3>
+                        </div>
+                    </div>
+                    </div>
+                </section>
+            </div>`
+        }
+        const Swap={
+            template:`<div>
+                <section>  
+                    <div id="swap">
+                        <div class="swap">
+                        <h2>Swap Exchange</h2>
+                        <h3>Trade tokens in an instant</h3>
+                        <h3>用 BNB 購買 FDOGE</h3>
+                        <hr>
+                        <h3>Form</h3>
+                        <h3>BNB Balance : <span id="account1">0<a></a></span></h3>
+                        <input class="text_field" id="input_value" type="input_value" placeholder="0.0">
+                        <h3>To</h3> 
+                        <h3>FDOGE Balance : <span id="FDOGE_value1"></span></h3>
+                        <input class="text_field" type="input_value" id="get_FDOGE" placeholder="0.0">
+                        <div class="btn-field">
+                            <button class="button" onclick="get_apir_value()">GET</button>
+                            <button class="button" onclick="Swap_BNB_to_FDOGE()">SWAP</button>
+                        </div>
+                        </div>
+                    </div>
+                </section>
+            </div>`,
+        }
+        const Nft={
+            template:`<div>
+                <section class="nft">
+                    <div class="picture">
+                    <img src="https://static.wixstatic.com/media/2d320c_e92e745669b8477786e328f1ce12834d~mv2.gif" alt="">
+                    </div>  
+                    <div class="block right">
+                    <div class="block mintblock">
+                        <div class="block info">
+                            <div class="">83-86</div>
+                        </div>
+                        <div class="block unit_price">
+                            <div class="green_text">PRICE</div>
+                            <div class="">0.08ETH</div>
+                        </div>
+                        </div>
+                        <div class="block purchase">
+                        <div class="zone">
+                            <div class="percent">
+                            <div class="progress" :style="{'width':percentage+'%'}"></div>
+                            </div>
+                            <div class="value">{{num}}/{{maxNum}}</div>
+                        </div>
+                        <div class="zone">
+                            <p>AMOUNT</p>
+                            <button class="btn cal_btn" @click="reduceHandler">-</button>
+                            <p>{{num}}</p>
+                            <button class="btn cal_btn" @click="plusHandler">+</button>
+                            <button class="btn max_btn" @click="maxHandler">MAX</button>
+                        </div>
+                        <div class="zone">
+                            <p>TOTAL PRICE</p>
+                            <p class="total_display">{{0.08*num}}</p>
+                            <p>ETH</p>
+                        </div>  
+                        <div class="zone">        
+                            <button class="btn mint_btn">MINT</button>
+                        </div>
+                        </div> 
+                    </div>       
+                    </div>
+                </section>
+            </div>`,
+            data(){
+                return{
+                    num:0,
+                    maxNum:10,
+                    percentage:null
+                }
+            },
+            methods:{
+                reduceHandler(){
+                    if(this.num>0){
+                        this.num--
+                        this.percentage=this.num*10
+                    }
+                },
+                plusHandler(){
+                    if(this.num<this.maxNum){
+                        this.num++
+                        this.percentage=this.num*10
+                    }
+                },
+                maxHandler(){
+                    this.num=this.maxNum
+                }
+            }
+        }
+        const router=new VueRouter({
+            routes: [
+                {
+                    path: "/",
+                    name: "index",
+                    component: Index
+                },
+                {
+                    path: "/swap",
+                    name: "swap",
+                    component: Swap
+                },
+                {
+                    path: "/nft",
+                    name: "nft",
+                    component: Nft
+                }
+            ]
+        });
+        new Vue({
+            el:'#app',
+            router,
+            Index,
+            Swap,
+            data:{
+                banner:'banner',
+                use:'use',
+                roadmap:'roadmap',
+                team:'team',
+            },
+            methods:{
+                Anchor(id){
+                    router.push({name:'index',params:{id}})
+                }
+            },
+            template:`
+            <div id="app">
+                <section class="nav">
+                    <div id="nav">
+                        <a href="">fishdoge</a>
+                        <ul>    
+                            <a href="#banner"><li @click="Anchor(banner)">首頁</li>
+                            <a href="#use"><li @click="Anchor(use)">白皮書</li></router-link>
+                            <a href="#roadmap"><li @click="Anchor(roadmap)">Roadmap</li></router-link>
+                            <a href="#team"><li @click="Anchor(team)">開發團隊</li></router-link>
+                            <router-link to="/swap"><li>SWAP</li></router-link>
+                            <router-link to="/nft"><li>NFT</li></router-link>
+                        </ul>
+                        <button>Connect Wallet</button>
+                        </div>  
+                </section>
+                <router-view />
+                <div id="footer">
+                    <p>
+                        © The FishDogecoin Project 2021 Created by Aaron yen. Website Design by davidcolor , patrick.        
+                    </p>
+                </div>
+            </div>`,
+        })
+    </script>
+</body>
+</html>
