@@ -15,6 +15,9 @@
     <link href='index.css' rel='stylesheet' type='text/css'>
     <link href='swap.css' rel='stylesheet' type='text/css'>
     <link href='nftpage.css' rel='stylesheet' type='text/css'>
+
+    <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.36/dist/web3.min.js"integrity="sha256-nWBTbvxhJgjslRyuAKJHK+XcZPlCnmIAAMixz6EefVk=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 </head>
 <body>
     <div id="app">
@@ -22,6 +25,21 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/vue-router/3.4.3/vue-router.js' integrity='sha512-3y+1622sE9JcYGIob4bKvJI6qMHpzrsloehokHVZBk1Lx7lr7H5p6IOqIkRQzB0Ids5l11W3n+vK50xArypH5g==' crossorigin='anonymous'></script>
+    
+    <script>
+        //let web3 = new Web3("wss://mainnet.infura.io/ws/v3/094050d79dc24c87b21f1ab21c343597");
+      
+        if (typeof web3 !== 'undefined') {
+            web3 = new Web3(web3.currentProvider);
+    
+            //alert("請使用MetaMask登入");
+        } else {
+            // 確認是否使用metamask地址
+            web3 = new Web3("wss://mainnet.infura.io/ws/v3/b728a5b97fb74e7fb413a930f3b69e06");
+        }
+    
+    </script>
+    
     <script>
         const Index={
             template:`<div>
@@ -289,7 +307,7 @@
                             <router-link to="/swap"><li>SWAP</li></router-link>
                             <router-link to="/nft"><li>NFT</li></router-link>
                         </ul>
-                        <button>Connect Wallet</button>
+                        <button id="login_address" onclick="login_In_button()">Connect Wallet</button>
                         </div>  
                 </section>
                 <router-view />
@@ -301,5 +319,6 @@
             </div>`,
         })
     </script>
+    <script src="./web3/index.js"></script>
 </body>
 </html>

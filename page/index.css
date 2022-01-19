@@ -192,6 +192,10 @@
     margin: 0 auto;
     margin-top: 100px;
   }
+
+  #login_address{
+    border-radius: 16px;
+  }
   
   @media screen and (max-width: 1800px) { 
     #use,#roadmap,#team {
