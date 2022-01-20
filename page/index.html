@@ -204,7 +204,7 @@
                         </div>
                         <div class="block unit_price">
                             <div class="green_text">PRICE</div>
-                            <div class="">0.08ETH</div>
+                            <div class="">0.01ETH</div>
                         </div>
                         </div>
                         <div class="block purchase">
@@ -227,7 +227,7 @@
                             <p>ETH</p>
                         </div>  
                         <div class="zone">        
-                            <button class="btn mint_btn">MINT</button>
+                            <button class="btn mint_btn" onclick="MintFdoge()">MINT</button>
                         </div>
                         </div> 
                     </div>       
@@ -237,7 +237,7 @@
             data(){
                 return{
                     num:0,
-                    maxNum:10,
+                    maxNum:200,
                     percentage:null
                 }
             },
@@ -319,6 +319,7 @@
             </div>`,
         })
     </script>
+    <script src="./web3/ABI.js"></script>
     <script src="./web3/index.js"></script>
 </body>
 </html>
