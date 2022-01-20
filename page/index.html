@@ -41,11 +41,15 @@
                     </div>
                 </section>
                 <section>
+                    <div id= origin>
+                        <h1>緣起</h1>
+                        <p>狗幣暴發戶勢不可擋，你是否也對狗型代幣充滿期待呢?最遺憾的是你還沒上車阿!<br>
+                        沒關係，現在有FishDoge Coin魚狗幣(FDOGE)，滿足你對狗狗的幻想，不管哪一方面，擁有一大把魚狗幣的你終將幸福。</p>
+                    </div>
                     <div id="use">
                     <h1>白皮書</h1>
                     <div class="container">      
                         <div class="text">
-                        <p>狗幣暴發戶勢不可擋，你是否也對狗型代幣充滿期待呢?最遺憾的是你還沒上車阿!沒關係，現在有FishDoge Coin魚狗幣(FDOGE)，滿足你對狗狗的幻想，不管哪一方面，擁有一大把魚狗幣的你終將幸福。</p>
                         <h3>注意事項</h3>
                         <ul>
                             <li>一顆 FDOGE 的價值等同於一顆FDOGE，不多不少不消不漲，比穩定幣還要穩!</li>
@@ -62,7 +66,7 @@
                         <h4>魚狗幣與你、區塊鏈、幣安鏈永存於世</h4>
                         </div>
                         <div class="pic">
-                        <img src="https://i.kfs.io/playlist/global/66915808v1/cropresize/600x600.jpg" alt="">
+                        <img src="金魚.png" alt="">
                         </div>
                     </div>
                     </div>
@@ -72,7 +76,7 @@
                     <h1>Roadmap</h1>
                     <div class="container">
                         <div class="pic">
-                        <img src="https://i.kfs.io/playlist/global/66915808v1/cropresize/600x600.jpg" alt="">
+                        <img src="柴犬.png" alt="">
                     </div>
                     <div class="text">
                         <div class="wrap">
@@ -98,11 +102,9 @@
                         <h1>開發團隊</h1>
                     </div>
                     <div class="container">   
-                        <div class="block">
-                        <div class="pfp">
-                            <img src="https://i.kfs.io/playlist/global/66915808v1/cropresize/600x600.jpg" alt="">
-                        </div>
-                        <h3>顏培祐</h3>
+                        <div id="arron" class="block">
+                        <img src="arron.png" alt="">
+                        <h3>Aaron Yan</h3>
                         <h2>CEO</h2>
                         <h4>
                             Cypherpunks - 密碼龐克台灣成員<br>
@@ -112,34 +114,28 @@
                         </h4>
                         <h3>喜歡思考一些有趣的議題，解決問題主義者</h3>
                         </div>  
-                        <div class="block">
-                        <div class="pfp">
-                            <img src="https://i.kfs.io/playlist/global/66915808v1/cropresize/600x600.jpg" alt="">
-                        </div>
-                        <h3>王渝翔</h3>
+                        <div id="fishdoge" class="block">
+                        <img src="fishdoge.png" alt="">
+                        <h3>FishDoge</h3>
                         <h2>Mascot</h2>
                         <h4>Call me “The Fishdoge” who always searching for best strongest NFT and only gives you the best information by fishdoge.crypto,MCV/AlienFrens Holder🐈👽💎🚀</h4>
                         <h3>我很有錢</h3>
                         </div> 
-                        <div class="block">
-                        <div class="pfp">
-                            <img src="https://i.kfs.io/playlist/global/66915808v1/cropresize/600x600.jpg" alt="">
-                        </div>
-                        <h3>顏大衛</h3>
-                        <h2>Front-End</h2>
+                        <div id="david" class="block">
+                        <img src="david.png" alt="">
+                        <h3>David Color</h3>
+                        <h2>Web designer</h2>
                         <h4>Crypto Aritist<br>
                             Front-End Developer
                         </h4>
                         <h3>解決解決問題主義者主義者</h3>
                         </div>
-                        <div class="block">
-                        <div class="pfp">
-                            <img src="https://i.kfs.io/playlist/global/66915808v1/cropresize/600x600.jpg" alt="">
-                        </div>
+                        <div id="patrick" class="block">
+                            <img src="peach.png" alt="">
                         <h3>顏毓潁</h3>
-                        <h2>Back-End PooPoo</h2>
+                        <h2>Front-End Designer</h2>
                         <h4>
-                            Front-End rookie<br>
+                            Back-End rookie<br>
                             Restaurant - shareholder
                         </h4>
                         <h3>製造問題主義者</h3>
@@ -176,44 +172,34 @@
         const Nft={
             template:`<div>
                 <section class="nft">
-                    <div class="picture">
+                    <div id="picture">
                     <img src="https://static.wixstatic.com/media/2d320c_e92e745669b8477786e328f1ce12834d~mv2.gif" alt="">
-                    </div>  
-                    <div class="block right">
-                    <div class="block mintblock">
-                        <div class="block info">
-                            <div class="">83-86</div>
-                        </div>
-                        <div class="block unit_price">
-                            <div class="green_text">PRICE</div>
-                            <div class="">0.08ETH</div>
-                        </div>
-                        </div>
-                        <div class="block purchase">
-                        <div class="zone">
-                            <div class="percent">
-                            <div class="progress" :style="{'width':percentage+'%'}"></div>
-                            </div>
-                            <div class="value">{{num}}/{{maxNum}}</div>
-                        </div>
-                        <div class="zone">
-                            <p>AMOUNT</p>
-                            <button class="btn cal_btn" @click="reduceHandler">-</button>
-                            <p>{{num}}</p>
-                            <button class="btn cal_btn" @click="plusHandler">+</button>
-                            <button class="btn max_btn" @click="maxHandler">MAX</button>
-                        </div>
-                        <div class="zone">
-                            <p>TOTAL PRICE</p>
-                            <p class="total_display">{{0.08*num}}</p>
-                            <p>ETH</p>
-                        </div>  
-                        <div class="zone">        
-                            <button class="btn mint_btn">MINT</button>
-                        </div>
-                        </div> 
-                    </div>       
                     </div>
+                    <div id="blockinfo">
+                        <div class="mintblock">
+                            <div class="zone">
+                                <div class="percent">
+                                    <div class="progress" :style="{'width':percentage+'%'}"></div>
+                                </div>
+                                <div class="value">{{num}}/{{maxNum}}</div>
+                            </div>
+                            <div class="zone">
+                                <p>AMOUNT</p>
+                                <button class="btn cal_btn" @click="reduceHandler">-</button>
+                                <p>{{num}}</p>
+                                <button class="btn cal_btn" @click="plusHandler">+</button>
+                                <button class="btn max_btn" @click="maxHandler">MAX</button>
+                            </div>
+                            <div class="zone">
+                                <p>TOTAL PRICE</p>
+                                <p class="total_display">{{0.08*num}}</p>
+                                <p>ETH</p>
+                            </div>  
+                            <div class="zone">        
+                                <button class="btn mint_btn">MINT</button>
+                            </div> 
+                        </div>       
+                    </div>  
                 </section>
             </div>`,
             data(){
@@ -238,6 +224,7 @@
                 },
                 maxHandler(){
                     this.num=this.maxNum
+                    this.percentage=this.num*10
                 }
             }
         }
@@ -280,7 +267,7 @@
             <div id="app">
                 <section class="nav">
                     <div id="nav">
-                        <a href="">fishdoge</a>
+                        <a href="" id="logo">Fishdoge</a>
                         <ul>    
                             <a href="#banner"><li @click="Anchor(banner)">首頁</li>
                             <a href="#use"><li @click="Anchor(use)">白皮書</li></router-link>
@@ -295,7 +282,7 @@
                 <router-view />
                 <div id="footer">
                     <p>
-                        © The FishDogecoin Project 2021 Created by Aaron yen. Website Design by davidcolor , patrick.        
+                        © The FishDogecoin Project 2021 Created by Aaron Yan. Website Design by David Color , Patrick Yan.        
                     </p>
                 </div>
             </div>`,

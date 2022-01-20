@@ -1,11 +1,20 @@
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC&display=swap");
 * {
     background-color: black;
-    color: white;
-    font-family: 微軟正黑體;
+    font-family: 'Noto Sans TC',sans-serif !important;
+    color: rgb(216, 215, 215);
+    font-weight: bolder;
+    text-shadow: 0.1em 0.1em 0.2em rgba(255, 255, 255, 0.7);
     position: relative;
     text-align: center;
   }
   /* 常規設置 */
+  html,body{
+    height: 100%;
+    width: 100%;
+    padding: 0px;
+    margin:0px;
+  }
   a {  
     padding: 5px 10px;
     border-radius: 15px;
@@ -13,17 +22,17 @@
   }
   h1 {
     font-size: 50px;
-    text-shadow: 0px 2px 13px rgb(119 227 239 / 28%), 0px 4px 26px rgb(119 227 239 / 34%);
   }
   h2 {
     font-size: 35px;
-    text-shadow: 0px 2px 13px rgb(119 227 239 / 28%), 0px 4px 26px rgb(119 227 239 / 34%);
   }
   h3 {
     font-size: 25px;
-    text-shadow: 0px 2px 13px rgb(119 227 239 / 28%), 0px 4px 26px rgb(119 227 239 / 34%);
   }
   h4 {
+    font-size: 20px;
+  }
+  p{
     font-size: 15px;
   }
   img {
@@ -39,14 +48,22 @@
     left: 0;
     top: 0;
   }
+  #nav #logo{
+    display: inline;
+    font-size: 40px;
+    margin-right: 30px;
+  }
+
   ul {  
     list-style: none;
     display: inline-block;
   }
-  li {  
+  li {
+    font-size: 15px;
     display: inline-block;
   }
   #nav a,button {  
+    text-shadow: none;
     border: none;  
     font-size: 20px;
     text-decoration: none;
@@ -55,9 +72,25 @@
     height: 50px;
     line-height: 50px;
   }
+  #nav li{
+    font-size: 20px;
+    text-shadow: none;
+  }
   #nav button{
-    background-color: red;
+    border-radius: 20px;
+    background:radial-gradient(circle farthest-corner at left,rgb(74, 121, 209),rgb(187, 56, 132));
     padding: 0px 15px;
+  }
+  #nav li:hover{
+    border: 1px solid;
+    border-width: 0px 1px 2.5px 0px;
+    border-radius: 13px;
+    border-color: #574de7; 
+  }
+  #nav button:hover{
+    top:1.5px;
+    left: 1.5px;
+    box-shadow: 1px 1px 2px 1px rgb(187,56, 132);
   }
   
   /* 首頁 */
@@ -87,7 +120,14 @@
     box-shadow: inset 0px 2px 13px rgb(119 227 239 / 28%), inset 0px 4px 26px rgb(119 227 239 / 34%);
     
   }
-  
+  /*緣起*/
+  #origin{
+    padding-top: 50px;
+    padding-bottom: 100px;
+  }
+  #origin p{
+    font-size: 20px;
+  }
   /* 白皮書 */
   #use .text{
     display: inline-block;
@@ -98,21 +138,27 @@
     vertical-align: text-top;
   }
   #use .text ul{
-    padding: 0px;
-    list-style-type: square;
+    text-align: left;
   }
-  #use .text p,li{
-    text-align: center;  
+  #use .text li{
+    font-size: 18px;  
+    padding: 10px;
+    text-align: left;
   }
+  #use .text li::before{
+    content:"。";
+    color:white;
+  }
+
   #use .text h4{
-    font-size: 12px;
+    font-size: 14px;
     text-align: right;
   }
   #use .pic{
     width: 556px;/*padding的關係-20px*/
     height: 480px;
     display: inline-block;
-    vertical-align: text-top;
+    vertical-align:bottom;
   }
   #use img{
     position: absolute;
@@ -137,7 +183,6 @@
   #roadmap .text{
     display: inline-block;
     width: 576px;
-    font-size: 14px;
     padding-left: 20px;
     padding-right: 20px;
     vertical-align: text-top;
@@ -156,28 +201,45 @@
     left: 50%;
     transform: translate(-50%, -50%);    
   }
+  .wrap li{
+    font-size: 20px;
+    padding: 5px;
+  }
   
   /* 開發團隊 */
   #team .block{
+    max-width: 1600px;
+    border: solid 1px #60C0CB;
+    border-radius: 10px;
     display: inline-block;
-    width: 576px;  
+    width: 35%;
     vertical-align: text-top;
-    margin-bottom: 100px;
+    margin: 100px 50px;
+    padding:50px;
   }
-  #team h4{
+  #arron{
+    height: 650px;
+  }
+  #fishdoge{
+    height: 650px;
+  }
+  #david,#patrick{
+    height: 550px;
+  }
+  #team img{
+    width:150px;
+    height: 150px;
+  }
+  /*#team h4{
     padding-left: 20px;
     padding-right: 20px;
-  }
+  }*/
   #team .container{
     padding-bottom: 100px;
-  }
-  #team h3,h2{
-    text-shadow: none;
   }
   
   /* 頁尾 */
   #footer {
-  /*   background-color: black;  */
     height: 30px;
     line-height:  30px;
   }
@@ -185,28 +247,101 @@
     font-family: Poppins;  
   }
   
-  #use,#roadmap,#team {
+  #origin,#use,#roadmap {
     max-width: 1600px;
     border: solid 1px #60C0CB;
-    border-radius: 10px;
-    margin: 0 auto;
-    margin-top: 100px;
+    border-radius: 15px;
+    margin: 150px auto;
   }
   
   @media screen and (max-width: 1800px) { 
-    #use,#roadmap,#team {
+    #origin,#use,#roadmap,#team {
       margin: 100px;
+    }
+  }
+
+  @media screen and (max-width: 1200px) { 
+    #origin,#use,#roadmap,#team {
+      margin-top: 60px;
+    }
+    #nav #logo{
+      font-size: 20px;
+      margin:0px;
+    }
+    #nav ul{
+      width:400px;
+      padding:5px;
+      padding-right:0px;
+    }
+    #nav button{
+      font-size: 15px;
+      width:200px;
+      padding:0px;
+      
+    }
+    #nav a{
+      padding: 3px;
+    }
+    #nav li{
+      font-size: 15px;
+    }
+    #origin{
+      padding-top: 20px;
+      padding-bottom: 70px;
+    }
+    #origin p{
+      font-size:18px;
+      margin:auto 20px;
+    }
+    #team h1{
+      margin-top: 30px;
+      margin-bottom: 0px;
+    }
+    #arron,#fishdoge{
+      height: 650px;
+      margin: 20px 50px;
+    }
+    #team .container {
+      padding-bottom: 20px;
+    }
+    #team h2{
+      font-size: 20px;
+    }
+    #team h4{
+      font-size: 12px;
     }
   }
     
   @media screen and (max-width: 992px) {  
-    #use,#roadmap,#team {
-      margin: 50px;
+    #origin,#use,#roadmap,#team {
+      margin: 100px 30px;
+    }
+    #team h3{
+      font-size: 20px;
+    }
+    #arron,#fishdoge{
+      height: 650px;
+    }
+    #arron h4{
+      font-size: 14px;
+      margin-bottom: 40px;
+      padding: 0px 10px;
+    };
+    #fishdoge h4{
+      font-size: 10px;
+      text-align: left;
+      margin-bottom: 30px;
+      padding-left:0px;
+      padding-right:0px;
+    }
+    #david,#patrick{
+      font-size: 14px;
+      height: 500px;
     }
   }
-  @media screen and (max-width: 768px) { 
-    #use,#roadmap,#team {
-      margin: 20px;
+  @media screen and (max-width: 767px) { 
+    #origin,#use,#roadmap,#team {
+      margin: 30px;
     }
     #use .pic{
       width: 90%;
@@ -226,5 +361,107 @@
     }
     #team .block{
       width: 100%;
+    }
+  }
+  @media screen and (max-width: 576px){
+    #origin,#use,#roadmap,#team{
+      margin: 60px 5%;
+    }
+    h1{
+      width: 100%;
+      font-size: 30px;
+      text-align: center;
+    }
+    h3{
+      width: 100%;
+      font-size: 20px;
+    }
+    p{
+      font-size: 12px;
+    }
+    img{
+      width: 200px;
+      height: 200px;
+    }
+    #nav{
+      height:260px;
+    }
+    #nav a{
+      height: 40px;
+    }
+    #nav ul{
+      position: absolute;
+      right: 0;
+      top:0;
+      width:180px;
+      height: 260px;
+      margin: 0;
+      padding: 0;
+
+    }
+    #nav li{
+      height: 40px;
+    }
+    #logo{
+      position: absolute;
+      left: 50px;
+      top:50px;
+    }
+    #nav button{
+      position: absolute;
+      left: 30px;
+      top:150px;
+      width: 150px;
+    }
+    #banner{
+      height: 850px;
+    }
+    #banner .container{
+      margin: 0;
+      width: 100%;
+      height: 40px;
+      padding:0;
+    }
+    #banner .bsc-address {
+      font-size: 13px;
+      width:95%;
+      margin: 5% 0;
+      padding:0;
+    }
+    #origin h1{
+      width: 100%;
+      margin-top:0;
+      margin-bottom:20px;
+    }
+    #use .pic{
+      height: 300px;
+    }
+    #use .container{
+      padding: 0;
+    }
+    #roadmap .pic{
+      height: 300px;
+    }
+    #team .block{
+      margin: 20px 0;
+      padding: 20px;
+    }
+    #team img{
+      width: 100px;
+      height: 100px;
+    }
+    #arron{
+      height: 470px;
+    }
+    #fishdoge{
+      height: 400px;
+    }
+    #david,#patrick{
+      height: 380px;
+    }
+    #footer{
+      width:90%;
+      margin: 0 5%;
+      text-align: center;
     }
   }
