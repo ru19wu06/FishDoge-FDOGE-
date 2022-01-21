@@ -3,19 +3,18 @@
     position: relative;
     display: inline-block;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background-color: #0f0d0f;
+    padding-top: 10%;
   }
   .swap {
     display: inline-block;
     width: 80%;
-    max-width: 500px;
-    position: absolute;
-    top:50%;
-    left: 50%;
-    transform: translate(-50%, -50%);    
+    max-width: 500px;    
     /* margin-top: 100px; */
     border-radius: 10px;
+    margin-left:auto ;
+    margin-right:auto ;
     padding: 10px 20px;
     background-color: rgb(31,34,37);
     box-shadow: 0 9px 20px 0px rgba(0,0,0,0.7), 0 -4px 20px 0px rgba(255,255,255,0.1);
@@ -84,27 +83,9 @@
 
    
     
-  @media screen and (max-width: 1024px) { 
-      #nav .nav ,#footer{
-          position: relative;
-      }
-      .nav{          
-        position: relative;
-        width: 100%;
-      }
-      #swap{
-          margin-top: 200px;
-      }
-  }
-  @media screen and (max-height: 950px) { 
-      #nav .nav ,#footer{
-          position: relative;
-      }
-      #swap{
-          margin-top: 200px;
-      }
-      .nav{          
-        position: relative;
-        width: 100%;
+  
+  @media screen and (max-width: 426px) { 
+      #swap-section{
+        padding-top: 35vh;
       }
   }
