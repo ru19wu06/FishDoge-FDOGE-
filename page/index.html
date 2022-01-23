@@ -15,6 +15,9 @@
     <link href='index.css' rel='stylesheet' type='text/css'>
     <link href='swap.css' rel='stylesheet' type='text/css'>
     <link href='nftpage.css' rel='stylesheet' type='text/css'>
+
+    <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.36/dist/web3.min.js"integrity="sha256-nWBTbvxhJgjslRyuAKJHK+XcZPlCnmIAAMixz6EefVk=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 </head>
 <body>
     <div id="app">
@@ -22,6 +25,21 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/vue-router/3.4.3/vue-router.js' integrity='sha512-3y+1622sE9JcYGIob4bKvJI6qMHpzrsloehokHVZBk1Lx7lr7H5p6IOqIkRQzB0Ids5l11W3n+vK50xArypH5g==' crossorigin='anonymous'></script>
+    
+    <script>
+        //let web3 = new Web3("wss://mainnet.infura.io/ws/v3/094050d79dc24c87b21f1ab21c343597");
+      
+        if (typeof web3 !== 'undefined') {
+            web3 = new Web3(web3.currentProvider);
+    
+            //alert("請使用MetaMask登入");
+        } else {
+            // 確認是否使用metamask地址
+            web3 = new Web3("wss://mainnet.infura.io/ws/v3/b728a5b97fb74e7fb413a930f3b69e06");
+        }
+    
+    </script>
+    
     <script>
         const Index={
             template:`<div>
@@ -177,7 +195,7 @@
             template:`<div>
                 <section class="nft">
                     <div class="picture">
-                    <img src="https://static.wixstatic.com/media/2d320c_e92e745669b8477786e328f1ce12834d~mv2.gif" alt="">
+                    <img src="./FDOGE_GIF.gif" alt="">
                     </div>  
                     <div class="block right">
                     <div class="block mintblock">
@@ -186,7 +204,7 @@
                         </div>
                         <div class="block unit_price">
                             <div class="green_text">PRICE</div>
-                            <div class="">0.08ETH</div>
+                            <div class="">0.01ETH</div>
                         </div>
                         </div>
                         <div class="block purchase">
@@ -209,7 +227,7 @@
                             <p>ETH</p>
                         </div>  
                         <div class="zone">        
-                            <button class="btn mint_btn">MINT</button>
+                            <button class="btn mint_btn" onclick="MintFdoge()">MINT</button>
                         </div>
                         </div> 
                     </div>       
@@ -219,7 +237,7 @@
             data(){
                 return{
                     num:0,
-                    maxNum:10,
+                    maxNum:200,
                     percentage:null
                 }
             },
@@ -280,7 +298,7 @@
             <div id="app">
                 <section class="nav">
                     <div id="nav">
-                        <a href="">fishdoge</a>
+                        <a style="font-weight:bold;" href="">Fishdoge</a>
                         <ul>    
                             <a href="#banner"><li @click="Anchor(banner)">首頁</li>
                             <a href="#use"><li @click="Anchor(use)">白皮書</li></router-link>
@@ -289,7 +307,7 @@
                             <router-link to="/swap"><li>SWAP</li></router-link>
                             <router-link to="/nft"><li>NFT</li></router-link>
                         </ul>
-                        <button>Connect Wallet</button>
+                        <button id="login_address" onclick="login_In_button()">Connect Wallet</button>
                         </div>  
                 </section>
                 <router-view />
@@ -301,5 +319,7 @@
             </div>`,
         })
     </script>
+    <script src="./web3/ABI.js"></script>
+    <script src="./web3/index.js"></script>
 </body>
 </html>
