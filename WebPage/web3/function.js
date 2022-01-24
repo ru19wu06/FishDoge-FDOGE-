@@ -10,7 +10,7 @@
    
       //Will Start the metamask extension
     async function login_In_button(){
-      ethereum.request({ method: 'eth_requestAccounts' });
+      await ethereum.request({ method: 'eth_requestAccounts' });
       window.location.reload();
     }
 

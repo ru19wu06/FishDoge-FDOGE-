@@ -223,7 +223,7 @@
                         </div>
                         <div class="zone">
                             <p>TOTAL PRICE</p>
-                            <p class="total_display">{{0.08*num}}</p>
+                            <p class="total_display">0.01</p>
                             <p>ETH</p>
                         </div>  
                         <div class="zone">        
@@ -236,12 +236,16 @@
             </div>`,
             data(){
                 return{
-                    num:0,
+                    num:5,
                     maxNum:200,
                     percentage:null
                 }
             },
             methods:{
+                
+                async function(){
+                    this.num = await getTotalMint();
+                },
                 reduceHandler(){
                     if(this.num>0){
                         this.num--

@@ -26,9 +26,16 @@ var FDOGE_Contract;
 var FDOGE_agiContract;
 
 async function setNFT_ABI(){
-  FDOGE_Contract= "0x361d8552d7db423ec0cb097a5911fe453d205374";
+  FDOGE_Contract= "0xbb5abff929e15239d9f28119d6e339276d2186f7";
     
   FDOGE_agiContract = new web3.eth.Contract(FDOGE_NFT_ABI,FDOGE_Contract);
+
+  
+}
+
+async function getTotalMint(){
+  let mintValue = await FDOGE_agiContract.methods.total_mint().call();
+  return mintValue;
 }
 
 
@@ -43,3 +50,4 @@ async function MintFdoge(){
 
 
 RenewAddress();
+
