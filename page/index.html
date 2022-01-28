@@ -16,7 +16,7 @@
     <link href='swap.css' rel='stylesheet' type='text/css'>
     <link href='nftpage.css' rel='stylesheet' type='text/css'>
 
-    <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.36/dist/web3.min.js"integrity="sha256-nWBTbvxhJgjslRyuAKJHK+XcZPlCnmIAAMixz6EefVk=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.7.0/web3.min.js" integrity="sha512-C63V0mFzwl8KV2fRz0QJNKX0d9877urOLSUq5WUq8nUOhDl69hKdGr9mAvl57k47GNjqEMAtiufsvDnk7xs8+w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -31,11 +31,15 @@
       
         if (typeof web3 !== 'undefined') {
             web3 = new Web3(web3.currentProvider);
+            //wondow.ethereum
+            console.log(web3);
     
             //alert("請使用MetaMask登入");
         } else {
             // 確認是否使用metamask地址
             web3 = new Web3("wss://mainnet.infura.io/ws/v3/b728a5b97fb74e7fb413a930f3b69e06");
+            
+            console.log(web3);
         }
     
     </script>
