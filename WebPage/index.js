@@ -4,6 +4,8 @@ class Stage {
       clearColor: 0x666666,
       width: window.innerWidth,
       height: window.innerHeight
+      // width: window.innerWidth,
+      // height: window.innerHeight
     };
 
     this.cameraParam = {
