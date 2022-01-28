@@ -125,13 +125,9 @@ nav a:hover{
   font-family: Poppins;  
   font-size: 18px;
 }
-canvas {
-  position: absolute;
+#webgl-canvas{
   z-index: 0;
-  width: 100%;  
-}
-.webgl-canvas{
-  width: 100%;  
+  position: absolute;
 }
 
 /* 首頁 */
@@ -140,6 +136,7 @@ canvas {
   margin-right: auto;
   min-height: 100vh;
   text-align: center;
+  z-index: 1;
 }
 #home .bscbutton{
   color: rgba(119, 227, 239, 1);
@@ -468,5 +465,17 @@ canvas {
   .wrapper {
     width: 95%;
     padding: 60px 10px;
+  }
+}
+@media  screen and (max-width:950px) and (max-height:500px){
+  #swap{
+    height: 680px;
+  }
+  #swap .container{
+    height: 680px;
+  }
+  .swap{
+    width:80%;
+    max-width:800px;
   }
 }
