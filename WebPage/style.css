@@ -290,6 +290,47 @@ nav a:hover{
   line-height: 1.5em;
 }
 
+/*project*/
+#project{
+  margin-top: 8%;
+}
+#project .wrapper{
+  display: inline-block;
+  max-width: 100%;
+  width: 90%;
+  margin: 1% 3%;
+  padding: 2% 0;
+}
+#project .list{
+  margin: 0;
+}
+#project .list-item{
+  display: inline-block;
+  width: 20%;
+  margin: 0 5%;
+}
+#project a{
+  padding: 2%;
+}
+#project a:hover{
+  background-image: linear-gradient(135deg, #60C0CB 18.23%, #6868FC 100%);
+  border-color:rgba(255, 255, 255, 0.705);
+  border-style:groove;
+  border-radius: 10%;
+  border-width: 2px;
+}
+#project img{
+  margin-top: 15%;
+  width: 150px;
+  height: 150px;
+  background-color: #c4c4c4;
+  border-radius: 100%;
+}
+#project h4{
+  color: rgba(255, 255, 255, 0.507);
+}
+
+
 /* swap */
 #swap {
   width: 100%;
@@ -399,7 +440,7 @@ canvas {
 }
 
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 426px) {
   .wrapper {
     width: 90%;
     padding: 60px 20px;
@@ -446,6 +487,26 @@ canvas {
   #roadmap .wrapper .watermarker {
     font-size: 40px;
     line-height: 70px;
+  }
+  #team .block{
+    min-height: 300px;
+  }
+  #project .list-item{
+    display: block;
+  }
+  #project img{
+    width:100px;
+    height:100px;
+  }
+  #project a{
+    width:80vw;
+
+  }
+  #project h3{
+    font-size: 25px;
+  }
+  #project h4{
+    font-size: 18px;
   }
   p {
     line-height: 1.2em;
